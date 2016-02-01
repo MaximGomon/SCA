@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgeDirection.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="CompanyRelation.cs" />
     <Compile Include="CompanySector.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="DictionaryEntity.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeePosition.cs" />
+    <Compile Include="Enums\GenderEnum.cs" />
     <Compile Include="IdentityEntity.cs" />
     <Compile Include="Interfaces\IChanged.cs" />
     <Compile Include="Interfaces\IChangedBy.cs" />
@@ -62,6 +64,9 @@
     <Compile Include="Interfaces\ICreatedBy.cs" />
     <Compile Include="Interfaces\IDeletable.cs" />
     <Compile Include="NamedEntity.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentStatus.cs" />
+    <Compile Include="PaymentType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemUser.cs" />
     <Compile Include="SystemUserType.cs" />
