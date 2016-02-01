@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace SCA.Domain
 {
     /// <summary>
-    /// Должность сотрудника
+    /// Тип пользователя (Юзер, админ)
     /// </summary>
-    public class EmployeePosition : DictionaryEntity
+    public class SystemUserType: DictionaryEntity
     {
     }
 }

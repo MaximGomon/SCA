@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SCA.Domain
 {
+    /// <summary>
+    /// Справочник валюк
+    /// </summary>
     public class Currency : NamedEntity
     {
         [MaxLength(4)]

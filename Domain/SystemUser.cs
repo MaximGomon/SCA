@@ -2,6 +2,9 @@
 
 namespace SCA.Domain
 {
+    /// <summary>
+    /// Пользователь системы
+    /// </summary>
     public class SystemUser : IdentityEntity
     {
         [Required]
@@ -17,5 +20,8 @@ namespace SCA.Domain
         {
             get { return string.Format("{0} {1}", FirstName, LastName); }
         }
+
+        [Required]
+        public virtual SystemUserType Type { get; set; }
     }
 }
