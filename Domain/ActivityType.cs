@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace SCA.Domain
 {
     /// <summary>
-    /// Направление работы компании (Управление, Финансы, ИТ, Производство и т.д.)
+    /// Тип события на сайте
     /// </summary>
-    public class CompanySector : DictionaryEntity
+    public class ActivityType : DictionaryEntity
     {
     }
 }

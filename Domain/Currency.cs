@@ -6,7 +6,7 @@ namespace SCA.Domain
     /// <summary>
     /// Справочник валюк
     /// </summary>
-    public class Currency : NamedEntity
+    public class Currency : DictionaryEntity
     {
         [MaxLength(4)]
         public virtual string BankCode { get; set; }

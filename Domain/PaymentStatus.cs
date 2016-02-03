@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SCA.Domain
 {
     /// <summary>
-    /// Состояние оплаты
+    /// Состояние оплаты (Проведена, План, Отменена, Факт)
     /// </summary>
     public class PaymentStatus : DictionaryEntity
     {

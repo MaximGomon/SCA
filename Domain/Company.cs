@@ -26,5 +26,9 @@ namespace SCA.Domain
         /// Ответственный исполнитель, человек, который закреплен за компанией
         /// </summary>
         public virtual Employee Executor { get; set; }
+        /// <summary>
+        /// Перечень всех сайтов клиента, на которых установленны счетчики
+        /// </summary>
+        public virtual List<ClientSite> Sites { get; set; }
     }
 }

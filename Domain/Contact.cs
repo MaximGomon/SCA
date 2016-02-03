@@ -66,5 +66,13 @@ namespace SCA.Domain
         /// Дата последней активности контакта
         /// </summary>
         public virtual DateTime LastActivityDate { get; set; }
+        /// <summary>
+        /// Состояние готовности к покупке
+        /// </summary>
+        public virtual ReadyToSellState ReadyToSell { get; set; }
+        /// <summary>
+        /// Список всех подтвержденных профилей соцсетей для контакта
+        /// </summary>
+        public virtual List<SocialNetwork> SocialProfiles {get; set; }
     }
 }

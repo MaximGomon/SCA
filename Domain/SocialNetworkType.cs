@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace SCA.Domain
 {
     /// <summary>
-    /// Направление работы компании (Управление, Финансы, ИТ, Производство и т.д.)
+    /// Тип соц сети (ФБ, ВК, Ютюб и т.д.)
     /// </summary>
-    public class CompanySector : DictionaryEntity
+    public class SocialNetworkType : DictionaryEntity
     {
     }
 }
