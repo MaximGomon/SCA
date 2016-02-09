@@ -25,7 +25,7 @@ namespace SCA.Domain
         /// <summary>
         /// Ответственный исполнитель, человек, который закреплен за контактом
         /// </summary>
-        public virtual Employee Executor { get; set; }
+        //public virtual Employee Executor { get; set; }
         /// <summary>
         /// Текущее количество балов
         /// </summary>
@@ -74,5 +74,10 @@ namespace SCA.Domain
         /// Список всех подтвержденных профилей соцсетей для контакта
         /// </summary>
         public virtual List<SocialNetwork> SocialProfiles {get; set; }
+        public virtual List<ClientSitePage> ViewedPages { get; set; }
+        public virtual DateTime CreateDate { get; set; }
+        public virtual SystemUser CreatedBy { get; set; }
+        public virtual DateTime ModifyDate { get; set; }
+        public virtual SystemUser ChangedBy { get; set; }
     }
 }

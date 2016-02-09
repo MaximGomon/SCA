@@ -1,0 +1,14 @@
+D:\Work\Sources\SCA\DataAccess\bin\Debug\DataAccess.dll.config
+D:\Work\Sources\SCA\DataAccess\bin\Debug\DataAccess.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\DataAccess.pdb
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Domain.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\EntityFramework.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Domain.pdb
+D:\Work\Sources\SCA\DataAccess\bin\Debug\EntityFramework.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.dll
+D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.pdb
+D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.Migrations.Init.resources
+D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache

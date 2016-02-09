@@ -1,0 +1,6 @@
+D:\Work\Sources\SCA\CounterService\bin\Debug\CounterService.dll.config
+D:\Work\Sources\SCA\CounterService\bin\Debug\CounterService.dll
+D:\Work\Sources\SCA\CounterService\bin\Debug\CounterService.pdb
+D:\Work\Sources\SCA\CounterService\obj\Debug\CounterService.csprojResolveAssemblyReference.cache
+D:\Work\Sources\SCA\CounterService\obj\Debug\CounterService.dll
+D:\Work\Sources\SCA\CounterService\obj\Debug\CounterService.pdb

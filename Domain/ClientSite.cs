@@ -15,5 +15,9 @@ namespace SCA.Domain
         /// Перечень страниц сайта
         /// </summary>
         public virtual List<ClientSitePage> Pages { get; set; }
+        /// <summary>
+        /// Список доменов для сайта
+        /// </summary>
+        public virtual List<string> Domains { get; set; } 
     }
 }

@@ -16,6 +16,11 @@ namespace SCA.Domain
         /// Тип события
         /// </summary>
         public virtual ActivityType Type { get; set; }
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual List<Tag> Tag { get; set; }
+
+        public DateTime CreateDate { get; set; }
     }
 }

@@ -25,10 +25,16 @@ namespace SCA.Domain
         /// <summary>
         /// Ответственный исполнитель, человек, который закреплен за компанией
         /// </summary>
-        public virtual Employee Executor { get; set; }
+        //public virtual Employee Executor { get; set; }
         /// <summary>
         /// Перечень всех сайтов клиента, на которых установленны счетчики
         /// </summary>
         public virtual List<ClientSite> Sites { get; set; }
+
+        public virtual DateTime ModifyDate { get; set; }
+        public virtual SystemUser ChangedBy { get; set; }
+        public virtual DateTime CreateDate { get; set; }
+        public virtual SystemUser CreatedBy { get; set; }
+        public virtual string Comment { get; set; }
     }
 }

@@ -14,15 +14,10 @@ namespace SCA.Domain
         /// <summary>
         /// Тег странички
         /// </summary>
-        public virtual string Tag { get; set; }
-        public virtual string Url { get; set; }
+        public virtual List<Tag> Tags { get; set; }
         /// <summary>
-        /// Количество посищений странички пользователями
+        /// Относительный урл странички от домена сайта
         /// </summary>
-        public virtual int VisitCount { get; set; }
-        /// <summary>
-        /// Дата последнего посещения странички
-        /// </summary>
-        public virtual DateTime LastVisitDate { get; set; }
+        public virtual string RelatedUrl { get; set; }
     }
 }
