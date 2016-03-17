@@ -9,7 +9,7 @@
     <ProjectGuid>{81CA8E29-782E-41E0-B555-B9565141DDFF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CounterService</RootNamespace>
+    <RootNamespace>SCA.CounterService</RootNamespace>
     <AssemblyName>CounterService</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>/client:"WcfTestClient.exe"</StartArguments>

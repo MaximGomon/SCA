@@ -2,7 +2,7 @@
 using System.Data.Entity.ModelConfiguration.Conventions;
 using SCA.Domain;
 
-namespace DataAccess
+namespace SCA.DataAccess
 {
     public class ScaDbContext : DbContext
     {

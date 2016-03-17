@@ -7,7 +7,8 @@ namespace SCA.DataAccess.Repositories.Interfaces
 {
     public interface ICRUDRepository<TEntity> where TEntity : IdentityEntity
     {
-        TEntity Add(TEntity entity);
+        void Add(TEntity entity);
+        TEntity GetById(Guid id);
         IEnumerable<TEntity> Add(IEnumerable<TEntity> range);
         void Delete(Guid id);
         void Delete(TEntity entity);

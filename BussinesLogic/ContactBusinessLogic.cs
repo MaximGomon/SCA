@@ -1,4 +1,5 @@
-﻿using SCA.DataAccess.Repositories.Implementations;
+﻿using System;
+using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 
 namespace SCA.BussinesLogic
@@ -10,6 +11,16 @@ namespace SCA.BussinesLogic
         public ContactBusinessLogic(ContactRepository repository) : base(repository)
         {
             _contactRepository = repository;
+        }
+
+        public Contact GetByName(string name)
+        {
+            return _contactRepository.GetByName(name);
+        }
+
+        public Contact GetByLogin(string login)
+        {
+            return _contactRepository.GetByLogin(login);
         }
     }
 }

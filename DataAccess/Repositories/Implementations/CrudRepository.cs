@@ -9,9 +9,18 @@ namespace SCA.DataAccess.Repositories.Implementations
     public class CrudRepository<TEntity> : ICRUDRepository<TEntity>
         where TEntity : IdentityEntity
     {
-        public TEntity Add(TEntity entity)
+
+        public ScaDbContext DbContext = new ScaDbContext();
+        
+        public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            DbContext.Set<TEntity>().Add(entity);
+            DbContext.SaveChanges();
+        }
+
+        public TEntity GetById(Guid id)
+        {
+            return DbContext.Set<TEntity>().Find(id);
         }
 
         public IEnumerable<TEntity> Add(IEnumerable<TEntity> range)

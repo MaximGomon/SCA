@@ -1,15 +1,15 @@
-namespace DataAccess.Migrations
+namespace SCA.DataAccess.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.ScaDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ScaDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(DataAccess.ScaDbContext context)
+        protected override void Seed(ScaDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

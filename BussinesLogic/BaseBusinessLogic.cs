@@ -18,6 +18,21 @@ namespace SCA.BussinesLogic
             Repository = repository;
         }
 
+        protected TEntity GetById(Guid id)
+        {
+            return Repository.GetById(id);
+        }
+
+        protected void Update(TEntity entity)
+        {
+            Repository.Update(entity);
+        }
+
+        protected void Add(TEntity entity)
+        {
+            Repository.Add(entity);
+        }
+
         protected TRepository Repository { get; private set; }
     }
 }
