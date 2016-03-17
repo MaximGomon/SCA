@@ -21,6 +21,9 @@ namespace SCA.Domain
             get { return string.Format("{0} {1}", FirstName, LastName); }
         }
 
+        [MaxLength(50)]
+        public virtual string Login { get; set; }
+
         [Required]
         public virtual SystemUserType Type { get; set; }
     }
