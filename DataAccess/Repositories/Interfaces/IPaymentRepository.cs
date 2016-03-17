@@ -1,6 +1,8 @@
-﻿namespace DataAccess.Repositories.Interfaces
+﻿using SCA.Domain;
+
+namespace SCA.DataAccess.Repositories.Interfaces
 {
-    public interface IPaymentRepository
+    public interface IPaymentRepository : ICRUDRepository<Payment>
     {
          
     }

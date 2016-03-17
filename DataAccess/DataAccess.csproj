@@ -7,7 +7,7 @@
     <ProjectGuid>{65038161-5D50-49B6-A5D2-1E4EA828E5B2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
+    <RootNamespace>SCA.DataAccess</RootNamespace>
     <AssemblyName>DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -54,7 +54,22 @@
       <DependentUpon>201602092147008_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
+    <Compile Include="Repositories\Implementations\ActivityTypeRepository.cs" />
+    <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
+    <Compile Include="Repositories\Implementations\ClientSiteRepository.cs" />
+    <Compile Include="Repositories\Implementations\CompanyRelationRepository.cs" />
+    <Compile Include="Repositories\Implementations\CompanyRepository.cs" />
+    <Compile Include="Repositories\Implementations\CompanySectorRepository.cs" />
+    <Compile Include="Repositories\Implementations\CompanySizeRepository.cs" />
+    <Compile Include="Repositories\Implementations\CompanyStatusRepository.cs" />
+    <Compile Include="Repositories\Implementations\CompanyTypeRepository.cs" />
+    <Compile Include="Repositories\Implementations\ContactRepository.cs" />
+    <Compile Include="Repositories\Implementations\ContactStatusRepository.cs" />
+    <Compile Include="Repositories\Implementations\ContactTypeRepository.cs" />
     <Compile Include="Repositories\Implementations\CrudRepository.cs" />
+    <Compile Include="Repositories\Implementations\SocialNetworkRepository.cs" />
+    <Compile Include="Repositories\Implementations\SocialNetworkTypeRepository.cs" />
     <Compile Include="Repositories\Interfaces\IActivityRepository.cs" />
     <Compile Include="Repositories\Interfaces\IActivityTypeRepository.cs" />
     <Compile Include="Repositories\Interfaces\IAgeDirectionRepository.cs" />
@@ -67,7 +82,21 @@
     <Compile Include="Repositories\Interfaces\ICompanyStatusRepository.cs" />
     <Compile Include="Repositories\Interfaces\ICompanyTypeRepository.cs" />
     <Compile Include="Repositories\Interfaces\IContactRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IContactStatusRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IContactTypeRepository.cs" />
     <Compile Include="Repositories\Interfaces\ICRUDRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICurrencyRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IEmployeePositionRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\INamedRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IPaymentRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IPaymentStatusRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IPaymentTypeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IReadyToSellStateRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISocialNetworkRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISocialNetworkTypeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISystemUserRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISystemUserTypeRepository.cs" />
     <Compile Include="ScaDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SCA.Domain;
+﻿using SCA.Domain;
 
-namespace DataAccess.Repositories.Interfaces
+namespace SCA.DataAccess.Repositories.Interfaces
 {
-    public interface ICompanyRepository : ICRUDRepository<Company>
+    public interface ICompanyRepository : ICRUDRepository<Company>, INamedRepository<Company>
     {
     }
 }

@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using DataAccess.Repositories.Interfaces;
+using SCA.DataAccess.Repositories.Interfaces;
 using SCA.Domain;
 
-namespace DataAccess.Repositories.Implementations
+namespace SCA.DataAccess.Repositories.Implementations
 {
     public class CrudRepository<TEntity> : ICRUDRepository<TEntity>
         where TEntity : IdentityEntity
