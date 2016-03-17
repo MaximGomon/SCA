@@ -54,6 +54,19 @@
       <DependentUpon>201602092147008_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\Implementations\CrudRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IActivityRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IActivityTypeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IAgeDirectionRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IClientSitePageRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IClientSiteRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICompanyRelationRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICompanyRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICompanySectorRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICompanySizeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICompanyStatusRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICompanyTypeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IContactRepository.cs" />
     <Compile Include="Repositories\Interfaces\ICRUDRepository.cs" />
     <Compile Include="ScaDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,9 +81,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\Implementations\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602092147008_Init.resx">
       <DependentUpon>201602092147008_Init.cs</DependentUpon>
