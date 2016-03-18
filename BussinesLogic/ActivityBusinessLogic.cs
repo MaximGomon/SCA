@@ -1,4 +1,6 @@
-﻿using SCA.DataAccess.Repositories.Implementations;
+﻿using System;
+using System.Linq;
+using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 
 namespace SCA.BussinesLogic
@@ -10,5 +12,10 @@ namespace SCA.BussinesLogic
         {
             _activityRepository = repository;
         }
+
+        public IQueryable<Activity> GetActivitiesByContactId(Guid contactId)
+        {
+            return _activityRepository.GetActivitiesByContactId(contactId);
+        } 
     }
 }

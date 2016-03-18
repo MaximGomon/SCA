@@ -1,10 +1,11 @@
-﻿using SCA.DataAccess.Repositories.Interfaces;
+﻿using System;
+using System.Linq;
+using SCA.DataAccess.Repositories.Interfaces;
 using SCA.Domain;
 
 namespace SCA.DataAccess.Repositories.Implementations
 {
     public class ClientSitePageRepository : CrudRepository<ClientSitePage>, IClientSitePageRepository
     {
-         
     }
 }

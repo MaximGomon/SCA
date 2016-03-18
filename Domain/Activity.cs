@@ -22,5 +22,9 @@ namespace SCA.Domain
         public virtual List<Tag> Tag { get; set; }
 
         public DateTime CreateDate { get; set; }
+        /// <summary>
+        /// Юзер, которого мі определили со счетчика
+        /// </summary>
+        public virtual Contact Author { get; set; }
     }
 }
