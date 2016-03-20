@@ -1,0 +1,28 @@
+﻿@section content_header{
+    <h1><img src="~/Content/themes/admin/img/websites.png" />  Мини сайты</h1>
+    @Html.GetBreadcrumb("fa fa-dashboard", null, "Развитие", "Мини сайты")
+}
+
+@section content_box_header{
+    <div class="row">
+        <div class="col-md-6">
+            <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-success">Добавить <i class="fa fa-plus-circle"></i></button>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control form" placeholder="Поиск по ключевым словам">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">Поиск <i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="hr-top" />
+}
+<div class="text-center">Нет записей</div>
+
+

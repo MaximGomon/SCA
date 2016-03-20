@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using SCA.DataAccess.Repositories.Interfaces;
 using SCA.Domain;
@@ -51,6 +52,11 @@ namespace SCA.DataAccess.Repositories.Implementations
         public void UpdateAny(TEntity entity)
         {
             throw new NotImplementedException();
+        }
+
+        public IQueryable<TEntity> GetAllEntities()
+        {
+            return DbContext.Set<TEntity>().Select(x => x);
         }
 
         public void SaveChanges()

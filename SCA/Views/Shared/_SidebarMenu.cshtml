@@ -1,0 +1,80 @@
+﻿<ul class="sidebar-menu">
+    <li class="header">Главное меню</li>
+    <li class="treeview" data-mvc-area="Monitoring">
+        <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Мониторинг</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li data-mvc-cntrl="Companies"><a href="@Url.Action("List","Companies", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Компании</a></li>
+            <li data-mvc-cntrl="Contacts"><a href="@Url.Action("List","Contacts", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Контакты</a></li>
+            <li data-mvc-cntrl="ContactActivity"><a href="@Url.Action("List","ContactActivity", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Лог действий</a></li>
+            <li data-mvc-cntrl="ContactSegments"><a href="@Url.Action("List","ContactSegments", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Сегментация клиентов</a></li>
+            <li data-mvc-cntrl="SiteAction"><a href="@Url.Action("List","SiteAction", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Сообщения</a></li>
+            <li data-mvc-cntrl="Analytics"><a href="@Url.Action("List","Analytics", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Аналитика</a></li>
+        </ul>
+    </li>
+    <li class="treeview" data-mvc-area="Evaluation">
+        <a href="#">
+            <i class="fa fa-line-chart"></i>
+            <span>Развитие</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li data-mvc-cntrl="Companies"><a href="@Url.Action("List","Companies", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Компании</a></li>
+            <li data-mvc-cntrl="Contacts"><a href="@Url.Action("List","Contacts", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Контакты</a></li>
+            <li data-mvc-cntrl="WorkflowTemplates"><a href="@Url.Action("List","WorkflowTemplates", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Шаблоны процессов</a></li>
+            <li data-mvc-cntrl="MassWorkflows"><a href="@Url.Action("List","MassWorkflows", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Мероприятия</a></li>
+            <li data-mvc-cntrl="MassMails"><a href="@Url.Action("List","MassMails", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Рассылки</a></li>
+            <li data-mvc-cntrl="Workflows"><a href="@Url.Action("List","Workflows", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Процессы</a></li>
+            <li data-mvc-cntrl="Form"><a href="@Url.Action("List","Form", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Формы</a></li>
+            <li data-mvc-cntrl="File"><a href="@Url.Action("List","File", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Файлы</a></li>
+            <li data-mvc-cntrl="WebSites"><a href="@Url.Action("List","WebSites", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Мини сайты</a></li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-gears"></i>
+            <span>Настройки</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Шаблоны сообщений</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Импорт</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Справочники</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Мониторинг</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Настройка домена</a></li>
+        </ul>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-eye"></i> <span>Администрирование</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Профиль контакта</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Справочники</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Системные настройки</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Импорт</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Пользователи</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Профили доступа</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Мониторинг</a></li>
+        </ul>
+    </li>
+
+    <li><a href="#"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+    <li class="header">Закладки</li>
+    <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+    <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+    <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+</ul>
+
+<script>
+    $(function () {
+        var cntrName = '@(ViewContext.RouteData.Values["controller"])';
+        var areaName = '@(ViewContext.RouteData.DataTokens["area"])';
+        
+        $("li[data-mvc-area='" + areaName + "']").addClass("active");
+        $("li[data-mvc-cntrl='" + cntrName + "']").addClass("active");
+    });
+
+</script>

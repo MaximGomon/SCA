@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!--Include css-->
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/ionicons/css/ionicons.css" rel="stylesheet" />
+    <link href="~/Content/themes/admin/AdminLTE.css" rel="stylesheet" />
+    <link href="~/Content/themes/admin/skins/_all-skins.css" rel="stylesheet" />
+    <link href="~/Content/kendo/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/admin/kendo.ui.grid.css" rel="stylesheet" />
+    <link href="~/Content/plugins/iCheck/square/blue.css" rel="stylesheet" />
+
+    <!--...-->
+    <link href="~/Content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css" rel="stylesheet" />
+    <!--End css-->
+    <script src="~/scripts/jquery-2.2.0.js"></script>
+
+    <title>@ViewBag.Title</title>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>S</b>CA</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>SCA</b>&emsp;</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    @Html.Partial("_NavbarMenu")    
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- Sidebar user panel -->
+            @Html.Partial("_SidebarUser")     
+            <section class="sidebar">                
+                @Html.Partial("_SearchForm")                
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                @Html.Partial("_SidebarMenu")                
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                @if (!IsSectionDefined("content_header"))
+                {
+                    <h1>
+                        CMS
+                    </h1>                    
+                }
+                else
+                {
+                    @RenderSection("content_header", false)
+
+                }
+                
+            </section>
+            <!-- Main content -->
+            <section class="content">
+            @if (!IsSectionDefined("content"))
+            {
+                <div class="row">
+                    <section class="col-lg-12 connectedSortable">
+                        <div class="box box-primary">
+                            @if (!IsSectionDefined("content_box_header"))
+                            {
+                                <div class="box-header">
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="box-header">
+                                    @RenderSection("content_box_header", false)
+                                </div>
+                                
+                            }
+
+                            <div class="box-body">
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            }
+            else
+            {
+                @RenderSection("content",false)
+            }
+
+            </section><!-- /.content -->
+        </div>
+
+        <!-- /.content-wrapper -->
+        @Html.Partial("_Footer")        
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-user bg-yellow"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                                    <p>New phone +1(800)555-1234</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript::;">
+                                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                                    <p>nora@example.com</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div><!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Some information about this general settings option
+                            </p>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Allow mail redirect
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Other sets of options are available
+                            </p>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Expose author name in posts
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Allow the user to show his name in blog posts
+                            </p>
+                        </div><!-- /.form-group -->
+                    </form>
+                </div><!-- /.tab-pane -->
+            </div>
+        </aside><!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+
+    <!--Include js-->
+    
+    <script src="~/scripts/jquery-ui-1.11.4.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <script src="~/scripts/bootstrap.js"></script>
+    <!--...-->
+    <script src="~/scripts/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
+    <script src="~/scripts/plugins/slimScroll/jquery.slimscroll.js"></script>
+    <script src="~/scripts/plugins/fastclick/fastclick.js"></script>
+    <script src="~/scripts/plugins/iCheck/icheck.js"></script>
+
+    <script src="~/scripts/kendo/kendo.all.min.js"></script>
+    <script src="~/scripts/kendo/kendo.aspnetmvc.min.js"></script>
+    <script src="~/scripts/kendo/messages/kendo.messages.ru-RU.min.js"></script>
+
+    <script src="~/scripts/themes/admin/app.js"></script>
+    <script src="~/scripts/themes/admin/demo.js"></script>
+
+    @RenderSection("scripts", false)
+    <!--End js-->
+</body>
+</html>

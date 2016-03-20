@@ -1,0 +1,64 @@
+﻿@using Kendo.Mvc.UI
+@using SCA.Areas.Evaluation.Models
+
+@section content_header{
+    <h1><img src="~/Content/themes/admin/img/contacts.png" /> Контакты</h1>
+    @Html.GetBreadcrumb("fa fa-dashboard", null, "Развитие", "Контакты")
+}
+@section content_box_header{
+    @Html.Action("TopMenu", "Grid", new { area = String.Empty })
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Категории клиентов
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu ">
+        <li><a href="#">Известные контакты <span class="badge">4</span></a></li>
+        <li><a href="#">Активные контакты <span class="badge">100</span></a></li>
+        <li><a href="#">Анонимные посетители <span class="badge">0</span></a></li>
+        <li ><a href="#">Все контакты <span class="badge">104</span></a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Удаленные контакты <span class="badge">2</span></a></li>
+    </ul>
+</div>
+    <hr class="hr-top" />
+}
+
+@(Html.Kendo().Grid<ContactModel>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(c => c.Id).Hidden(true);
+            columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+            columns.Bound(c => c.CreateDate).Title("Дата создания").Width(150);
+            //columns.Bound(c => c.).Title("<div class='text-center'>Последняя <br/>активность</div>").Width(150);
+            columns.Bound(c => c.Name).Title("ФИО").Width(150);
+            columns.Bound(c => c.Email).Title("E-mail").Width(120);
+            columns.Bound(c => c.ReadyToSell).Title("<div class='text-center'>Готовность <br/>к продаже</div>").Width(150);
+            columns.Bound(c => c.CompanyName).Title("Компания").Width(120);
+            //columns.Bound(c => c.Name).Title("Важность").Width(120);
+            columns.Bound(c => c.Score).Title("Общий балл").Width(150); ;
+            //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
+
+        })
+        .Filterable()
+        .ColumnMenu(c => c.Columns(false))
+        .Resizable(resizable => resizable.Columns(true))
+        .Reorderable(reorderable => reorderable.Columns(true))
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            .PageSizes(true)
+            .ButtonCount(5))
+
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("Test", "Home"))
+        )
+)
+
+
+
+
+

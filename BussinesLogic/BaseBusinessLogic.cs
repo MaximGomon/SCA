@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using SCA.DataAccess.Repositories.Interfaces;
 using SCA.Domain;
 
@@ -34,5 +35,10 @@ namespace SCA.BussinesLogic
         }
 
         protected TRepository Repository { get; private set; }
+
+        public IQueryable<TEntity> GetAllEntities()
+        {
+            return Repository.GetAllEntities();
+        } 
     }
 }

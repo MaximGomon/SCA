@@ -1,0 +1,44 @@
+﻿
+@section content_header{
+    <h1><img src="~/Content/themes/admin/img/workflows.png" /> Процессы</h1>
+    @Html.GetBreadcrumb("fa fa-dashboard", null, "Развитие", "Процессы")
+}
+@section content_box_header{
+    @Html.Action("TopMenu", "Grid", new {insert = false, area = String.Empty })
+    <hr class="hr-top" />
+}
+
+@(Html.Kendo().Grid<GridData>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+            columns.Bound(c => c.Name).Title("Название").Width(150);
+            columns.Bound(c => c.Name).Title("Параметр").Width(150);
+            columns.Bound(c => c.Name).Title("<div class='text-center'>Дата запуска</div>").Width(150);
+            columns.Bound(c => c.Name).Title("<div class='text-center'>Дата завершение</div>").Width(150);
+            columns.Bound(c => c.Name).Title("Статус").Width(120);
+            columns.Bound(c => c.Name).Title("Действия").Width(120);
+
+        })
+        .Filterable()
+        .ColumnMenu(c => c.Columns(false))
+        .Resizable(resizable => resizable.Columns(true))
+        .Reorderable(reorderable => reorderable.Columns(true))
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            .PageSizes(true)
+            .ButtonCount(5))
+
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("Test", "Home"))
+        )
+)
+
+
+
+
+
