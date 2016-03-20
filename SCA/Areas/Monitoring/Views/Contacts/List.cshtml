@@ -1,4 +1,5 @@
 ﻿@using Kendo.Mvc.UI
+@using SCA.Areas.Monitoring.Models
 
 @section content_header{
     <h1><img src="~/Content/themes/admin/img/contacts.png" /> Контакты</h1>
@@ -9,20 +10,21 @@
     <hr class="hr-top" />
 }
 
-@(Html.Kendo().Grid<GridData>()
+@(Html.Kendo().Grid<ContactModel>()
         .Name("grid")
         .Columns(columns =>
         {
+            columns.Bound(c => c.Id).Hidden(true);
             columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
-            columns.Bound(c => c.Name).Title("Дата создания").Width(150);
-            columns.Bound(c => c.Name).Title("<div class='text-center'>Последняя <br/>активность</div>").Width(150);
+            columns.Bound(c => c.CreateDate).Title("Дата создания").Width(150);
+            //columns.Bound(c => c.).Title("<div class='text-center'>Последняя <br/>активность</div>").Width(150);
             columns.Bound(c => c.Name).Title("ФИО").Width(150);
-            columns.Bound(c => c.Name).Title("E-mail").Width(120);
-            columns.Bound(c => c.Name).Title("<div class='text-center'>Готовность <br/>к продаже</div>").Width(150);
-            columns.Bound(c => c.Name).Title("Компания").Width(120);
-            columns.Bound(c => c.Name).Title("Важность").Width(120);
-            columns.Bound(c => c.Name).Title("Общий балл").Width(150); ;
-            columns.Bound(c => c.Name).Title("Действия").Width(120); ;
+            columns.Bound(c => c.Email).Title("E-mail").Width(120);
+            columns.Bound(c => c.ReadyToSell).Title("<div class='text-center'>Готовность <br/>к продаже</div>").Width(150);
+            columns.Bound(c => c.CompanyName).Title("Компания").Width(120);
+            //columns.Bound(c => c.Name).Title("Важность").Width(120);
+            columns.Bound(c => c.Score).Title("Общий балл").Width(150); ;
+            //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
 
         })
         .Filterable()

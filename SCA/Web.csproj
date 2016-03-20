@@ -1348,6 +1348,9 @@
     <Compile Include="Areas\Monitoring\Controllers\ContactsController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\ContactSegmentsController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\SiteActionController.cs" />
+    <Compile Include="Areas\Monitoring\Converters\ContactModelToDb.cs" />
+    <Compile Include="Areas\Monitoring\Models\ActivityModel.cs" />
+    <Compile Include="Areas\Monitoring\Models\ContactModel.cs" />
     <Compile Include="Areas\Monitoring\MonitoringAreaRegistration.cs" />
     <Compile Include="Controllers\GridController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1504,7 +1507,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Monitoring\Models\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

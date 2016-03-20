@@ -16,7 +16,7 @@ namespace SCA.Areas.Evaluation.Controllers
     {
         private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
         // GET: Monitoring/Contacts
-        public IQueryable<ContactModel> List()
+        public List<ContactModel> List()
         {
             var items = _contactBusinessLogic.GetAllEntities().Select(x => new ContactModel
             {
@@ -27,7 +27,7 @@ namespace SCA.Areas.Evaluation.Controllers
                 Email = x.Email,
                 Id = x.Id
             });
-            return items;
+            return items.ToList();
         }
     }
 }

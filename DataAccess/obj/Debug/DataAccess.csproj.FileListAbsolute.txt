@@ -8,7 +8,7 @@ D:\Work\Sources\SCA\DataAccess\bin\Debug\Domain.pdb
 D:\Work\Sources\SCA\DataAccess\bin\Debug\EntityFramework.xml
 D:\Work\Sources\SCA\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
-D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.dll
-D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.pdb
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.Init.resources
 D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
+D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.dll
+D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.pdb

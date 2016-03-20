@@ -5,7 +5,12 @@ namespace SCA.Domain
 {
     public class IdentityEntity
     {
+        public IdentityEntity()
+        {
+            Id = Guid.NewGuid();
+        }
+
         [Required]
-        public virtual Guid Id { get; set; }
+        public virtual Guid Id { get; private set; }
     }
 }

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SCA.Areas.Evaluation.Models;
+using SCA.BussinesLogic;
+using SCA.DataAccess.Repositories.Implementations;
+using SCA.Domain;
 
 namespace SCA.Areas.Monitoring.Controllers
 {
@@ -11,10 +15,27 @@ namespace SCA.Areas.Monitoring.Controllers
     /// </summary>
     public class ContactsController : Controller
     {
+        private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+
         // GET: Monitoring/Contacts
-        public ActionResult List()
+        public List<ContactModel> List()
         {
-            return View();
+            var items = _contactBusinessLogic.GetAllEntities().Select(x => new ContactModel
+            {
+                Score = x.Score,
+                ReadyToSell = x.ReadyToSell.Name,
+                Name = x.Name,
+                CreateDate = x.CreateDate,
+                Email = x.Email,
+                Id = x.Id
+            });
+            return items.ToList();
+        }
+
+        public void Add(ContactModel contact)
+        {
+            var dbContact = new Contact();
+            _contactBusinessLogic.Add(dbContact);
         }
     }
 }
