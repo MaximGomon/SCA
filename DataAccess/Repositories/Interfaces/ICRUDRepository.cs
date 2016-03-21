@@ -10,7 +10,7 @@ namespace SCA.DataAccess.Repositories.Interfaces
     {
         void Add(TEntity entity);
         TEntity GetById(Guid id);
-        IEnumerable<TEntity> Add(IEnumerable<TEntity> range);
+        void Add(IEnumerable<TEntity> range);
         void Delete(Guid id);
         void Delete(TEntity entity);
         void Delete(Expression<Func<TEntity, bool>> filter = null);

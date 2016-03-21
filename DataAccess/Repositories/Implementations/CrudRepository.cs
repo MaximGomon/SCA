@@ -16,7 +16,7 @@ namespace SCA.DataAccess.Repositories.Implementations
         public void Add(TEntity entity)
         {
             DbContext.Set<TEntity>().Add(entity);
-            DbContext.SaveChanges();
+            SaveChanges();
         }
 
         public TEntity GetById(Guid id)
@@ -24,19 +24,21 @@ namespace SCA.DataAccess.Repositories.Implementations
             return DbContext.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable<TEntity> Add(IEnumerable<TEntity> range)
+        public void Add(IEnumerable<TEntity> range)
         {
-            throw new NotImplementedException();
+            DbContext.Set<TEntity>().AddRange(range);
+            SaveChanges();
         }
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            //DbContext.
         }
 
         public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            DbContext.Set<TEntity>().Remove(entity);
+            SaveChanges();
         }
 
         public void Delete(Expression<Func<TEntity, bool>> filter = null)
@@ -61,7 +63,7 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            DbContext.SaveChanges();
         }
     }
 }
