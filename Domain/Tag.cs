@@ -19,5 +19,6 @@ namespace SCA.Domain
         /// Все теги, которые находятся на том же уровне, что и текущий
         /// </summary>
         //public List<Tag> SubsideriesTags { get; set; }  
+        public virtual string Description { get; set; }
     }
 }

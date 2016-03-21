@@ -49,6 +49,7 @@
     <Compile Include="DictionaryBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemUserBusinessLogic.cs" />
+    <Compile Include="TagBusinessLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">

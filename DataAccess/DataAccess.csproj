@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201603201912434_Init.Designer.cs">
       <DependentUpon>201603201912434_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603211817179_UpdateActivity.cs" />
+    <Compile Include="Migrations\201603211817179_UpdateActivity.Designer.cs">
+      <DependentUpon>201603211817179_UpdateActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -63,6 +67,7 @@
     <Compile Include="Repositories\Implementations\DictionaryRepository.cs" />
     <Compile Include="Repositories\Implementations\SocialNetworkRepository.cs" />
     <Compile Include="Repositories\Implementations\SystemUserRepository.cs" />
+    <Compile Include="Repositories\Implementations\TagRepository.cs" />
     <Compile Include="Repositories\Interfaces\IActivityRepository.cs" />
     <Compile Include="Repositories\Interfaces\IClientSitePageRepository.cs" />
     <Compile Include="Repositories\Interfaces\IClientSiteRepository.cs" />
@@ -76,6 +81,7 @@
     <Compile Include="Repositories\Interfaces\IPaymentRepository.cs" />
     <Compile Include="Repositories\Interfaces\ISocialNetworkRepository.cs" />
     <Compile Include="Repositories\Interfaces\ISystemUserRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ITagRepository.cs" />
     <Compile Include="ScaDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +98,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201603201912434_Init.resx">
       <DependentUpon>201603201912434_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603211817179_UpdateActivity.resx">
+      <DependentUpon>201603211817179_UpdateActivity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

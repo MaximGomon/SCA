@@ -21,6 +21,8 @@ namespace SCA.Areas.Monitoring.Controllers
         private readonly DictionaryBusinessLogic<ContactType> _contactTypeBusinessLogic = new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>());
         private readonly DictionaryBusinessLogic<ContactStatus> _contactStatusBusinessLogic = new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>());
         private readonly DictionaryBusinessLogic<AgeDirection> _ageBusinessLogic = new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>());
+        private readonly DictionaryBusinessLogic<ReadyToSellState> _sellBusinessLogic = new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>());
+
         // GET: Monitoring/Contacts
         public ActionResult List()
         {
@@ -69,6 +71,13 @@ namespace SCA.Areas.Monitoring.Controllers
         public JsonResult GetAgeDirection([DataSourceRequest]DataSourceRequest request)
         {
             var items = _ageBusinessLogic.GetAllEntities();
+            DataSourceResult result = items.ToDataSourceResult(request);
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult GetSellStatus([DataSourceRequest]DataSourceRequest request)
+        {
+            var items = _sellBusinessLogic.GetAllEntities();
             DataSourceResult result = items.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }

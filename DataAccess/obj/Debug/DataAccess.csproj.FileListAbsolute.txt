@@ -12,3 +12,4 @@ D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.Init.resource
 D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
 D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.dll
 D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.pdb
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.UpdateActivity.resources

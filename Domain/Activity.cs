@@ -20,7 +20,8 @@ namespace SCA.Domain
         /// 
         /// </summary>
         public virtual List<Tag> Tag { get; set; }
-
+        public virtual string UserAgent { get; set; }
+        public virtual string Cookie { get; set; }
         public DateTime CreateDate { get; set; }
         /// <summary>
         /// Юзер, которого мі определили со счетчика

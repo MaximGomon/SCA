@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SCA.CountersService.CounterService" CodeBehind="CounterService.svc.cs" %>
