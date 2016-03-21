@@ -44,6 +44,7 @@
     <Compile Include="BaseBusinessLogic.cs" />
     <Compile Include="ClientSiteBusinessLogic.cs" />
     <Compile Include="ClientSitePagesBusinessLogic.cs" />
+    <Compile Include="CompanyBusinessLogic.cs" />
     <Compile Include="ContactBusinessLogic.cs" />
     <Compile Include="DictionaryBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
