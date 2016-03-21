@@ -52,7 +52,7 @@ function Button1_onclick() {
 <body>
 <form id="HtmlForm" runat="server">
     <div>
-        <input type="button" id="firstButton" onclick="Button1_onclick();" value="Send request"/>
+        <input type="button" onclick="window.location.href ='SecondPage.aspx'" value="Go next"/>
     </div>
 </form>
 </body>

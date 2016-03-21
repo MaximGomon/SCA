@@ -18,3 +18,11 @@ D:\Work\Sources\SCA\CountersService\bin\Microsoft.CodeDom.Providers.DotNetCompil
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.csprojResolveAssemblyReference.cache
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.dll
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.pdb
+D:\Work\Sources\SCA\CountersService\bin\BussinesLogic.dll
+D:\Work\Sources\SCA\CountersService\bin\DataAccess.dll
+D:\Work\Sources\SCA\CountersService\bin\Domain.dll
+D:\Work\Sources\SCA\CountersService\bin\EntityFramework.dll
+D:\Work\Sources\SCA\CountersService\bin\BussinesLogic.pdb
+D:\Work\Sources\SCA\CountersService\bin\DataAccess.pdb
+D:\Work\Sources\SCA\CountersService\bin\Domain.pdb
+D:\Work\Sources\SCA\CountersService\bin\EntityFramework.xml

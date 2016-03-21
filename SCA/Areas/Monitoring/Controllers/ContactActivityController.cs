@@ -28,7 +28,9 @@ namespace SCA.Areas.Monitoring.Controllers
                 Id = x.Id,
                 ActivityDate = x.CreateDate,
                 UserName = x.Author.Name,
-                Type = x.Type.Name
+                Type = x.Type.Name,
+                UserAgent = x.UserAgent,
+                Tags = x.GetAllTags(),
             }).ToList();
             DataSourceResult result = items.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);

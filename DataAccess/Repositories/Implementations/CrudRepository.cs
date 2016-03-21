@@ -11,8 +11,9 @@ namespace SCA.DataAccess.Repositories.Implementations
         where TEntity : IdentityEntity
     {
 
-        public ScaDbContext DbContext = new ScaDbContext();
-        
+        public ScaDbContext DbContext = DbContextSingle.Instance;
+
+
         public void Add(TEntity entity)
         {
             DbContext.Set<TEntity>().Add(entity);
@@ -58,6 +59,7 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public IQueryable<TEntity> GetAllEntities()
         {
+            //var type = typeof (TEntity);
             return DbContext.Set<TEntity>().Select(x => x);
         }
 

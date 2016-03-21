@@ -8,6 +8,7 @@ namespace SCA.Areas.Monitoring.Models
         public DateTime ActivityDate { get; set; }
         public string Type { get; set; } 
         public string UserName { get; set; }
-        
+        public string UserAgent { get; set; }
+        public string Tags { get; set; }
     }
 }

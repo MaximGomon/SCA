@@ -48,6 +48,11 @@ namespace SCA.CountersService
                 {
                     activity.Tag.Add(tag);
                 }
+                else
+                {
+                    //TODO Выпилить и выдавать ошибку в лог на этом этапе
+                    tagLogic.Add(new Tag {Name = item});
+                }
             }
             activityLogic.Add(activity);
 
