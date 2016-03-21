@@ -1,5 +1,4 @@
-﻿@using Kendo.Mvc.UI
-@using SCA.Areas.Evaluation.Models
+﻿@using SCA.Areas.Evaluation.Models
 
 @section content_header{
     <h1><img src="~/Content/themes/admin/img/contacts.png" /> Контакты</h1>
@@ -54,7 +53,7 @@
 
         .DataSource(dataSource => dataSource
             .Ajax()
-            .Read(read => read.Action("Test", "Home"))
+            .Read(read => read.Action("List_Read", "Contacts"))
         )
 )
 
