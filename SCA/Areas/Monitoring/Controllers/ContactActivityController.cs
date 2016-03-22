@@ -30,7 +30,7 @@ namespace SCA.Areas.Monitoring.Controllers
                 UserName = x.Author.Name,
                 Type = x.Type.Name,
                 UserAgent = x.UserAgent,
-                Tags = x.GetAllTags(),
+                //Tags = x.GetAllTags(),
             }).ToList();
             DataSourceResult result = items.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);

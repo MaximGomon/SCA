@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using SCA.DataAccess.Repositories.Interfaces;
@@ -33,7 +34,8 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public void Delete(Guid id)
         {
-            //DbContext.
+            Delete(GetById(id));
+            SaveChanges();
         }
 
         public void Delete(TEntity entity)
@@ -49,7 +51,13 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            if (DbContext.ChangeTracker.Entries<TEntity>().All(e => e.Entity != entity))
+            {
+                DbContext.Set<TEntity>().Attach(entity);
+            }
+            DbContext.Entry(entity).State = EntityState.Modified;
+
+            SaveChanges();
         }
 
         public void UpdateAny(TEntity entity)
@@ -59,7 +67,6 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public IQueryable<TEntity> GetAllEntities()
         {
-            //var type = typeof (TEntity);
             return DbContext.Set<TEntity>().Select(x => x);
         }
 

@@ -34,8 +34,14 @@ namespace SCA.CountersService
                     Ip = data.Ip,
                     Name = data.Ip
                 };
+                contact.CreateDate = DateTime.Now;
+                contactLogic.Add(contact);
             }
-            contactLogic.Add(contact);
+            else
+            {
+                contact.ModifyDate = DateTime.Now;
+                contactLogic.Update(contact);
+            }
             activity.Author = contact;
             activity.CreateDate = DateTime.Now;
             activity.Cookie = data.Cookie;

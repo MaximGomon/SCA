@@ -8,8 +8,6 @@ namespace SCA.Domain.Interfaces
 {
     public interface IChanged
     {
-        
-
-        DateTime ModifyDate { get; set; }
+        DateTime? ModifyDate { get; set; }
     }
 }

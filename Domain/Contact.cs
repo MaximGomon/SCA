@@ -41,7 +41,7 @@ namespace SCA.Domain
         /// <summary>
         /// Дата рождения
         /// </summary>
-        public virtual DateTime BirthDate { get; set; }
+        public virtual DateTime? BirthDate { get; set; }
         /// <summary>
         /// Коментарии
         /// </summary>
@@ -65,7 +65,7 @@ namespace SCA.Domain
         /// <summary>
         /// Дата последней активности контакта
         /// </summary>
-        public virtual DateTime LastActivityDate { get; set; }
+        public virtual DateTime? LastActivityDate { get; set; }
         /// <summary>
         /// Состояние готовности к покупке
         /// </summary>
@@ -77,7 +77,7 @@ namespace SCA.Domain
         public virtual List<ClientSitePage> ViewedPages { get; set; }
         public virtual DateTime CreateDate { get; set; }
         public virtual SystemUser CreatedBy { get; set; }
-        public virtual DateTime ModifyDate { get; set; }
+        public virtual DateTime? ModifyDate { get; set; }
         public virtual SystemUser ChangedBy { get; set; }
     }
 }

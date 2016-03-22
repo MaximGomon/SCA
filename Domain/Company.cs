@@ -31,7 +31,7 @@ namespace SCA.Domain
         /// </summary>
         public virtual List<ClientSite> Sites { get; set; }
 
-        public virtual DateTime ModifyDate { get; set; }
+        public virtual DateTime? ModifyDate { get; set; }
         public virtual SystemUser ChangedBy { get; set; }
         public virtual DateTime CreateDate { get; set; }
         public virtual SystemUser CreatedBy { get; set; }

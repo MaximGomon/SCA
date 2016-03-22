@@ -8,7 +8,7 @@ namespace SCA.DataAccess
     {
         public ScaDbContext() : base("DbConnection")
         {
-
+            //var connectionString = this.Database.Connection.ConnectionString;
         }
 
         public DbSet<Activity> Activities { get; set; }
@@ -48,14 +48,7 @@ namespace SCA.DataAccess
 
         public static ScaDbContext Instance
         {
-            get
-            {
-                if (_context == null)
-                {
-                    _context = new ScaDbContext();
-                }
-                return _context;
-            }
+            get { return _context ?? (_context = new ScaDbContext()); }
         }
     }
 }
