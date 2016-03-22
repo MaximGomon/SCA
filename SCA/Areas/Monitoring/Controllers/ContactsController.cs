@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using SCA.Areas.Evaluation.Models;
+using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
@@ -81,10 +81,17 @@ namespace SCA.Areas.Monitoring.Controllers
             DataSourceResult result = items.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
 
+        [HttpPost]
         public void Add(ContactModel contact)
         {
             var dbContact = new Contact();
+            
             _contactBusinessLogic.Add(dbContact);
         }
     }
