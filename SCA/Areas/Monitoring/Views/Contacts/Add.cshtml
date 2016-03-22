@@ -1,8 +1,115 @@
-﻿
-@{
-    ViewBag.Title = "Add";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model SCA.Areas.Monitoring.Models.ContactModel
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>ContactModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().TextBoxFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().TextBoxFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreateDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.CreateDate, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().DatePickerFor(model => model.CreateDate)
+                @Html.ValidationMessageFor(model => model.CreateDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReadyToSell, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.ReadyToSell, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().TextBoxFor(model => model.ReadyToSell)
+                @Html.ValidationMessageFor(model => model.ReadyToSell, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReadyToSellCode, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.ReadyToSellCode, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.ValidationMessageFor(model => model.ReadyToSellCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().TextBoxFor(model => model.CompanyName)
+                @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Score, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.Score, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().NumericTextBoxFor(model => model.Score)
+                @Html.ValidationMessageFor(model => model.Score, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AgeCode, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.AgeCode, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().NumericTextBoxFor(model => model.AgeCode)
+                @Html.ValidationMessageFor(model => model.AgeCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().DatePickerFor(model => model.BirthDate)
+                @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().TextBoxFor(model => model.Gender)
+                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
 }
 
-<h2>Add</h2>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
 
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@

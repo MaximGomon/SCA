@@ -81,10 +81,17 @@ namespace SCA.Areas.Monitoring.Controllers
             DataSourceResult result = items.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
 
+        [HttpPost]
         public void Add(ContactModel contact)
         {
             var dbContact = new Contact();
+            
             _contactBusinessLogic.Add(dbContact);
         }
     }

@@ -6,7 +6,20 @@
     @Html.GetBreadcrumb("fa fa-dashboard", null, "Мониторинг", "Контакты")
 }
 @section content_box_header{
-    @Html.Action("TopMenu", "Grid", new { area = String.Empty })
+   <div class="btn-group" role="group" aria-label="...">
+       <a href="@Url.Action("Add","Contacts")" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i> Добавить</a>
+       <button class="btn btn-default btn-sm"><i class="fa fa-tags"></i> Теги</button>
+       <div class="btn-group" role="group">
+           <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Экспорт
+               <span class="caret"></span>
+           </button>
+           <ul class="dropdown-menu">
+               <li><a href="#"><i class="fa fa-file-excel-o"></i> Excel</a></li>
+               <li><a href="#"><i class="fa fa-file-pdf-o"></i> Pdf</a></li>
+           </ul>
+       </div>
+    </div>
     <hr class="hr-top" />
 }
 

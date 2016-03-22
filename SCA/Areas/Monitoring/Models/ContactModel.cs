@@ -1,5 +1,6 @@
 ﻿using System;
 using SCA.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace SCA.Areas.Monitoring.Models
 {
@@ -19,6 +20,8 @@ namespace SCA.Areas.Monitoring.Models
         }
 
         public string Name { get; set; }
+
+        [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string Email { get; set; }
         public string ReadyToSell { get; set; }
         public int ReadyToSellCode { get; set; }
