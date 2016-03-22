@@ -23,16 +23,30 @@ namespace SCA.Areas.Monitoring.Controllers
 
         public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
         {
-            var items = _activityBusinessLogic.GetAllEntities().Select(x => new ActivityModel
+            var items = _activityBusinessLogic.GetAllEntities().ToArray();//.Select(x => new ActivityModel
+            //{
+            //    Id = x.Id,
+            //    ActivityDate = x.CreateDate,
+            //    UserName = x.Author.Name,
+            //    Type = x.Type.Name,
+            //    UserAgent = x.UserAgent,
+            //    //Tags = x.GetAllTags(),
+            //}).ToList();
+            items.FirstOrDefault();
+            var act = new List<ActivityModel>();
+            foreach (var activity in items)
             {
-                Id = x.Id,
-                ActivityDate = x.CreateDate,
-                UserName = x.Author.Name,
-                Type = x.Type.Name,
-                UserAgent = x.UserAgent,
-                //Tags = x.GetAllTags(),
-            }).ToList();
-            DataSourceResult result = items.ToDataSourceResult(request);
+                act.Add(new ActivityModel
+                {
+                    Tags = activity.GetAllTags(),
+                    Id = activity.Id,
+                    UserAgent = activity.UserAgent,
+                    ActivityDate = activity.CreateDate,
+                    UserName = activity.Author.Name,
+                    //Type = activity.Type.Name
+                });
+            }
+            DataSourceResult result = act.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }

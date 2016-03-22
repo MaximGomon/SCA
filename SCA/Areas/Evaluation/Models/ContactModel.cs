@@ -6,6 +6,7 @@ namespace SCA.Areas.Evaluation.Models
     {
         public Guid Id { get; set; }
         public DateTime CreateDate { get; set; }
+        public string CreateDateAsString { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string ReadyToSell { get; set; }

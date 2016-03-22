@@ -34,7 +34,11 @@ namespace SCA.Domain
 
         public string GetAllTags()
         {
-            return Tag.Select(x => x.Name).Aggregate((a, b) => a + ", " + b);
+            if (Tag.Count > 0)
+            {
+                return Tag.Select(x => x.Name).Aggregate((a, b) => a + ", " + b);
+            }
+            return String.Empty;
         }
     }
 }
