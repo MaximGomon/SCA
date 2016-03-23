@@ -12,6 +12,7 @@ namespace SCA.Areas.Monitoring.Models
         public DateTime CreateDate
         {
             set { _createDateTime = value; }
+            get { return _createDateTime; }
         }
 
         public string CreateDateAsString
@@ -24,8 +25,15 @@ namespace SCA.Areas.Monitoring.Models
         [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string Email { get; set; }
         public string ReadyToSell { get; set; }
-        public int ReadyToSellCode { get; set; }
+        public Guid ReadyToSellId { get; set; }
         public string CompanyName { get; set; }
+        public Guid CompanyId { get; set; }
+        public string Status { get; set; }
+        public Guid StatusId { get; set; }
+        public string AgeDirection { get; set; }
+        public Guid AgeDirectionId { get; set; }
+        public string ContactType { get; set; }
+        public Guid ContactTypeId { get; set; }
         public int Score { get; set; }
         public int AgeCode { get; set; }
         public DateTime BirthDate { get; set; }

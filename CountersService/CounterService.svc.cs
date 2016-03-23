@@ -52,6 +52,10 @@ namespace SCA.CountersService
                 var tag = tagLogic.GetByName(item);
                 if (tag != null)
                 {
+                    if (activity.Tag == null)
+                    {
+                        activity.Tag = new List<Tag>();
+                    }
                     activity.Tag.Add(tag);
                 }
                 else

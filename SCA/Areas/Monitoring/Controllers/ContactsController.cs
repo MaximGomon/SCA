@@ -54,32 +54,28 @@ namespace SCA.Areas.Monitoring.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult GetContactTypes([DataSourceRequest]DataSourceRequest request)
+        public JsonResult GetContactTypes()
         {
-            var items = _contactTypeBusinessLogic.GetAllEntities();
-            DataSourceResult result = items.ToDataSourceResult(request);
-            return Json(result, JsonRequestBehavior.AllowGet);
+            var items = _contactTypeBusinessLogic.GetAllEntities().ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult GetContactStatuses([DataSourceRequest]DataSourceRequest request)
+        public JsonResult GetContactStatuses()
         {
-            var items = _contactStatusBusinessLogic.GetAllEntities();
-            DataSourceResult result = items.ToDataSourceResult(request);
-            return Json(result, JsonRequestBehavior.AllowGet);
+            var items = _contactStatusBusinessLogic.GetAllEntities().ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult GetAgeDirection([DataSourceRequest]DataSourceRequest request)
+        public JsonResult GetAgeDirection()
         {
-            var items = _ageBusinessLogic.GetAllEntities();
-            DataSourceResult result = items.ToDataSourceResult(request);
-            return Json(result, JsonRequestBehavior.AllowGet);
+            var items = _ageBusinessLogic.GetAllEntities().ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult GetSellStatus([DataSourceRequest]DataSourceRequest request)
+        public JsonResult GetSellStatus()
         {
-            var items = _sellBusinessLogic.GetAllEntities();
-            DataSourceResult result = items.ToDataSourceResult(request);
-            return Json(result, JsonRequestBehavior.AllowGet);
+            var items = _sellBusinessLogic.GetAllEntities().ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
         }
         [HttpGet]
         public ActionResult Add()

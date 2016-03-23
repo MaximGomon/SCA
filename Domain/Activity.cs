@@ -19,7 +19,7 @@ namespace SCA.Domain
         /// <summary>
         /// 
         /// </summary>
-        public virtual List<Tag> Tag { get; set; }
+        public virtual ICollection<Tag> Tag { get; set; }
         public virtual string UserAgent { get; set; }
         public virtual string Cookie { get; set; }
         public DateTime CreateDate { get; set; }

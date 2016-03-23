@@ -39,17 +39,19 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ReadyToSell, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @*@Html.EditorFor(model => model.ReadyToSell, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.Kendo().TextBoxFor(model => model.ReadyToSell)
-                @Html.ValidationMessageFor(model => model.ReadyToSell, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ReadyToSellCode, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-4">
-                @*@Html.EditorFor(model => model.ReadyToSellCode, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.ValidationMessageFor(model => model.ReadyToSellCode, "", new { @class = "text-danger" })
+                @(Html.Kendo().DropDownList()
+                                    .Name("ReadyToSellId")
+                                    .DataTextField("Name")
+                                    .DataValueField("Id")
+                                    .DataSource(source =>
+                                    {
+                                        source.Read(read =>
+                                        {
+                                            read.Action("GetSellStatus", "Contacts");
+                                        });
+                                    })
+                )
             </div>
         </div>
 
@@ -107,7 +109,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "List")
 </div>
 
 @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>

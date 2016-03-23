@@ -1351,7 +1351,10 @@
     <Compile Include="Areas\Monitoring\Controllers\SiteActionController.cs" />
     <Compile Include="Areas\Monitoring\Converters\ContactModelToDb.cs" />
     <Compile Include="Areas\Monitoring\Models\ActivityModel.cs" />
+    <Compile Include="Areas\Monitoring\Models\CompanyModel.cs" />
     <Compile Include="Areas\Monitoring\Models\ContactModel.cs" />
+    <Compile Include="Areas\Monitoring\Models\SiteModel.cs" />
+    <Compile Include="Areas\Monitoring\Models\TagModel.cs" />
     <Compile Include="Areas\Monitoring\MonitoringAreaRegistration.cs" />
     <Compile Include="Controllers\GridController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
