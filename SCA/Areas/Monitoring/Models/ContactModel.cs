@@ -34,11 +34,12 @@ namespace SCA.Areas.Monitoring.Models
         public Guid AgeDirectionId { get; set; }
         public string ContactType { get; set; }
         public Guid ContactTypeId { get; set; }
-        public int Score { get; set; }
+        public int ReadyToBuyScore { get; set; }
         public int AgeCode { get; set; }
         public DateTime BirthDate { get; set; }
         public string Gender { get; set; }
         public int GenderCode { get; set; }
         public string Comment { get; set; }
+        public string Telephones { get; set; }
     }
 }

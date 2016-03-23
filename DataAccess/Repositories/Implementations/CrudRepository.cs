@@ -26,6 +26,11 @@ namespace SCA.DataAccess.Repositories.Implementations
             return DbContext.Set<TEntity>().Find(id);
         }
 
+        public TEntity GetEntity<TEntity>(Guid id) where TEntity : IdentityEntity
+        {
+            return DbContext.Set<TEntity>().Find(id);
+        }
+
         public void Add(IEnumerable<TEntity> range)
         {
             DbContext.Set<TEntity>().AddRange(range);

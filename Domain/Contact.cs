@@ -33,7 +33,7 @@ namespace SCA.Domain
         /// <summary>
         /// Количество балов, когда контакт "готов к покупке"
         /// </summary>
-        public virtual int ReadyToByScore { get; set; }
+        public virtual int ReadyToBuyScore { get; set; }
         /// <summary>
         /// Преверено ли имя контакта
         /// </summary>
@@ -73,6 +73,9 @@ namespace SCA.Domain
         /// <summary>
         /// Список всех подтвержденных профилей соцсетей для контакта
         /// </summary>
+        public virtual ContactStatus Status { get; set; }
+        public virtual ContactType Type { get; set; }
+
         public virtual ICollection<SocialNetwork> SocialProfiles {get; set; }
         public virtual ICollection<ClientSitePage> ViewedPages { get; set; }
         public virtual DateTime CreateDate { get; set; }

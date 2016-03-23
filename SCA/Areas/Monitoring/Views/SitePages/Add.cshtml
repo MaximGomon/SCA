@@ -24,9 +24,34 @@
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @(Html.Kendo().MultiSelect()
+                  .Name("Tags")
+                  .DataTextField("Name")
+                  .DataValueField("Id")
+                  //.Placeholder("Select products...")
+                  .AutoBind(false)
+                  //.Value(new[] { new { ProductName = "Chang", ProductID = 2 }, new { ProductName = "Uncle Bob's Organic Dried Pears", ProductID = 7 } })
+                  .DataSource(source =>
+                  {
+                      source.Read(read =>
+                      {
+                          read.Action("GetTags", "SitePages");
+                      })
+                      .ServerFiltering(true);
+                  })
+                        )
             </div>
         </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default"/>
+            </div>
+        </div>
+
+
     </div>
 }

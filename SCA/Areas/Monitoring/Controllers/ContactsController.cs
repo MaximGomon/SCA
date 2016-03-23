@@ -35,7 +35,7 @@ namespace SCA.Areas.Monitoring.Controllers
         {
             //var items = _contactBusinessLogic.GetAllEntities().Select(x => new ContactModel
             //{
-            //    Score = x.Score,
+            //    ReadyToBuyScore = x.ReadyToBuyScore,
             //    ReadyToSell = x.ReadyToSell.Name,
             //    Name = x.Name,
             //    CreateDate = x.CreateDate,
@@ -45,7 +45,7 @@ namespace SCA.Areas.Monitoring.Controllers
             //return items.ToList();
             var items = _contactBusinessLogic.GetAllEntities().Select(x => new ContactModel
             {
-                Score = x.Score,
+                ReadyToBuyScore = x.Score,
                 ReadyToSell = x.ReadyToSell.Name,
                 Name = x.Name,
                 CreateDate = x.CreateDate,
@@ -106,7 +106,18 @@ namespace SCA.Areas.Monitoring.Controllers
         public void Add(ContactModel contact)
         {
             var dbContact = new Contact();
-            
+            dbContact.Age = _ageBusinessLogic.GetById(contact.AgeDirectionId);
+            dbContact.BirthDate = contact.BirthDate;
+            dbContact.Comment = contact.Comment;
+            dbContact.CreateDate = DateTime.Now;
+            dbContact.Email = contact.Email;
+            dbContact.Gender = (GenderEnum)Enum.Parse(typeof (GenderEnum), contact.Gender);
+            dbContact.IsNameChecked = true;
+            dbContact.ReadyToBuyScore = contact.ReadyToBuyScore;
+            dbContact.ReadyToSell = _sellBusinessLogic.GetById(contact.ReadyToSellId);
+            dbContact.Telephones = contact.Telephones.Split(';').ToList();
+            dbContact.Status = _contactStatusBusinessLogic.GetById(contact.StatusId);
+            dbContact.Type = _contactTypeBusinessLogic.GetById(contact.ContactTypeId);
             _contactBusinessLogic.Add(dbContact);
         }
     }

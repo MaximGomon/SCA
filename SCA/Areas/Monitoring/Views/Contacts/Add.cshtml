@@ -82,11 +82,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Score, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ReadyToBuyScore, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @*@Html.EditorFor(model => model.Score, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.Kendo().NumericTextBoxFor(model => model.Score)
-                @Html.ValidationMessageFor(model => model.Score, "", new { @class = "text-danger" })
+                @*@Html.EditorFor(model => model.ReadyToBuyScore, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().NumericTextBoxFor(model => model.ReadyToBuyScore)
+                @Html.ValidationMessageFor(model => model.ReadyToBuyScore, "", new { @class = "text-danger" })
             </div>
         </div>
 
