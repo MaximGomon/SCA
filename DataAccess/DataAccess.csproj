@@ -65,6 +65,10 @@
     <Compile Include="Migrations\201603230951070_FixTags.Designer.cs">
       <DependentUpon>201603230951070_FixTags.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603231423108_FixDbContext.cs" />
+    <Compile Include="Migrations\201603231423108_FixDbContext.Designer.cs">
+      <DependentUpon>201603231423108_FixDbContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -115,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603230951070_FixTags.resx">
       <DependentUpon>201603230951070_FixTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603231423108_FixDbContext.resx">
+      <DependentUpon>201603231423108_FixDbContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

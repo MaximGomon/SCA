@@ -8,7 +8,8 @@ namespace SCA.Domain.Enums
 {
     public enum GenderEnum
     {
-        Man,
-        Woman
+        Man = 1,
+        Woman = 2,
+        Unknown = 3
     }
 }

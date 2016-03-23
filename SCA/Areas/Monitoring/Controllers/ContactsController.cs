@@ -9,6 +9,7 @@ using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
+using SCA.Domain.Enums;
 
 namespace SCA.Areas.Monitoring.Controllers
 {
@@ -18,6 +19,7 @@ namespace SCA.Areas.Monitoring.Controllers
     public class ContactsController : Controller
     {
         private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+        private readonly CompanyBusinessLogic _companyBusinessLogic = new CompanyBusinessLogic(new CompanyRepository());
         private readonly DictionaryBusinessLogic<ContactType> _contactTypeBusinessLogic = new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>());
         private readonly DictionaryBusinessLogic<ContactStatus> _contactStatusBusinessLogic = new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>());
         private readonly DictionaryBusinessLogic<AgeDirection> _ageBusinessLogic = new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>());
@@ -57,6 +59,23 @@ namespace SCA.Areas.Monitoring.Controllers
         public JsonResult GetContactTypes()
         {
             var items = _contactTypeBusinessLogic.GetAllEntities().ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult GetCompanies()
+        {
+            var items = _companyBusinessLogic.GetAllEntities().ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult GetGender()
+        {
+            var items = new List<DictionaryEntity>
+            {
+                new DictionaryEntity {Code = int.Parse(GenderEnum.Unknown.ToString("D")), Name = GenderEnum.Unknown.ToString()},
+                new DictionaryEntity {Code = int.Parse(GenderEnum.Man.ToString("D")), Name = GenderEnum.Man.ToString()},
+                new DictionaryEntity {Code = int.Parse(GenderEnum.Woman.ToString("D")), Name = GenderEnum.Woman.ToString()},
+            };
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 

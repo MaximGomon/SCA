@@ -22,7 +22,9 @@ namespace SCA.DataAccess
         public DbSet<CompanySize> CompanySizes { get; set; }
         public DbSet<CompanyStatus> CompanyStatuses { get; set; }
         public DbSet<ContactType> ContactTypes { get; set; }
+        public DbSet<CompanyType> CompanyTypes { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactStatus> ContactStatuses { get; set; }
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeePosition> EmployeePositions { get; set; }

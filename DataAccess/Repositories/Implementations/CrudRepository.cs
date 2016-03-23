@@ -67,6 +67,7 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public IQueryable<TEntity> GetAllEntities()
         {
+            var type = typeof (TEntity);
             return DbContext.Set<TEntity>().Select(x => x);
         }
 

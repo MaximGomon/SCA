@@ -38,5 +38,7 @@ namespace SCA.Areas.Monitoring.Models
         public int AgeCode { get; set; }
         public DateTime BirthDate { get; set; }
         public string Gender { get; set; }
+        public int GenderCode { get; set; }
+        public string Comment { get; set; }
     }
 }

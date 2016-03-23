@@ -18,23 +18,31 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Email, htmlAttributes: new {@class = "control-label col-md-2"})
             <div class="col-md-4">
                 @*@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.Kendo().TextBoxFor(model => model.Email)
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.Email, "", new {@class = "text-danger"})
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CreateDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @*@Html.EditorFor(model => model.CreateDate, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.Kendo().DatePickerFor(model => model.CreateDate)
-                @Html.ValidationMessageFor(model => model.CreateDate, "", new { @class = "text-danger" })
+               @(Html.Kendo().DropDownList()
+                                    .Name("StatusId")
+                                    .DataTextField("Name")
+                                    .DataValueField("Id")
+                                    .DataSource(source =>
+                                    {
+                                        source.Read(read =>
+                                        {
+                                            read.Action("GetContactStatuses", "Contacts");
+                                        });
+                                    })
+            )
             </div>
         </div>
-        
 
         <div class="form-group">
             @Html.LabelFor(model => model.ReadyToSell, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -58,9 +66,18 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CompanyName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @*@Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.Kendo().TextBoxFor(model => model.CompanyName)
-                @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+                @(Html.Kendo().DropDownList()
+                                    .Name("CompanyId")
+                                    .DataTextField("Name")
+                                    .DataValueField("Id")
+                                    .DataSource(source =>
+                                    {
+                                        source.Read(read =>
+                                        {
+                                            read.Action("GetCompanies", "Contacts");
+                                        });
+                                    })
+                )
             </div>
         </div>
 
@@ -77,26 +94,54 @@
             @Html.LabelFor(model => model.AgeCode, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
                 @*@Html.EditorFor(model => model.AgeCode, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.Kendo().NumericTextBoxFor(model => model.AgeCode)
-                @Html.ValidationMessageFor(model => model.AgeCode, "", new { @class = "text-danger" })
+                @(Html.Kendo().DropDownList()
+                                    .Name("AgeDirectionId")
+                                    .DataTextField("Name")
+                                    .DataValueField("Id")
+                                    .DataSource(source =>
+                                    {
+                                        source.Read(read =>
+                                        {
+                                            read.Action("GetAgeDirection", "Contacts");
+                                        });
+                                    })
+                )
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.BirthDate, htmlAttributes: new {@class = "control-label col-md-2"})
             <div class="col-md-4">
                 @*@Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.Kendo().DatePickerFor(model => model.BirthDate)
-                @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.BirthDate, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @*@Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.Kendo().TextBoxFor(model => model.Comment)
+                @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @*@Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.Kendo().TextBoxFor(model => model.Gender)
-                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                @(Html.Kendo().DropDownList()
+                                    .Name("GenderCode")
+                                    .DataTextField("Name")
+                                    .DataValueField("Code")
+                                    .DataSource(source =>
+                                    {
+                                        source.Read(read =>
+                                        {
+                                            read.Action("GetGender", "Contacts");
+                                        });
+                                    })
+                )
             </div>
         </div>
 

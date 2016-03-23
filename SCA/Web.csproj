@@ -725,6 +725,8 @@
     <Content Include="Areas\Evaluation\Views\File\List.cshtml" />
     <Content Include="Areas\Evaluation\Views\WebSites\List.cshtml" />
     <Content Include="Areas\Monitoring\Views\Contacts\Add.cshtml" />
+    <Content Include="Areas\Monitoring\Views\Site\Add.cshtml" />
+    <None Include="Areas\Monitoring\Views\SitePages\Add.cshtml" />
     <None Include="Properties\PublishProfiles\malpinsoft - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\malpinsoft - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\webcore-ms - FTP.pubxml" />
@@ -1349,11 +1351,14 @@
     <Compile Include="Areas\Monitoring\Controllers\ContactsController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\ContactSegmentsController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\SiteActionController.cs" />
+    <Compile Include="Areas\Monitoring\Controllers\SiteController.cs" />
+    <Compile Include="Areas\Monitoring\Controllers\SitePagesController.cs" />
     <Compile Include="Areas\Monitoring\Converters\ContactModelToDb.cs" />
     <Compile Include="Areas\Monitoring\Models\ActivityModel.cs" />
     <Compile Include="Areas\Monitoring\Models\CompanyModel.cs" />
     <Compile Include="Areas\Monitoring\Models\ContactModel.cs" />
     <Compile Include="Areas\Monitoring\Models\SiteModel.cs" />
+    <Compile Include="Areas\Monitoring\Models\SitePageModel.cs" />
     <Compile Include="Areas\Monitoring\Models\TagModel.cs" />
     <Compile Include="Areas\Monitoring\MonitoringAreaRegistration.cs" />
     <Compile Include="Controllers\GridController.cs" />

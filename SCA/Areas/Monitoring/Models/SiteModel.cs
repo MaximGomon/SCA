@@ -8,5 +8,6 @@ namespace SCA.Areas.Monitoring.Models
         public string Domain { get; set; }
         public string Name { get; set; } 
         public SitePageModel[] Pages { get; set; }
+        public string Comment { get; set; }
     }
 }
