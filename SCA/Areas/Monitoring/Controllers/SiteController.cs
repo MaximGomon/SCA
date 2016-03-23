@@ -34,6 +34,7 @@ namespace SCA.Areas.Monitoring.Controllers
             {
                 dbSite.Pages.Add(_sitePagesBusinessLogic.GetById(sitePageModel.Id));
             }
+            _siteBusinessLogic.Add(dbSite);
         }
     }
 }
