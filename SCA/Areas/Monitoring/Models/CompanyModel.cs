@@ -10,5 +10,6 @@ namespace SCA.Areas.Monitoring.Models
         public Guid OwnerId { get; set; }
         public string Comment { get; set; }
         public DateTime CreateDate { get; set; }
+        public SiteModel[] Sites { get; set; }
     }
 }
