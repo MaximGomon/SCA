@@ -14,3 +14,4 @@ D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.dll
 D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.pdb
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.UpdateActivity.resources
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FixModifyDate.resources
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FixTags.resources

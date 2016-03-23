@@ -16,7 +16,7 @@ namespace SCA.Domain
         /// <summary>
         /// Перечен его телефонніх номеров
         /// </summary>
-        public virtual List<string> Telephones { get; set; }
+        public virtual ICollection<string> Telephones { get; set; }
         public virtual string Email { get; set; }
         /// <summary>
         /// Родительский контакт
@@ -61,7 +61,7 @@ namespace SCA.Domain
         /// <summary>
         /// Связанные контакты
         /// </summary>
-        public virtual List<Contact> LinkedContacts { get; set; }
+        public virtual ICollection<Contact> LinkedContacts { get; set; }
         /// <summary>
         /// Дата последней активности контакта
         /// </summary>
@@ -73,8 +73,8 @@ namespace SCA.Domain
         /// <summary>
         /// Список всех подтвержденных профилей соцсетей для контакта
         /// </summary>
-        public virtual List<SocialNetwork> SocialProfiles {get; set; }
-        public virtual List<ClientSitePage> ViewedPages { get; set; }
+        public virtual ICollection<SocialNetwork> SocialProfiles {get; set; }
+        public virtual ICollection<ClientSitePage> ViewedPages { get; set; }
         public virtual DateTime CreateDate { get; set; }
         public virtual SystemUser CreatedBy { get; set; }
         public virtual DateTime? ModifyDate { get; set; }

@@ -57,7 +57,9 @@ namespace SCA.CountersService
                 else
                 {
                     //TODO Выпилить и выдавать ошибку в лог на этом этапе
-                    tagLogic.Add(new Tag {Name = item});
+                    var tg = new Tag {Name = item};
+                    tagLogic.Add(tg);
+                    activity.Tag.Add(tg);
                 }
             }
             activityLogic.Add(activity);

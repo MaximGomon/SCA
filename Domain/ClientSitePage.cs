@@ -14,7 +14,7 @@ namespace SCA.Domain
         /// <summary>
         /// Тег странички
         /// </summary>
-        public virtual List<Tag> Tags { get; set; }
+        public virtual ICollection<Tag> Tags { get; set; }
         /// <summary>
         /// Относительный урл странички от домена сайта
         /// </summary>

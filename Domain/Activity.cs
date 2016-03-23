@@ -12,10 +12,6 @@ namespace SCA.Domain
     /// </summary>
     public class Activity: IdentityEntity, ICreated
     {
-        public Activity()
-        {
-            Tag = new List<Tag>();
-        }
         /// <summary>
         /// Тип события
         /// </summary>

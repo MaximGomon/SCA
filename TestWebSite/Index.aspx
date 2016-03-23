@@ -20,31 +20,11 @@
             processdata: true,
             crossDomain: true,
             success: function () {
-               
             },
             error: function (msg) {
             }
         });
     });
-function Button1_onclick() {        
-    $.ajax({
-        type: "POST",
-        url: "http://localhost:8002/CounterService.svc/DoWork",
-        data: JSON.stringify({
-            Ip: "eeeee"
-        }),
-        contentType: "application/json; charset=UTF-8",
-        dataType: "json",
-        processdata: true,
-        crossDomain: true,
-        success: function () {
-            
-        },
-        error: function (msg) {
-        }
-    });
-    return false;
-}
 </script>
 <head runat="server">
     <title>FirstPage</title>

@@ -21,7 +21,7 @@ namespace SCA.Domain
         /// <summary>
         /// Сотрудники
         /// </summary>
-        public virtual List<Contact> Employees { get; set; }
+        public virtual ICollection<Contact> Employees { get; set; }
         /// <summary>
         /// Ответственный исполнитель, человек, который закреплен за компанией
         /// </summary>
@@ -29,7 +29,7 @@ namespace SCA.Domain
         /// <summary>
         /// Перечень всех сайтов клиента, на которых установленны счетчики
         /// </summary>
-        public virtual List<ClientSite> Sites { get; set; }
+        public virtual ICollection<ClientSite> Sites { get; set; }
 
         public virtual DateTime? ModifyDate { get; set; }
         public virtual SystemUser ChangedBy { get; set; }

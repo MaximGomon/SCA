@@ -14,11 +14,12 @@ namespace SCA.Domain
         /// <summary>
         /// Все теги, которые находятся выше по иерархии
         /// </summary>
-        public virtual List<Tag> ParentTags { get; set; }
+        public virtual ICollection<Tag> ParentTags { get; set; }
         /// <summary>
         /// Все теги, которые находятся на том же уровне, что и текущий
         /// </summary>
         //public List<Tag> SubsideriesTags { get; set; }  
         public virtual string Description { get; set; }
+        public virtual ICollection<Activity> Activities { get; set; }
     }
 }

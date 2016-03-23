@@ -14,10 +14,10 @@ namespace SCA.Domain
         /// <summary>
         /// Перечень страниц сайта
         /// </summary>
-        public virtual List<ClientSitePage> Pages { get; set; }
+        public virtual ICollection<ClientSitePage> Pages { get; set; }
         /// <summary>
         /// Список доменов для сайта
         /// </summary>
-        public virtual List<string> Domains { get; set; } 
+        public virtual ICollection<string> Domains { get; set; } 
     }
 }
