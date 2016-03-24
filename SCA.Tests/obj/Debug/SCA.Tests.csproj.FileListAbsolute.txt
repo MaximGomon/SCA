@@ -33,9 +33,9 @@ D:\Work\Sources\SCA\SCA.Tests\bin\Debug\SCA.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Domain.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\BussinesLogic.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\DataAccess.dll
-D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Domain.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.Razor.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.dll
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
@@ -46,9 +46,9 @@ D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.Unit
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.xml
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.xml
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Domain.pdb
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\BussinesLogic.pdb
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\DataAccess.pdb
-D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Domain.pdb
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.Razor.xml
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Deployment.xml

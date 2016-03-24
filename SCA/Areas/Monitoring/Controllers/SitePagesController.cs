@@ -34,7 +34,7 @@ namespace SCA.Areas.Monitoring.Controllers
             {
                 Name = model.Name,
                 IsDeleted = false,
-                RelatedUrl = model.RelatedUrl
+                RelatedUrl = model.RelatedUrl,
             };
             _sitePagesBusinessLogic.Add(dbSitePage);
         }
