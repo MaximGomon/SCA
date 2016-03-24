@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201603232121400_AddNewFieldsToContact.Designer.cs">
       <DependentUpon>201603232121400_AddNewFieldsToContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603240926016_AddNewDbEntity.cs" />
+    <Compile Include="Migrations\201603240926016_AddNewDbEntity.Designer.cs">
+      <DependentUpon>201603240926016_AddNewDbEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -129,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603232121400_AddNewFieldsToContact.resx">
       <DependentUpon>201603232121400_AddNewFieldsToContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603240926016_AddNewDbEntity.resx">
+      <DependentUpon>201603240926016_AddNewDbEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
