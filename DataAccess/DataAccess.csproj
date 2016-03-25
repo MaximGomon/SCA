@@ -85,6 +85,7 @@
     <Compile Include="Repositories\Implementations\ContactRepository.cs" />
     <Compile Include="Repositories\Implementations\CrudRepository.cs" />
     <Compile Include="Repositories\Implementations\DictionaryRepository.cs" />
+    <Compile Include="Repositories\Implementations\LeadRepository.cs" />
     <Compile Include="Repositories\Implementations\SocialNetworkRepository.cs" />
     <Compile Include="Repositories\Implementations\SystemUserRepository.cs" />
     <Compile Include="Repositories\Implementations\TagRepository.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="Repositories\Interfaces\ICurrencyRepository.cs" />
     <Compile Include="Repositories\Interfaces\IDictionaryRepository.cs" />
     <Compile Include="Repositories\Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ILeadRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ILeadTypeRepository.cs" />
     <Compile Include="Repositories\Interfaces\INamedRepository.cs" />
     <Compile Include="Repositories\Interfaces\IPaymentRepository.cs" />
     <Compile Include="Repositories\Interfaces\ISocialNetworkRepository.cs" />
