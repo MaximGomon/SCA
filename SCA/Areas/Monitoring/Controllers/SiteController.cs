@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Kendo.Mvc.Extensions;
+using Kendo.Mvc.UI;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
@@ -18,7 +20,7 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            return View();
+            return View(new SiteModel {Id = Guid.NewGuid()});
         }
 
         [HttpPost]
@@ -35,6 +37,38 @@ namespace SCA.Areas.Monitoring.Controllers
                 dbSite.Pages.Add(_sitePagesBusinessLogic.GetById(sitePageModel.Id));
             }
             _siteBusinessLogic.Add(dbSite);
+        }
+
+        [HttpGet]
+        public ActionResult Details(Guid id)
+        {
+            var site = _siteBusinessLogic.GetById(id);
+            var model = ConvertToSiteModel(site);
+            return View(model);
+        }
+
+        public ActionResult List()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
+        {
+            var items = _siteBusinessLogic.GetAllEntities().Select(x => ConvertToSiteModel(x));
+            DataSourceResult result = items.ToDataSourceResult(request);
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        private static SiteModel ConvertToSiteModel(ClientSite x)
+        {
+            return new SiteModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Company = x.Owner.Name,
+                PagesCount = x.Pages.Count
+            };
         }
     }
 }

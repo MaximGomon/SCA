@@ -18,3 +18,4 @@ D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.dll
 D:\Work\Sources\SCA\DataAccess\obj\Debug\DataAccess.pdb
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddNewFieldsToContact.resources
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddNewDbEntity.resources
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddNewFieldsToClientSite.resources

@@ -4,7 +4,7 @@
     @Html.GetBreadcrumb("fa fa-dashboard", null, "Мониторинг", "Компании")
 }
 @section content_box_header{
-    @Html.Action("TopMenu", "Grid", new { area = String.Empty })
+   <a href="@Url.Action("Add","Companies")" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i> Добавить</a>
     <hr class="hr-top" />
 }
 

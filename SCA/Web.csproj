@@ -727,7 +727,10 @@
     <Content Include="Areas\Monitoring\Views\Contacts\Add.cshtml" />
     <Content Include="Areas\Monitoring\Views\Site\Add.cshtml" />
     <None Include="Areas\Monitoring\Views\Companies\Add.cshtml" />
-    <None Include="Areas\Monitoring\Views\SitePages\Add.cshtml" />
+    <Content Include="Areas\Monitoring\Views\SitePages\Add.cshtml" />
+    <None Include="Areas\Monitoring\Views\SitePages\AddFull.cshtml" />
+    <Content Include="Areas\Monitoring\Views\Site\Details.cshtml" />
+    <Content Include="Areas\Monitoring\Views\Site\List.cshtml" />
     <None Include="Properties\PublishProfiles\malpinsoft - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\malpinsoft - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\webcore-ms - FTP.pubxml" />

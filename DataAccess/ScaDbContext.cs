@@ -45,6 +45,8 @@ namespace SCA.DataAccess
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Activity>()
                 .HasMany(s => s.Tag);
+            modelBuilder.Entity<Company>()
+                .HasMany(x => x.Sites);
         }
     }
 
