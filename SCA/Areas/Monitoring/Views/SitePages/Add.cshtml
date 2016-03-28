@@ -1,23 +1,45 @@
 ﻿@model SCA.Areas.Monitoring.Models.SitePageModel
 
 <div class="modal-content">
-    <div class="modal-header">
+    @*<div class="modal-header">
         <button class="close" data-dismiss="modal" area-hidden="true">X</button>
         <h4>Новая страница</h4>
-    </div>
+    </div>*@
     <div class="modal-body">
-        <dl class="dl-horizontal">
-            <dt>Название:</dt>
-            <dd>@Html.DisplayFor(model => model.Name)</dd>
-
-            <dt>Теги (через запятую)</dt>
-            <dd>@Html.DisplayFor(model => model.Tag)</dd>
-
-            <dt>Относительный URL</dt>
-            <dd>@Html.DisplayFor(model => model.RelatedUrl)</dd>
-        </dl>
+        <table style="width: 100%">
+            <tr>
+                <td style="width: auto">
+                    @Html.Label("Название")
+                </td>
+                <td>
+                    @Html.Kendo().TextBoxFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td style="width: auto">
+                    @Html.Label("Теги (через запятую)")
+                </td>
+                <td>
+                    @Html.Kendo().TextBoxFor(model => model.Tag)
+                    @Html.ValidationMessageFor(model => model.Tag, "", new { @class = "text-danger" })
+                </td>
+            </tr>
+            <tr>
+                <td style="width: auto">
+                    @Html.Label("Относительный URL")
+                </td>
+                <td>
+                    @Html.Kendo().TextBoxFor(model => model.RelatedUrl)
+                    @Html.ValidationMessageFor(model => model.RelatedUrl, "", new {@class = "text-danger"})
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </td>
+            </tr>
+        </table>
     </div>
-    <div>
-        @Html.ActionLink("SitePages", "Add", new { @class = "close" })
-    </div>
+    
 </div>

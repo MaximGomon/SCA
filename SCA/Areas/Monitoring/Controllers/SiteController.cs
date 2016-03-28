@@ -55,8 +55,13 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpPost]
         public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
         {
-            var items = _siteBusinessLogic.GetAllEntities().Select(x => ConvertToSiteModel(x));
-            DataSourceResult result = items.ToDataSourceResult(request);
+            var items = _siteBusinessLogic.GetAllEntities();//.Select(x => ConvertToSiteModel(x));
+            var models = new List<SiteModel>();
+            foreach (var clientSite in items)
+            {
+                models.Add(ConvertToSiteModel(clientSite));
+            }
+            DataSourceResult result = models.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 

@@ -1,6 +1,6 @@
 ﻿@model SCA.Areas.Monitoring.Models.SiteModel
 
-@using (Html.BeginForm("Add", "Site")) 
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
 
@@ -28,8 +28,6 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button type="submit" id="btnSave" name="Command" value="Save" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
-                    <span class="ui-button-text">Save</span></button>
                 <input type="submit" value="Create" class="btn btn-default"/>
             </div>
         </div>
@@ -38,9 +36,9 @@
     <div id="modDialog" class="modal fade">
         <div id="dialogContent" class="modal-dialog"></div>
     </div>
-                @Html.ActionLink("SitePages", "Add", new { id = Model.Id }, new {@class = "addNewItem"})
+                @Html.ActionLink("SitePages", "Add", "SitePages", new { id = Model.Id }, new {@class = "addNewItem"})
     @section scripts
-{
+    {
         <script type="text/javascript">
 
         $(function () {
