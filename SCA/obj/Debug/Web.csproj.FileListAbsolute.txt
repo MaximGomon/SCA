@@ -89,3 +89,4 @@ D:\Work\Sources\SCA\SCA\bin\zh-CN\Kendo.Mvc.resources.dll
 D:\Work\Sources\SCA\SCA\obj\Debug\Web.csprojResolveAssemblyReference.cache
 D:\Work\Sources\SCA\SCA\obj\Debug\SCA.dll
 D:\Work\Sources\SCA\SCA\obj\Debug\SCA.pdb
+D:\Work\Sources\SCA\SCA\bin\FillDictionary.sql

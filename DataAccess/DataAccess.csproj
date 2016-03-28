@@ -81,6 +81,10 @@
     <Compile Include="Migrations\201603272127076_AddNewFieldsToClientSite.Designer.cs">
       <DependentUpon>201603272127076_AddNewFieldsToClientSite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603282021042_FillDictionary.cs" />
+    <Compile Include="Migrations\201603282021042_FillDictionary.Designer.cs">
+      <DependentUpon>201603282021042_FillDictionary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -148,6 +152,14 @@
     <EmbeddedResource Include="Migrations\201603272127076_AddNewFieldsToClientSite.resx">
       <DependentUpon>201603272127076_AddNewFieldsToClientSite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603282021042_FillDictionary.resx">
+      <DependentUpon>201603282021042_FillDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FillDictionary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

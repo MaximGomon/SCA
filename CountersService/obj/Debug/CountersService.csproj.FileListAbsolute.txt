@@ -26,3 +26,4 @@ D:\Work\Sources\SCA\CountersService\bin\EntityFramework.xml
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.csprojResolveAssemblyReference.cache
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.dll
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.pdb
+D:\Work\Sources\SCA\CountersService\bin\FillDictionary.sql
