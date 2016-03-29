@@ -2,7 +2,7 @@
 
 namespace SCA.Domain
 {
-    public class LeadType : IdentityEntity
+    public class LeadType : NamedEntity
     {
          public virtual ICollection<Tag> LeadTags { get; set; } 
     }

@@ -4,4 +4,31 @@
     ViewBag.Title = "Lead";
 }
 
-<h2>New Lead</h2>
+@using (Html.BeginForm())
+{
+    <h2>New Lead</h2>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+                @(Html.Kendo().MultiSelectFor(x => x.Tags)
+                  .Name("Tags")
+                  .DataTextField("Name")
+                  .DataValueField("Id")
+                  .Placeholder("Select tags...")
+                  .AutoBind(true)
+                  .DataSource(source =>
+                  {
+                      source.Read(read =>
+                      {
+                          read.Action("GetTags", "Lead");
+                      }).ServerFiltering(true);
+                  })
+                )
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+}
