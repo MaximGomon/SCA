@@ -27,7 +27,6 @@ namespace SCA.Domain
         /// Юзер, которого мі определили со счетчика
         /// </summary>
         public virtual Contact Author { get; set; }
-
         public string GetAllTags()
         {
             if (Tag.Count > 0)
