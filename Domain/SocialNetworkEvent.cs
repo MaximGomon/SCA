@@ -13,6 +13,7 @@ namespace SCA.Domain
     {
         //Придумать набор полей, в зависимости от того, что можно прочитать с сетей
         public virtual string Link { get; set; }
+
         public virtual string Message { get; set; }
         public virtual ICollection<Tag> Tags { get; set; }
         public virtual Contact Avtor { get; set; }
