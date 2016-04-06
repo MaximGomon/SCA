@@ -39,6 +39,26 @@ namespace SCA.Areas.Monitoring.Controllers
             _siteBusinessLogic.Add(dbSite);
         }
 
+        public JsonResult PagesList([DataSourceRequest]DataSourceRequest request, Guid id)
+        {
+            var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Id == id).SelectMany(x => x.Pages).ToList();
+            var pages = new List<SitePageModel>();
+            foreach (var item in items)
+            {
+                pages.Add(new SitePageModel
+                {
+                    Name = item.Name,
+                    RelatedUrl = item.RelatedUrl,
+                    Id = item.Id,
+                    Tag = string.Join(", ", item.Tags.Select(x => x.Name)),
+                    SiteId = id
+
+                });
+            }
+            DataSourceResult result = items.ToDataSourceResult(request);
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
         [HttpGet]
         public ActionResult Details(Guid id)
         {
@@ -72,7 +92,8 @@ namespace SCA.Areas.Monitoring.Controllers
                 Id = x.Id,
                 Name = x.Name,
                 Company = x.Owner.Name,
-                PagesCount = x.Pages.Count
+                PagesCount = x.Pages.Count,
+                Domains = x.Domains.Aggregate((a, b) => a + ";" + b)
             };
         }
     }

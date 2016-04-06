@@ -18,3 +18,5 @@ D:\Work\Sources\SCA\TestWebSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPl
 D:\Work\Sources\SCA\TestWebSite\obj\Debug\TestWebSite.csprojResolveAssemblyReference.cache
 D:\Work\Sources\SCA\TestWebSite\obj\Debug\TestWebSite.dll
 D:\Work\Sources\SCA\TestWebSite\obj\Debug\TestWebSite.pdb
+D:\Work\Sources\SCA\TestWebSite\bin\TestWebSite.dll.CodeAnalysisLog.xml
+D:\Work\Sources\SCA\TestWebSite\bin\TestWebSite.dll.lastcodeanalysissucceeded

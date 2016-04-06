@@ -3,3 +3,5 @@ D:\Work\Sources\SCA\Domain\bin\Debug\Domain.pdb
 D:\Work\Sources\SCA\Domain\obj\Debug\Domain.dll
 D:\Work\Sources\SCA\Domain\obj\Debug\Domain.pdb
 D:\Work\Sources\SCA\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+D:\Work\Sources\SCA\Domain\bin\Debug\Domain.dll.CodeAnalysisLog.xml
+D:\Work\Sources\SCA\Domain\bin\Debug\Domain.dll.lastcodeanalysissucceeded

@@ -27,3 +27,5 @@ D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.csprojResolveAssem
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.dll
 D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.pdb
 D:\Work\Sources\SCA\CountersService\bin\FillDictionary.sql
+D:\Work\Sources\SCA\CountersService\bin\CountersService.dll.CodeAnalysisLog.xml
+D:\Work\Sources\SCA\CountersService\bin\CountersService.dll.lastcodeanalysissucceeded
