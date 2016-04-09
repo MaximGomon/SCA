@@ -2,7 +2,7 @@
 
 namespace SCA.DataAccess.Repositories.Interfaces
 {
-    public interface ISocialNetworkRepository : ICRUDRepository<SocialNetwork>
+    public interface ISocialNetworkRepository : ICRUDRepository<SocialNetworkEvent>
     {
          
     }

@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+D:\job\New TASK\SCA\DataAccess\bin\Debug\DataAccess.dll.config
+D:\job\New TASK\SCA\DataAccess\bin\Debug\DataAccess.dll
+D:\job\New TASK\SCA\DataAccess\bin\Debug\DataAccess.pdb
+D:\job\New TASK\SCA\DataAccess\bin\Debug\Domain.dll
+D:\job\New TASK\SCA\DataAccess\bin\Debug\EntityFramework.dll
+D:\job\New TASK\SCA\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\job\New TASK\SCA\DataAccess\bin\Debug\Domain.pdb
+D:\job\New TASK\SCA\DataAccess\bin\Debug\EntityFramework.xml
+D:\job\New TASK\SCA\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\job\New TASK\SCA\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+D:\job\New TASK\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.Init.resources
+D:\job\New TASK\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.UpdateActivity.resources
+D:\job\New TASK\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FixModifyDate.resources
+D:\job\New TASK\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FixTags.resources
+D:\job\New TASK\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FixDbContext.resources
+D:\job\New TASK\SCA\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
+D:\job\New TASK\SCA\DataAccess\obj\Debug\DataAccess.dll
+D:\job\New TASK\SCA\DataAccess\obj\Debug\DataAccess.pdb
+=======
 D:\Work\Sources\SCA\DataAccess\bin\Debug\DataAccess.dll.config
 D:\Work\Sources\SCA\DataAccess\bin\Debug\DataAccess.dll
 D:\Work\Sources\SCA\DataAccess\bin\Debug\DataAccess.pdb
@@ -21,4 +41,4 @@ D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddNewDbEntit
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddNewFieldsToClientSite.resources
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FillDictionary.resources
 D:\Work\Sources\SCA\DataAccess\bin\Debug\FillDictionary.sql
-D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.CompanyUpdate.resources
+>>>>>>> 47d84477dbf40fa6046cab558631787d8139c619

@@ -75,8 +75,11 @@ namespace SCA.Domain
         /// </summary>
         public virtual ContactStatus Status { get; set; }
         public virtual ContactType Type { get; set; }
-
-        public virtual ICollection<SocialNetwork> SocialProfiles {get; set; }
+        /// <summary>
+        /// Адрес пользователя в соцсетях
+        /// </summary>
+        public virtual string Link { get; set; }
+        public virtual ICollection<SocialNetworkEvent> SocialProfiles {get; set; }
         public virtual ICollection<ClientSitePage> ViewedPages { get; set; }
         public virtual DateTime CreateDate { get; set; }
         public virtual SystemUser CreatedBy { get; set; }

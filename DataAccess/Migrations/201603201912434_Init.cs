@@ -109,7 +109,7 @@ namespace SCA.DataAccess.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.SocialNetwork",
+                "dbo.SocialNetworkEvent",
                 c => new
                     {
                         Id = c.Guid(nullable: false),
@@ -375,7 +375,7 @@ namespace SCA.DataAccess.Migrations
             DropForeignKey("dbo.ClientSitePage", "Contact_Id", "dbo.Contact");
             DropForeignKey("dbo.Tag", "ClientSitePage_Id", "dbo.ClientSitePage");
             DropForeignKey("dbo.Tag", "Tag_Id", "dbo.Tag");
-            DropForeignKey("dbo.SocialNetwork", "Contact_Id", "dbo.Contact");
+            DropForeignKey("dbo.SocialNetworkEvent", "Contact_Id", "dbo.Contact");
             DropForeignKey("dbo.Contact", "ReadyToSell_Id", "dbo.ReadyToSellState");
             DropForeignKey("dbo.Contact", "Parent_Id", "dbo.Contact");
             DropForeignKey("dbo.Contact", "CreatedBy_Id", "dbo.SystemUser");
@@ -398,7 +398,7 @@ namespace SCA.DataAccess.Migrations
             DropIndex("dbo.Tag", new[] { "Tag_Id" });
             DropIndex("dbo.ClientSitePage", new[] { "ClientSite_Id" });
             DropIndex("dbo.ClientSitePage", new[] { "Contact_Id" });
-            DropIndex("dbo.SocialNetwork", new[] { "Contact_Id" });
+            DropIndex("dbo.SocialNetworkEvent", new[] { "Contact_Id" });
             DropIndex("dbo.SystemUser", new[] { "Type_Id" });
             DropIndex("dbo.Contact", new[] { "Company_Id" });
             DropIndex("dbo.Contact", new[] { "ReadyToSell_Id" });
@@ -425,7 +425,7 @@ namespace SCA.DataAccess.Migrations
             DropTable("dbo.ActivityType");
             DropTable("dbo.Tag");
             DropTable("dbo.ClientSitePage");
-            DropTable("dbo.SocialNetwork");
+            DropTable("dbo.SocialNetworkEvent");
             DropTable("dbo.ReadyToSellState");
             DropTable("dbo.SystemUserType");
             DropTable("dbo.SystemUser");

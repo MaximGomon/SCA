@@ -3,7 +3,7 @@ using SCA.Domain;
 
 namespace SCA.DataAccess.Repositories.Implementations
 {
-    public class SocialNetworkRepository: CrudRepository<SocialNetwork>, ISocialNetworkRepository
+    public class SocialNetworkRepository: CrudRepository<SocialNetworkEvent>, ISocialNetworkRepository
     {
          
     }
