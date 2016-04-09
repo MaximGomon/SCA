@@ -1,5 +1,5 @@
-D:\Work\Sources\SCA\Domain\bin\Debug\Domain.dll
-D:\Work\Sources\SCA\Domain\bin\Debug\Domain.pdb
-D:\Work\Sources\SCA\Domain\obj\Debug\Domain.dll
-D:\Work\Sources\SCA\Domain\obj\Debug\Domain.pdb
-D:\Work\Sources\SCA\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+D:\job\New TASK\SCA\Domain\bin\Debug\Domain.dll
+D:\job\New TASK\SCA\Domain\bin\Debug\Domain.pdb
+D:\job\New TASK\SCA\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+D:\job\New TASK\SCA\Domain\obj\Debug\Domain.dll
+D:\job\New TASK\SCA\Domain\obj\Debug\Domain.pdb

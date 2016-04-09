@@ -32,7 +32,7 @@ namespace SCA.DataAccess
         public DbSet<PaymentStatus> PaymentStatuses { get; set; }
         public DbSet<PaymentType> PaymentTypes { get; set; }
         public DbSet<ReadyToSellState> ReadyToSellStates { get; set; }
-        public DbSet<SocialNetwork> SocialNetworks { get; set; }
+        public DbSet<SocialNetworkEvent> SocialNetworks { get; set; }
         public DbSet<SocialNetworkType> SoxiSocialNetworkTypes { get; set; }
         public DbSet<SystemUser> SystemUsers { get; set; }
         public DbSet<SystemUserType> SystemUserTypes { get; set; }

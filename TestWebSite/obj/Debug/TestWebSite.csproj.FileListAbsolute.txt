@@ -18,3 +18,23 @@ D:\Work\Sources\SCA\TestWebSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPl
 D:\Work\Sources\SCA\TestWebSite\obj\Debug\TestWebSite.csprojResolveAssemblyReference.cache
 D:\Work\Sources\SCA\TestWebSite\obj\Debug\TestWebSite.dll
 D:\Work\Sources\SCA\TestWebSite\obj\Debug\TestWebSite.pdb
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\csc.exe
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\System.Collections.Immutable.dll
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\System.Reflection.Metadata.dll
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\vbc.exe
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\VBCSCompiler.exe
+D:\job\New TASK\Sca\TestWebSite\bin\roslyn\VBCSCompiler.exe.config
+D:\job\New TASK\Sca\TestWebSite\bin\TestWebSite.dll.config
+D:\job\New TASK\Sca\TestWebSite\bin\TestWebSite.dll
+D:\job\New TASK\Sca\TestWebSite\bin\TestWebSite.pdb
+D:\job\New TASK\Sca\TestWebSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\job\New TASK\Sca\TestWebSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\job\New TASK\Sca\TestWebSite\obj\Debug\TestWebSite.csprojResolveAssemblyReference.cache
+D:\job\New TASK\Sca\TestWebSite\obj\Debug\TestWebSite.dll
+D:\job\New TASK\Sca\TestWebSite\obj\Debug\TestWebSite.pdb
