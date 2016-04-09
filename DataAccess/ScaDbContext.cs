@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using SCA.Domain;
 
@@ -53,10 +54,21 @@ namespace SCA.DataAccess
     public sealed class DbContextSingle
     {
         private static ScaDbContext _context;
-
+        private static object syncRoot = new Object();
         public static ScaDbContext Instance
         {
-            get { return _context ?? (_context = new ScaDbContext()); }
+            get
+            {
+                if (_context == null)
+                {
+                    lock (syncRoot)
+                    {
+                        if (_context == null)
+                            _context = new ScaDbContext();
+                    }
+                }
+                return _context;
+            }
         }
     }
 }

@@ -80,7 +80,7 @@ namespace SCA.Areas.Monitoring.Controllers
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult GetContacts(string contains)
+        public JsonResult GetOwnersContains(string contains)
         {
             var items = _contactBusinessLogic.GetAllEntities().Where(x => x.Name.Contains(contains)).ToList();
             return Json(items, JsonRequestBehavior.AllowGet);

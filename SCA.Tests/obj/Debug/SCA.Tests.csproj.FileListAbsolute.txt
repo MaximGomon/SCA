@@ -74,4 +74,3 @@ D:\Work\Sources\SCA\SCA.Tests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
 D:\Work\Sources\SCA\SCA.Tests\obj\Debug\SCA.Tests.csprojResolveAssemblyReference.cache
 D:\Work\Sources\SCA\SCA.Tests\obj\Debug\SCA.Tests.dll
 D:\Work\Sources\SCA\SCA.Tests\obj\Debug\SCA.Tests.pdb
-D:\Work\Sources\SCA\SCA.Tests\bin\Debug\FillDictionary.sql
