@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\job\New TASK\SCA\CountersService\bin\roslyn\csc.exe
 D:\job\New TASK\SCA\CountersService\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\job\New TASK\SCA\CountersService\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -26,3 +27,34 @@ D:\job\New TASK\SCA\CountersService\bin\EntityFramework.xml
 D:\job\New TASK\SCA\CountersService\obj\Debug\CountersService.csprojResolveAssemblyReference.cache
 D:\job\New TASK\SCA\CountersService\obj\Debug\CountersService.dll
 D:\job\New TASK\SCA\CountersService\obj\Debug\CountersService.pdb
+=======
+D:\Work\Sources\SCA\CountersService\bin\roslyn\csc.exe
+D:\Work\Sources\SCA\CountersService\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Work\Sources\SCA\CountersService\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Work\Sources\SCA\CountersService\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Work\Sources\SCA\CountersService\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Work\Sources\SCA\CountersService\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Work\Sources\SCA\CountersService\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Work\Sources\SCA\CountersService\bin\roslyn\System.Collections.Immutable.dll
+D:\Work\Sources\SCA\CountersService\bin\roslyn\System.Reflection.Metadata.dll
+D:\Work\Sources\SCA\CountersService\bin\roslyn\vbc.exe
+D:\Work\Sources\SCA\CountersService\bin\roslyn\VBCSCompiler.exe
+D:\Work\Sources\SCA\CountersService\bin\roslyn\VBCSCompiler.exe.config
+D:\Work\Sources\SCA\CountersService\bin\CountersService.dll.config
+D:\Work\Sources\SCA\CountersService\bin\CountersService.dll
+D:\Work\Sources\SCA\CountersService\bin\CountersService.pdb
+D:\Work\Sources\SCA\CountersService\bin\BussinesLogic.dll
+D:\Work\Sources\SCA\CountersService\bin\DataAccess.dll
+D:\Work\Sources\SCA\CountersService\bin\Domain.dll
+D:\Work\Sources\SCA\CountersService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Work\Sources\SCA\CountersService\bin\EntityFramework.dll
+D:\Work\Sources\SCA\CountersService\bin\BussinesLogic.pdb
+D:\Work\Sources\SCA\CountersService\bin\DataAccess.pdb
+D:\Work\Sources\SCA\CountersService\bin\Domain.pdb
+D:\Work\Sources\SCA\CountersService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Work\Sources\SCA\CountersService\bin\EntityFramework.xml
+D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.csprojResolveAssemblyReference.cache
+D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.dll
+D:\Work\Sources\SCA\CountersService\obj\Debug\CountersService.pdb
+D:\Work\Sources\SCA\CountersService\bin\FillDictionary.sql
+>>>>>>> 47d84477dbf40fa6046cab558631787d8139c619

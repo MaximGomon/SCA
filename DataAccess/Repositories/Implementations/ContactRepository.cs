@@ -1,4 +1,5 @@
-﻿using SCA.DataAccess.Repositories.Interfaces;
+﻿using System.Linq;
+using SCA.DataAccess.Repositories.Interfaces;
 using SCA.Domain;
 
 namespace SCA.DataAccess.Repositories.Implementations
@@ -7,7 +8,7 @@ namespace SCA.DataAccess.Repositories.Implementations
     {
         public Contact GetByName(string name)
         {
-            throw new System.NotImplementedException();
+            return DbContext.Contacts.FirstOrDefault(x => x.Name == name);
         }
 
         public Contact GetByLogin(string login)

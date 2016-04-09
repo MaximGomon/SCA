@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\job\New TASK\SCA\BussinesLogic\bin\Debug\BussinesLogic.dll
 D:\job\New TASK\SCA\BussinesLogic\bin\Debug\BussinesLogic.pdb
 D:\job\New TASK\SCA\BussinesLogic\bin\Debug\DataAccess.dll
@@ -9,3 +10,17 @@ D:\job\New TASK\SCA\BussinesLogic\bin\Debug\EntityFramework.xml
 D:\job\New TASK\SCA\BussinesLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
 D:\job\New TASK\SCA\BussinesLogic\obj\Debug\BussinesLogic.dll
 D:\job\New TASK\SCA\BussinesLogic\obj\Debug\BussinesLogic.pdb
+=======
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\BussinesLogic.dll
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\BussinesLogic.pdb
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\DataAccess.dll
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\Domain.dll
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\EntityFramework.dll
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\DataAccess.pdb
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\Domain.pdb
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\EntityFramework.xml
+D:\Work\Sources\SCA\BussinesLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Work\Sources\SCA\BussinesLogic\obj\Debug\BussinesLogic.dll
+D:\Work\Sources\SCA\BussinesLogic\obj\Debug\BussinesLogic.pdb
+D:\Work\Sources\SCA\BussinesLogic\bin\Debug\FillDictionary.sql
+>>>>>>> 47d84477dbf40fa6046cab558631787d8139c619

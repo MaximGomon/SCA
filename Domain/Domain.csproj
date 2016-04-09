@@ -67,6 +67,8 @@
     <Compile Include="Interfaces\ICreated.cs" />
     <Compile Include="Interfaces\ICreatedBy.cs" />
     <Compile Include="Interfaces\IDeletable.cs" />
+    <Compile Include="Lead.cs" />
+    <Compile Include="LeadType.cs" />
     <Compile Include="NamedEntity.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="PaymentStatus.cs" />

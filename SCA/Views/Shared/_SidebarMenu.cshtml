@@ -7,13 +7,15 @@
         <ul class="treeview-menu">
             <li data-mvc-cntrl="Companies"><a href="@Url.Action("List","Companies", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Компании</a></li>
             <li data-mvc-cntrl="Contacts"><a href="@Url.Action("List","Contacts", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Контакты</a></li>
-            <li data-mvc-cntrl="ContactActivity"><a href="@Url.Action("List","ContactActivity", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Лог действий</a></li>
-            <li data-mvc-cntrl="ContactSegments"><a href="@Url.Action("List","ContactSegments", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Сегментация клиентов</a></li>
+            @*<li data-mvc-cntrl="ContactActivity"><a href="@Url.Action("List","ContactActivity", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Лог действий</a></li>*@
+            <li data-mvc-cntrl="ContactSegments"><a href="@Url.Action("List","Lead", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Лиды</a></li>
+            <li data-mvc-cntrl="Site"><a href="@Url.Action("List","Site", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Сайты</a></li>
+
             <li data-mvc-cntrl="SiteAction"><a href="@Url.Action("List","SiteAction", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Сообщения</a></li>
             <li data-mvc-cntrl="Analytics"><a href="@Url.Action("List","Analytics", new { area="Monitoring"})"><i class="fa fa-circle-o"></i> Аналитика</a></li>
         </ul>
     </li>
-    <li class="treeview" data-mvc-area="Evaluation">
+    @*<li class="treeview" data-mvc-area="Evaluation">
         <a href="#">
             <i class="fa fa-line-chart"></i>
             <span>Развитие</span>
@@ -30,7 +32,7 @@
             <li data-mvc-cntrl="File"><a href="@Url.Action("List","File", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Файлы</a></li>
             <li data-mvc-cntrl="WebSites"><a href="@Url.Action("List","WebSites", new { area="Evaluation"})"><i class="fa fa-circle-o"></i> Мини сайты</a></li>
         </ul>
-    </li>
+    </li>*@
     <li class="treeview">
         <a href="#">
             <i class="fa fa-gears"></i>

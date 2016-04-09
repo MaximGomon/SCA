@@ -18,6 +18,7 @@ namespace SCA.Domain
         /// <summary>
         /// Список доменов для сайта
         /// </summary>
-        public virtual ICollection<string> Domains { get; set; } 
+        public virtual ICollection<string> Domains { get; set; }
+        public virtual Company Owner { get; set; }
     }
 }

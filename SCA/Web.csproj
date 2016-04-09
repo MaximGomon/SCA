@@ -727,7 +727,12 @@
     <Content Include="Areas\Monitoring\Views\Contacts\Add.cshtml" />
     <Content Include="Areas\Monitoring\Views\Site\Add.cshtml" />
     <None Include="Areas\Monitoring\Views\Companies\Add.cshtml" />
-    <None Include="Areas\Monitoring\Views\SitePages\Add.cshtml" />
+    <Content Include="Areas\Monitoring\Views\SitePages\Add.cshtml" />
+    <None Include="Areas\Monitoring\Views\Lead\Add.cshtml" />
+    <None Include="Areas\Monitoring\Views\Lead\List.cshtml" />
+    <None Include="Areas\Monitoring\Views\SitePages\AddFull.cshtml" />
+    <Content Include="Areas\Monitoring\Views\Site\Details.cshtml" />
+    <Content Include="Areas\Monitoring\Views\Site\List.cshtml" />
     <None Include="Properties\PublishProfiles\malpinsoft - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\malpinsoft - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\webcore-ms - FTP.pubxml" />
@@ -1351,6 +1356,7 @@
     <Compile Include="Areas\Monitoring\Controllers\ContactActivityController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\ContactsController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\ContactSegmentsController.cs" />
+    <Compile Include="Areas\Monitoring\Controllers\LeadController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\SiteActionController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\SiteController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\SitePagesController.cs" />
@@ -1358,6 +1364,7 @@
     <Compile Include="Areas\Monitoring\Models\ActivityModel.cs" />
     <Compile Include="Areas\Monitoring\Models\CompanyModel.cs" />
     <Compile Include="Areas\Monitoring\Models\ContactModel.cs" />
+    <Compile Include="Areas\Monitoring\Models\LeadModel.cs" />
     <Compile Include="Areas\Monitoring\Models\SiteModel.cs" />
     <Compile Include="Areas\Monitoring\Models\SitePageModel.cs" />
     <Compile Include="Areas\Monitoring\Models\TagModel.cs" />

@@ -69,6 +69,22 @@
     <Compile Include="Migrations\201603231423108_FixDbContext.Designer.cs">
       <DependentUpon>201603231423108_FixDbContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603232121400_AddNewFieldsToContact.cs" />
+    <Compile Include="Migrations\201603232121400_AddNewFieldsToContact.Designer.cs">
+      <DependentUpon>201603232121400_AddNewFieldsToContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603240926016_AddNewDbEntity.cs" />
+    <Compile Include="Migrations\201603240926016_AddNewDbEntity.Designer.cs">
+      <DependentUpon>201603240926016_AddNewDbEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603272127076_AddNewFieldsToClientSite.cs" />
+    <Compile Include="Migrations\201603272127076_AddNewFieldsToClientSite.Designer.cs">
+      <DependentUpon>201603272127076_AddNewFieldsToClientSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603282021042_FillDictionary.cs" />
+    <Compile Include="Migrations\201603282021042_FillDictionary.Designer.cs">
+      <DependentUpon>201603282021042_FillDictionary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -77,6 +93,8 @@
     <Compile Include="Repositories\Implementations\ContactRepository.cs" />
     <Compile Include="Repositories\Implementations\CrudRepository.cs" />
     <Compile Include="Repositories\Implementations\DictionaryRepository.cs" />
+    <Compile Include="Repositories\Implementations\LeadRepository.cs" />
+    <Compile Include="Repositories\Implementations\LeadTypeRepository.cs" />
     <Compile Include="Repositories\Implementations\SocialNetworkRepository.cs" />
     <Compile Include="Repositories\Implementations\SystemUserRepository.cs" />
     <Compile Include="Repositories\Implementations\TagRepository.cs" />
@@ -89,6 +107,8 @@
     <Compile Include="Repositories\Interfaces\ICurrencyRepository.cs" />
     <Compile Include="Repositories\Interfaces\IDictionaryRepository.cs" />
     <Compile Include="Repositories\Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ILeadRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ILeadTypeRepository.cs" />
     <Compile Include="Repositories\Interfaces\INamedRepository.cs" />
     <Compile Include="Repositories\Interfaces\IPaymentRepository.cs" />
     <Compile Include="Repositories\Interfaces\ISocialNetworkRepository.cs" />
@@ -123,6 +143,23 @@
     <EmbeddedResource Include="Migrations\201603231423108_FixDbContext.resx">
       <DependentUpon>201603231423108_FixDbContext.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603232121400_AddNewFieldsToContact.resx">
+      <DependentUpon>201603232121400_AddNewFieldsToContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603240926016_AddNewDbEntity.resx">
+      <DependentUpon>201603240926016_AddNewDbEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603272127076_AddNewFieldsToClientSite.resx">
+      <DependentUpon>201603272127076_AddNewFieldsToClientSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603282021042_FillDictionary.resx">
+      <DependentUpon>201603282021042_FillDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FillDictionary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

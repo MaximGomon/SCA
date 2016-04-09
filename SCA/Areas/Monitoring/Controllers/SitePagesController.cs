@@ -16,9 +16,15 @@ namespace SCA.Areas.Monitoring.Controllers
         private readonly ClientSitePagesBusinessLogic _sitePagesBusinessLogic = new ClientSitePagesBusinessLogic(new ClientSitePageRepository());
         // GET: Monitoring/SitePages
         [HttpGet]
-        public ActionResult Add()
+        public ActionResult Add(Guid id)
         {
-            return View();
+            ClientSitePage csp = new ClientSitePage();
+            var model = new SitePageModel
+            {
+                Id = csp.Id,
+                SiteId = id,
+            };
+            return PartialView(model);
         }
 
         public JsonResult GetTags()
@@ -34,7 +40,13 @@ namespace SCA.Areas.Monitoring.Controllers
             {
                 Name = model.Name,
                 IsDeleted = false,
-                RelatedUrl = model.RelatedUrl
+                RelatedUrl = model.RelatedUrl,
+                Tags = model.Tag.Split(',').Select(x => new Tag
+                {
+                    Name = x,
+                    IsDeleted = false
+                }).ToList(),
+                
             };
             _sitePagesBusinessLogic.Add(dbSitePage);
         }

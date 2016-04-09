@@ -37,12 +37,16 @@ namespace SCA.DataAccess
         public DbSet<SystemUser> SystemUsers { get; set; }
         public DbSet<SystemUserType> SystemUserTypes { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Lead> Leads { get; set; }
+        public DbSet<LeadType> LeadTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Activity>()
                 .HasMany(s => s.Tag);
+            modelBuilder.Entity<Company>()
+                .HasMany(x => x.Sites);
         }
     }
 
