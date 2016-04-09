@@ -728,6 +728,7 @@
     <Content Include="Areas\Monitoring\Views\Site\Add.cshtml" />
     <None Include="Areas\Monitoring\Views\Companies\Add.cshtml" />
     <Content Include="Areas\Monitoring\Views\SitePages\Add.cshtml" />
+    <None Include="Areas\Monitoring\Views\Companies\Details.cshtml" />
     <None Include="Areas\Monitoring\Views\Lead\Add.cshtml" />
     <None Include="Areas\Monitoring\Views\Lead\List.cshtml" />
     <None Include="Areas\Monitoring\Views\SitePages\AddFull.cshtml" />

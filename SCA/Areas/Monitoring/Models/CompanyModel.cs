@@ -13,5 +13,13 @@ namespace SCA.Areas.Monitoring.Models
         public SiteModel[] Sites { get; set; }
         public string Status { get; set; }
         public Guid StatusId { get; set; }
+        public string Type { get; set; }
+        public Guid TypeId { get; set; }
+        public string Size { get; set; }
+        public Guid SizeId { get; set; }
+        public string Sector { get; set; }
+        public Guid SectorId { get; set; }
+        public string RelationType { get; set; }
+        public Guid RelationTypeId { get; set; }
     }
 }
