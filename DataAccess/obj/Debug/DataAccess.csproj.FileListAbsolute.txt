@@ -21,3 +21,4 @@ D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddNewDbEntit
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddNewFieldsToClientSite.resources
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FillDictionary.resources
 D:\Work\Sources\SCA\DataAccess\bin\Debug\FillDictionary.sql
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.CompanyUpdate.resources

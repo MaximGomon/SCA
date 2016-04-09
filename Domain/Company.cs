@@ -36,5 +36,10 @@ namespace SCA.Domain
         public virtual DateTime CreateDate { get; set; }
         public virtual SystemUser CreatedBy { get; set; }
         public virtual string Comment { get; set; }
+        public virtual CompanySector Sector { get; set; }
+        public virtual CompanySize Size { get; set; }
+        public virtual CompanyStatus Status { get; set; }
+        public virtual CompanyType Type { get; set; }
+        public virtual CompanyRelation RelationType { get; set; }
     }
 }

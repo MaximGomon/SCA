@@ -85,6 +85,10 @@
     <Compile Include="Migrations\201603282021042_FillDictionary.Designer.cs">
       <DependentUpon>201603282021042_FillDictionary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604091852524_CompanyUpdate.cs" />
+    <Compile Include="Migrations\201604091852524_CompanyUpdate.Designer.cs">
+      <DependentUpon>201604091852524_CompanyUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -154,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603282021042_FillDictionary.resx">
       <DependentUpon>201603282021042_FillDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604091852524_CompanyUpdate.resx">
+      <DependentUpon>201604091852524_CompanyUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
