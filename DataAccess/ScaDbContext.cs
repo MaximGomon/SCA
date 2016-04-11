@@ -64,7 +64,10 @@ namespace SCA.DataAccess
                     lock (syncRoot)
                     {
                         if (_context == null)
+                        {
                             _context = new ScaDbContext();
+                            _context.Database.Initialize(true);
+                        }
                     }
                 }
                 return _context;

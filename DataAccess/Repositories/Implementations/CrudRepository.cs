@@ -8,7 +8,7 @@ using SCA.Domain;
 
 namespace SCA.DataAccess.Repositories.Implementations
 {
-    public class CrudRepository<TEntity> : ICRUDRepository<TEntity>
+    public class CrudRepository<TEntity> : ICRUDRepository<TEntity>, IDisposable
         where TEntity : IdentityEntity
     {
 
@@ -79,6 +79,11 @@ namespace SCA.DataAccess.Repositories.Implementations
         public void SaveChanges()
         {
             DbContext.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            DbContext.Dispose();
         }
     }
 }

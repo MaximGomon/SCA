@@ -7,6 +7,11 @@
         };
     }
 </script>
+<style>
+     .abutton.create {
+        background: url('@Url.Content("~/Content/Icons/add.png")');
+    }
+</style>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -37,6 +42,8 @@
 
                     })
                     .Filterable()
+                    .ToolBar(toolBar => toolBar.Template("<a href='@Url.Action('Create', 'User')' class='glyphicon glyphicon-plus' title='Add site'>Add</a>"))
+
                     .ColumnMenu(c => c.Columns(false))
                     .Resizable(resizable => resizable.Columns(true))
                     .Reorderable(reorderable => reorderable.Columns(true))
