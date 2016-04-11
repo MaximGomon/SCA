@@ -7,7 +7,7 @@ namespace SCA.DataAccess.Migrations
     {
         public override void Up()
         {
-            RenameTable(name: "dbo.SocialNetwork", newName: "SocialNetworkEvent");
+            //RenameTable(name: "dbo.SocialNetwork", newName: "SocialNetworkEvent");
             RenameColumn(table: "dbo.SocialNetworkEvent", name: "Contact_Id", newName: "Avtor_Id");
             RenameIndex(table: "dbo.SocialNetworkEvent", name: "IX_Contact_Id", newName: "IX_Avtor_Id");
             AddColumn("dbo.Activity", "SocialNetworkEvent_Id", c => c.Guid());
@@ -36,7 +36,7 @@ namespace SCA.DataAccess.Migrations
             DropColumn("dbo.Activity", "SocialNetworkEvent_Id");
             RenameIndex(table: "dbo.SocialNetworkEvent", name: "IX_Avtor_Id", newName: "IX_Contact_Id");
             RenameColumn(table: "dbo.SocialNetworkEvent", name: "Avtor_Id", newName: "Contact_Id");
-            RenameTable(name: "dbo.SocialNetworkEvent", newName: "SocialNetwork");
+            //RenameTable(name: "dbo.SocialNetworkEvent", newName: "SocialNetwork");
         }
     }
 }

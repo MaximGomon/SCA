@@ -1,4 +1,5 @@
-﻿@model SCA.Areas.Monitoring.Models.CompanyModel
+﻿@using SCA.Areas.Monitoring.Models
+@model SCA.Areas.Monitoring.Models.CompanyModel
 <script>
     function onOwnerData() {
         return {
@@ -15,25 +16,56 @@
         <hr/>
         @Html.ValidationSummary(true, "", new {@class = "text-danger"})
 
-        <div class="form-group">
+        <div class="row">
             @Html.LabelFor(model => model.Name, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-4">
+            <div class="col-md-1">
                 @Html.Kendo().TextBoxFor(model => model.Name)
                 @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
             </div>
-        </div>
+            <div class="col-md-4 col-md-offset-4">
+                @(Html.Kendo().Grid<SiteModel>()
+                    .Name("grid")
+                    .Columns(columns =>
+                    {
+                        columns.Bound(c => c.Id).Hidden(true);
+                        columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+                        //columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
+                        columns.Bound(c => c.Name).Title("Название").Width(150);
+                        columns.Bound(c => c.Company).Title("Компания").Width(120);
+                        columns.Bound(c => c.PagesCount).Title("К-во страниц").Width(120);
+                        //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Comment, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-4">
-                @Html.Kendo().TextBoxFor(model => model.Comment)
-                @Html.ValidationMessageFor(model => model.Comment, "", new {@class = "text-danger"})
+                    })
+                    .Filterable()
+                    .ColumnMenu(c => c.Columns(false))
+                    .Resizable(resizable => resizable.Columns(true))
+                    .Reorderable(reorderable => reorderable.Columns(true))
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(true)
+                        .ButtonCount(5))
+
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("List_Read", "Site"))
+                    )
+                )
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Status, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-4">
+        <div class="row">
+            @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
+                @Html.Kendo().TextBoxFor(model => model.Comment)
+                @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
                 @(Html.Kendo().DropDownList()
                       .Name("StatusId")
                       .DataTextField("Name")
@@ -45,13 +77,13 @@
                               read.Action("GetCompanyStatus", "Companies");
                           });
                       })
-                      )
+                )
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Size, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-4">
+        <div class="row">
+            @Html.LabelFor(model => model.Size, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
                 @(Html.Kendo().DropDownList()
                       .Name("SizeId")
                       .DataTextField("Name")
@@ -63,13 +95,13 @@
                               read.Action("GetCompanySize", "Companies");
                           });
                       })
-                      )
+                )
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.RelationType, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-4">
+        <div class="row">
+            @Html.LabelFor(model => model.RelationType, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
                 @(Html.Kendo().DropDownList()
                       .Name("SizeId")
                       .DataTextField("Name")
@@ -81,13 +113,13 @@
                               read.Action("GetCompanyRelation", "Companies");
                           });
                       })
-                      )
+                )
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Sector, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-4">
+        <div class="row">
+            @Html.LabelFor(model => model.Sector, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
                 @(Html.Kendo().DropDownList()
                       .Name("SectorId")
                       .DataTextField("Name")
@@ -99,13 +131,13 @@
                               read.Action("GetCompanySector", "Companies");
                           });
                       })
-                      )
+                )
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.OwnerName, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-4">
+        <div class="row">
+            @Html.LabelFor(model => model.OwnerName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
                 @(Html.Kendo().AutoComplete()
                       .Name("OwnerAutoComplete")
                       .DataTextField("Name")
@@ -118,13 +150,13 @@
                           })
                               .ServerFiltering(true);
                       })
-                      )
+                )
             </div>
         </div>
 
-        <div class="form-group">
+        <<div class="row">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default"/>
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>

@@ -89,9 +89,9 @@
     <Compile Include="Migrations\201604091852524_CompanyUpdate.Designer.cs">
       <DependentUpon>201604091852524_CompanyUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604092000240_AddSocialNetworkDetails.cs" />
-    <Compile Include="Migrations\201604092000240_AddSocialNetworkDetails.Designer.cs">
-      <DependentUpon>201604092000240_AddSocialNetworkDetails.cs</DependentUpon>
+    <Compile Include="Migrations\201604102106393_AddSocialNetworkDetails.cs" />
+    <Compile Include="Migrations\201604102106393_AddSocialNetworkDetails.Designer.cs">
+      <DependentUpon>201604102106393_AddSocialNetworkDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Migrations\201604091852524_CompanyUpdate.resx">
       <DependentUpon>201604091852524_CompanyUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604092000240_AddSocialNetworkDetails.resx">
-      <DependentUpon>201604092000240_AddSocialNetworkDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604102106393_AddSocialNetworkDetails.resx">
+      <DependentUpon>201604102106393_AddSocialNetworkDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

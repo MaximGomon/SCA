@@ -13,7 +13,7 @@ namespace SCA.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201604092000240_AddSocialNetworkDetails"; }
+            get { return "201604102106393_AddSocialNetworkDetails"; }
         }
         
         string IMigrationMetadata.Source
