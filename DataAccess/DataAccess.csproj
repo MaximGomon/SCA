@@ -93,6 +93,10 @@
     <Compile Include="Migrations\201604102106393_AddSocialNetworkDetails.Designer.cs">
       <DependentUpon>201604102106393_AddSocialNetworkDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604112008533_SomeFixes.cs" />
+    <Compile Include="Migrations\201604112008533_SomeFixes.Designer.cs">
+      <DependentUpon>201604112008533_SomeFixes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -168,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604102106393_AddSocialNetworkDetails.resx">
       <DependentUpon>201604102106393_AddSocialNetworkDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604112008533_SomeFixes.resx">
+      <DependentUpon>201604112008533_SomeFixes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -40,6 +40,5 @@ namespace SCA.Domain
         public virtual CompanySize Size { get; set; }
         public virtual CompanyStatus Status { get; set; }
         public virtual CompanyType Type { get; set; }
-        public virtual CompanyRelation RelationType { get; set; }
     }
 }

@@ -23,3 +23,4 @@ D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.FillDictionar
 D:\Work\Sources\SCA\DataAccess\bin\Debug\FillDictionary.sql
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.CompanyUpdate.resources
 D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddSocialNetworkDetails.resources
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.SomeFixes.resources

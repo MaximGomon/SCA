@@ -47,7 +47,6 @@
     <Compile Include="ClientSite.cs" />
     <Compile Include="ClientSitePage.cs" />
     <Compile Include="Company.cs" />
-    <Compile Include="CompanyRelation.cs" />
     <Compile Include="CompanySector.cs" />
     <Compile Include="CompanySize.cs" />
     <Compile Include="CompanyStatus.cs" />

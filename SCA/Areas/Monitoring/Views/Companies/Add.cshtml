@@ -3,7 +3,7 @@
 <script>
     function onOwnerData() {
         return {
-            text: $("#OwnerAutoComplete").val()
+            contains: $("#OwnerAutoComplete").val()
         };
     }
 </script>
@@ -17,8 +17,6 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>SiteModel</h4>
-        <hr/>
         @Html.ValidationSummary(true, "", new {@class = "text-danger"})
 
         <div class="row">
@@ -42,7 +40,7 @@
 
                     })
                     .Filterable()
-                    .ToolBar(toolBar => toolBar.Template("<a href='@Url.Action('Create', 'User')' class='glyphicon glyphicon-plus' title='Add site'>Add</a>"))
+                    .ToolBar(toolBar => toolBar.Template("<a href='@Url.Action('Create', 'Companies')' class='glyphicon glyphicon-plus' title='Add site'/>"))
 
                     .ColumnMenu(c => c.Columns(false))
                     .Resizable(resizable => resizable.Columns(true))
@@ -57,7 +55,7 @@
                     .DataSource(dataSource => dataSource
                         .Ajax()
                         .Read(read => read.Action("List_Read", "Site"))
-                    )
+                    ) 
                 )
             </div>
         </div>
@@ -71,7 +69,7 @@
         </div>
 
         <div class="row">
-            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Status, htmlAttributes: new {@class = "control-label col-md-2"})
             <div class="col-md-1">
                 @(Html.Kendo().DropDownList()
                       .Name("StatusId")
@@ -82,6 +80,24 @@
                           source.Read(read =>
                           {
                               read.Action("GetCompanyStatus", "Companies");
+                          });
+                      })
+                      )
+            </div>
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-1">
+                @(Html.Kendo().DropDownList()
+                      .Name("TypeId")
+                      .DataTextField("Name")
+                      .DataValueField("Id")
+                      .DataSource(source =>
+                      {
+                          source.Read(read =>
+                          {
+                              read.Action("GetCompanyTypes", "Companies");
                           });
                       })
                 )
@@ -100,24 +116,6 @@
                           source.Read(read =>
                           {
                               read.Action("GetCompanySize", "Companies");
-                          });
-                      })
-                )
-            </div>
-        </div>
-
-        <div class="row">
-            @Html.LabelFor(model => model.RelationType, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-1">
-                @(Html.Kendo().DropDownList()
-                      .Name("SizeId")
-                      .DataTextField("Name")
-                      .DataValueField("Id")
-                      .DataSource(source =>
-                      {
-                          source.Read(read =>
-                          {
-                              read.Action("GetCompanyRelation", "Companies");
                           });
                       })
                 )
@@ -161,7 +159,7 @@
             </div>
         </div>
 
-        <<div class="row">
+        <div class="row">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>

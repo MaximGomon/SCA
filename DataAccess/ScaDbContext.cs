@@ -18,7 +18,6 @@ namespace SCA.DataAccess
         public DbSet<ClientSite> ClientSites { get; set; }
         public DbSet<ClientSitePage> ClientSitePages { get; set; }
         public DbSet<Company> Companies { get; set; }
-        public DbSet<CompanyRelation> CompanyRelations { get; set; }
         public DbSet<CompanySector> CompanySectors { get; set; }
         public DbSet<CompanySize> CompanySizes { get; set; }
         public DbSet<CompanyStatus> CompanyStatuses { get; set; }

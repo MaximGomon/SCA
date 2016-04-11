@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SCA.Areas.Monitoring.Models
 {
     public class CompanyModel
     {
+        [Display(Name = "Название")]
         public string Name { get; set; }
         public Guid Id { get; set; }
         public string OwnerName { get; set; }
@@ -19,7 +21,5 @@ namespace SCA.Areas.Monitoring.Models
         public Guid SizeId { get; set; }
         public string Sector { get; set; }
         public Guid SectorId { get; set; }
-        public string RelationType { get; set; }
-        public Guid RelationTypeId { get; set; }
     }
 }

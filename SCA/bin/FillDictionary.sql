@@ -24,4 +24,20 @@
 	INSERT INTO AgeDirection (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 2, N'15-20 лет', 0)
 	INSERT INTO AgeDirection (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 3, N'20-25 лет', 0)
 	INSERT INTO AgeDirection (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 4, N'25-30 лет', 0)
-	INSERT INTO AgeDirection (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 4, N'больше 30 лет', 0)
+	INSERT INTO AgeDirection (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 5, N'больше 30 лет', 0)
+
+  INSERT INTO CompanySize (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 1, N'до 50', 0)
+	INSERT INTO CompanySize (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 2, N'51 - 100', 0)
+	INSERT INTO CompanySize (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 3, N'101-200', 0)
+	INSERT INTO CompanySize (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 4, N'более 200', 0)
+
+  INSERT INTO CompanySector (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 1, N'Финансы', 0)
+	INSERT INTO CompanySector (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 2, N'IT', 0)
+	INSERT INTO CompanySector (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 3, N'Здравоохранение', 0)
+	INSERT INTO CompanySector (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 4, N'Оптовая торговля', 0)
+  INSERT INTO CompanySector (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 5, N'Розничная торговля', 0)
+
+  INSERT INTO CompanyStatus (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 1, N'Черновик', 0)
+	INSERT INTO CompanyStatus (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 2, N'Подтвержденный', 0)
+	INSERT INTO CompanyStatus (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 3, N'Требует подтверждения', 0)
+	INSERT INTO CompanyStatus (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 4, N'Архив', 0)

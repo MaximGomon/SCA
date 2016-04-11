@@ -103,7 +103,7 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         [HttpPost]
-        public void Add(ContactModel contact)
+        public ActionResult Add(ContactModel contact)
         {
             var dbContact = new Contact();
             dbContact.Age = _ageBusinessLogic.GetById(contact.AgeDirectionId);
@@ -115,10 +115,12 @@ namespace SCA.Areas.Monitoring.Controllers
             dbContact.IsNameChecked = true;
             dbContact.ReadyToBuyScore = contact.ReadyToBuyScore;
             dbContact.ReadyToSell = _sellBusinessLogic.GetById(contact.ReadyToSellId);
-            dbContact.Telephones = contact.Telephones.Split(';').ToList();
+            //dbContact.Telephones = contact.Telephones.Split(';').ToList();
             dbContact.Status = _contactStatusBusinessLogic.GetById(contact.StatusId);
             dbContact.Type = _contactTypeBusinessLogic.GetById(contact.ContactTypeId);
+            dbContact.Name = contact.Name;
             _contactBusinessLogic.Add(dbContact);
+            return RedirectToAction("List");
         }
     }
 }

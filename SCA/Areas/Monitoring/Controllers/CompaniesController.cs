@@ -19,7 +19,6 @@ namespace SCA.Areas.Monitoring.Controllers
         private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
         private readonly DictionaryBusinessLogic<CompanyType> _typeBusinessLogic = new DictionaryBusinessLogic<CompanyType>(new DictionaryRepository<CompanyType>());
         private readonly DictionaryBusinessLogic<CompanyStatus> _statusBusinessLogic = new DictionaryBusinessLogic<CompanyStatus>(new DictionaryRepository<CompanyStatus>());
-        private readonly DictionaryBusinessLogic<CompanyRelation> _relationBusinessLogic = new DictionaryBusinessLogic<CompanyRelation>(new DictionaryRepository<CompanyRelation>());
         private readonly DictionaryBusinessLogic<CompanySize> _sizeBusinessLogic = new DictionaryBusinessLogic<CompanySize>(new DictionaryRepository<CompanySize>());
         private readonly DictionaryBusinessLogic<CompanySector> _sectorBusinessLogic = new DictionaryBusinessLogic<CompanySector>(new DictionaryRepository<CompanySector>());
 
@@ -33,8 +32,7 @@ namespace SCA.Areas.Monitoring.Controllers
         {
             return View();
         }
-
-        [HttpGet]
+        
         public JsonResult GetCompanies([DataSourceRequest] DataSourceRequest request)
         {
             var items = _companyBusinessLogic.GetAllEntities();
@@ -54,24 +52,37 @@ namespace SCA.Areas.Monitoring.Controllers
             return View();
         }
 
-        [HttpPost]
-        public void Add(CompanyModel model)
+        public ActionResult Create(CompanyModel model)
         {
-            
+            var company = ConvertToDbCompany(model);
+            _companyBusinessLogic.Add(company);
+
+            return RedirectToAction("Add", "Site", company.Id);
+        }
+
+        [HttpPost]
+        public ActionResult Add(CompanyModel model)
+        {
+            var company = ConvertToDbCompany(model);
+            //foreach (var clientSite in company.Sites)
+            //{
+            //    company.Sites.Add(_siteBusinessLogic.GetById(clientSite.Id));
+            //}
+
+            _companyBusinessLogic.Add(company);
+            return RedirectToAction("List");
+        }
+
+        private static Company ConvertToDbCompany(CompanyModel model)
+        {
             var company = new Company
             {
                 Comment = model.Comment,
                 CreateDate = DateTime.Now,
                 Name = model.Name,
                 IsDeleted = false,
-                
             };
-            foreach (var clientSite in company.Sites)
-            {
-                company.Sites.Add(_siteBusinessLogic.GetById(clientSite.Id));
-            }
-
-            _companyBusinessLogic.Add(company);
+            return company;
         }
 
         public JsonResult GetCompanyTypes()
@@ -95,12 +106,6 @@ namespace SCA.Areas.Monitoring.Controllers
         public JsonResult GetCompanySector()
         {
             var items = _sectorBusinessLogic.GetAllEntities().ToList();
-            return Json(items, JsonRequestBehavior.AllowGet);
-        }
-
-        public JsonResult GetCompanyRelation()
-        {
-            var items = _relationBusinessLogic.GetAllEntities().ToList();
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 
