@@ -35,8 +35,24 @@ namespace SCA.Areas.Monitoring.Controllers
         
         public JsonResult GetCompanies([DataSourceRequest] DataSourceRequest request)
         {
-            var items = _companyBusinessLogic.GetAllEntities();
-            var result = items.ToDataSourceResult(request);
+            var items = _companyBusinessLogic.GetAllEntities().ToList();
+            var models = new List<CompanyModel>();
+            foreach (var company in items)
+            {
+                models.Add(new CompanyModel
+                {
+                    Id = company.Id,
+                    Name = company.Name,
+                    CreateDate = company.CreateDate,
+                    Comment = company.Comment,
+                    OwnerName = company.Owner != null ? company.Owner.Name : String.Empty,
+                    Sector = company.Sector.Name,
+                    Size = company.Size.Name,
+                    Status = company.Status.Name,
+                    Type = company.Type.Name
+                });
+            }
+            var result = models.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
@@ -73,7 +89,7 @@ namespace SCA.Areas.Monitoring.Controllers
             return RedirectToAction("List");
         }
 
-        private static Company ConvertToDbCompany(CompanyModel model)
+        private Company ConvertToDbCompany(CompanyModel model)
         {
             var company = new Company
             {
@@ -81,6 +97,11 @@ namespace SCA.Areas.Monitoring.Controllers
                 CreateDate = DateTime.Now,
                 Name = model.Name,
                 IsDeleted = false,
+                Type = _typeBusinessLogic.GetById(model.TypeId),
+                Size = _sizeBusinessLogic.GetById(model.SizeId),
+                Sector = _sectorBusinessLogic.GetById(model.SectorId),
+                Status = _statusBusinessLogic.GetById(model.StatusId),
+                Owner = _contactBusinessLogic.GetById(model.OwnerId), 
             };
             return company;
         }

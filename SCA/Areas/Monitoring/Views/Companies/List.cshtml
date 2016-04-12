@@ -1,4 +1,5 @@
-﻿
+﻿@using SCA.Areas.Monitoring.Models
+
 @section content_header{
     <h1><img src="~/Content/themes/admin/img/companies.png" /> Компании</h1>
     @Html.GetBreadcrumb("fa fa-dashboard", null, "Мониторинг", "Компании")
@@ -8,21 +9,19 @@
     <hr class="hr-top" />
 }
 
-@(Html.Kendo().Grid<GridData>()
+@(Html.Kendo().Grid<CompanyModel>()
         .Name("grid")
         .Columns(columns =>
         {
             columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
             columns.Bound(c => c.Name).Title("Наименование").Width(150);
-            columns.Bound(c => c.Name).Title("Ответственный").Width(150);
-            columns.Bound(c => c.Name).Title("Тип компании").Width(150);
-            columns.Bound(c => c.Name).Title("<div class='text-center'>Размер <br/>компании</div>").Width(120);
-            columns.Bound(c => c.Name).Title("Отрасль").Width(120); ;
-            columns.Bound(c => c.Name).Title("<div class='text-center'>Готовность <br/>к продаже</div>").Width(150);
-            columns.Bound(c => c.Name).Title("Важность").Width(120); ;
-            columns.Bound(c => c.Name).Title("Статус").Width(120); ;
-            columns.Bound(c => c.Name).Title("Общий балл").Width(150); ;
-            columns.Bound(c => c.Name).Title("Действия").Width(120); ;
+            columns.Bound(c => c.OwnerName).Title("Ответственный").Width(150);
+            columns.Bound(c => c.Type).Title("Тип компании").Width(150);
+            columns.Bound(c => c.Size).Title("<div class='text-center'>Размер <br/>компании</div>").Width(120);
+            columns.Bound(c => c.Sector).Title("Отрасль").Width(120);
+            columns.Bound(c => c.Status).Title("Статус").Width(120);
+            //columns.Bound(c => c.Name).Title("Общий балл").Width(150); 
+            //columns.Bound(c => c.Name).Title("Действия").Width(120);
 
         })
         .Filterable()

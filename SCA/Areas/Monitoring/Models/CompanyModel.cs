@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using SCA.Domain;
 
 namespace SCA.Areas.Monitoring.Models
 {

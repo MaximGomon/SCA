@@ -18,155 +18,156 @@
 
     <div class="form-horizontal">
         @Html.ValidationSummary(true, "", new {@class = "text-danger"})
-
         <div class="row">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-1">
-                @Html.Kendo().TextBoxFor(model => model.Name)
-                @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div class="col-md-10">
+                        @Html.Kendo().TextBoxFor(model => model.Name).HtmlAttributes(new { @class = "col-md-10"})
+                        @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.Comment, htmlAttributes: new {@class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.Kendo().TextBoxFor(model => model.Comment)
+                        @Html.ValidationMessageFor(model => model.Comment, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.Status, htmlAttributes: new {@class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @(Html.Kendo().DropDownList()
+                              .Name("StatusId")
+                              .DataTextField("Name")
+                              .DataValueField("Id")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("GetCompanyStatus", "Companies");
+                                  });
+                              })
+                              )
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.Type, htmlAttributes: new {@class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @(Html.Kendo().DropDownList()
+                              .Name("TypeId")
+                              .DataTextField("Name")
+                              .DataValueField("Id")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("GetCompanyTypes", "Companies");
+                                  });
+                              })
+                              )
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.Size, htmlAttributes: new {@class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @(Html.Kendo().DropDownList()
+                              .Name("SizeId")
+                              .DataTextField("Name")
+                              .DataValueField("Id")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("GetCompanySize", "Companies");
+                                  });
+                              })
+                              )
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.Sector, htmlAttributes: new {@class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @(Html.Kendo().DropDownList()
+                              .Name("SectorId")
+                              .DataTextField("Name")
+                              .DataValueField("Id")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("GetCompanySector", "Companies");
+                                  });
+                              })
+                              )
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.OwnerName, htmlAttributes: new {@class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @(Html.Kendo().AutoComplete()
+                              .Name("OwnerAutoComplete")
+                              .DataTextField("Name")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("GetOwnersContains", "Companies")
+                                          .Data("onOwnerData");
+                                  })
+                                      .ServerFiltering(true);
+                              })
+                              )
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 col-md-offset-4">
-                @(Html.Kendo().Grid<SiteModel>()
-                    .Name("grid")
-                    .Columns(columns =>
-                    {
-                        columns.Bound(c => c.Id).Hidden(true);
-                        columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
-                        //columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
-                        columns.Bound(c => c.Name).Title("Название").Width(150);
-                        columns.Bound(c => c.Company).Title("Компания").Width(120);
-                        columns.Bound(c => c.PagesCount).Title("К-во страниц").Width(120);
-                        //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
-
-                    })
-                    .Filterable()
-                    .ToolBar(toolBar => toolBar.Template("<a href='@Url.Action('Create', 'Companies')' class='glyphicon glyphicon-plus' title='Add site'/>"))
-
-                    .ColumnMenu(c => c.Columns(false))
-                    .Resizable(resizable => resizable.Columns(true))
-                    .Reorderable(reorderable => reorderable.Columns(true))
-                    .Scrollable()
-                    .Sortable()
-                    .Pageable(pageable => pageable
-                        .Refresh(true)
-                        .PageSizes(true)
-                        .ButtonCount(5))
-
-                    .DataSource(dataSource => dataSource
-                        .Ajax()
-                        .Read(read => read.Action("List_Read", "Site"))
-                    ) 
-                )
-            </div>
-        </div>
-
-        <div class="row">
-            @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-1">
-                @Html.Kendo().TextBoxFor(model => model.Comment)
-                @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="row">
-            @Html.LabelFor(model => model.Status, htmlAttributes: new {@class = "control-label col-md-2"})
-            <div class="col-md-1">
-                @(Html.Kendo().DropDownList()
-                      .Name("StatusId")
-                      .DataTextField("Name")
-                      .DataValueField("Id")
-                      .DataSource(source =>
-                      {
-                          source.Read(read =>
+            <div class="col-md-7">
+                    @(Html.Kendo().Grid<SiteModel>()
+                          .Name("grid")
+                          .Columns(columns =>
                           {
-                              read.Action("GetCompanyStatus", "Companies");
-                          });
-                      })
-                      )
-            </div>
-        </div>
+                              columns.Bound(c => c.Id).Hidden(true);
+                              columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+                              //columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
+                              columns.Bound(c => c.Name).Title("Название").Width(150);
+                              columns.Bound(c => c.Company).Title("Компания").Width(120);
+                              columns.Bound(c => c.PagesCount).Title("К-во страниц").Width(120);
+                              //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
 
-        <div class="row">
-            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-1">
-                @(Html.Kendo().DropDownList()
-                      .Name("TypeId")
-                      .DataTextField("Name")
-                      .DataValueField("Id")
-                      .DataSource(source =>
-                      {
-                          source.Read(read =>
-                          {
-                              read.Action("GetCompanyTypes", "Companies");
-                          });
-                      })
-                )
-            </div>
-        </div>
-
-        <div class="row">
-            @Html.LabelFor(model => model.Size, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-1">
-                @(Html.Kendo().DropDownList()
-                      .Name("SizeId")
-                      .DataTextField("Name")
-                      .DataValueField("Id")
-                      .DataSource(source =>
-                      {
-                          source.Read(read =>
-                          {
-                              read.Action("GetCompanySize", "Companies");
-                          });
-                      })
-                )
-            </div>
-        </div>
-
-        <div class="row">
-            @Html.LabelFor(model => model.Sector, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-1">
-                @(Html.Kendo().DropDownList()
-                      .Name("SectorId")
-                      .DataTextField("Name")
-                      .DataValueField("Id")
-                      .DataSource(source =>
-                      {
-                          source.Read(read =>
-                          {
-                              read.Action("GetCompanySector", "Companies");
-                          });
-                      })
-                )
-            </div>
-        </div>
-
-        <div class="row">
-            @Html.LabelFor(model => model.OwnerName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-1">
-                @(Html.Kendo().AutoComplete()
-                      .Name("OwnerAutoComplete")
-                      .DataTextField("Name")
-                      .DataSource(source =>
-                      {
-                          source.Read(read =>
-                          {
-                              read.Action("GetOwnersContains", "Companies")
-                              .Data("onOwnerData");
                           })
-                              .ServerFiltering(true);
-                      })
-                )
+                          .Filterable()
+                          .ToolBar(toolBar => toolBar.Template("<a href=\"@Url.Action('Create', 'Companies')\" class='btn btn-sm btn-success fa fa-plus-circle' title='Add site'/>"))
+
+                          .ColumnMenu(c => c.Columns(false))
+                          .Resizable(resizable => resizable.Columns(true))
+                          .Reorderable(reorderable => reorderable.Columns(true))
+                          .Scrollable()
+                          .Sortable()
+                          .Pageable(pageable => pageable
+                              .Refresh(true)
+                              .PageSizes(true)
+                              .ButtonCount(5))
+
+                          .DataSource(dataSource => dataSource
+                              .Ajax()
+                              .Read(read => read.Action("List_Read", "Site"))
+                          )
+                          )
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <br />
+                <input type="submit" value="Сохранить" class="btn btn-default" />
             </div>
         </div>
     </div>
-
 }
-<div>
-    @Html.ActionLink("Back to List", "List")
-</div>
