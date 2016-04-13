@@ -6,7 +6,7 @@
 
 @using (Html.BeginForm())
 {
-    <h2>New Lead</h2>
+    @Html.Kendo().TextBoxFor(model => model.Id).HtmlAttributes(new { @style = "display: none" })
     <div class="form-group">
         @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-4">

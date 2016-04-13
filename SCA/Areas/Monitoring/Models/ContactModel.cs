@@ -36,7 +36,7 @@ namespace SCA.Areas.Monitoring.Models
         public Guid ContactTypeId { get; set; }
         public int ReadyToBuyScore { get; set; }
         public int AgeCode { get; set; }
-        public DateTime BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
         public string Gender { get; set; }
         public int GenderCode { get; set; }
         public string Comment { get; set; }

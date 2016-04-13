@@ -28,10 +28,14 @@
         .Columns(columns =>
         {
             columns.Bound(c => c.Id).Hidden(true);
-            columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+            //columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
             columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
             //columns.Bound(c => c.).Title("<div class='text-center'>Последняя <br/>активность</div>").Width(150);
-            columns.Bound(c => c.Name).Title("ФИО").Width(150);
+            columns.Template(@<text>
+                                    @Html.ActionLink(@item.Name, "Details", "Contacts", new { id = @item.Id })
+                            </text>)
+            .ClientTemplate("<a href='/Monitoring/Contacts/Details/#= Id#'>#=Name#</a>").Title("ФИО").Width(150);
+            //columns.Bound(c => c.Name).Title("ФИО").Width(150);
             columns.Bound(c => c.Email).Title("E-mail").Width(120);
             columns.Bound(c => c.ReadyToSell).Title("<div class='text-center'>Готовность <br/>к продаже</div>").Width(150);
             columns.Bound(c => c.CompanyName).Title("Компания").Width(120);

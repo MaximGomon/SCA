@@ -19,7 +19,10 @@
                                     @Html.ActionLink(@item.Name, "Details", "Companies", new { id = @item.Id })
                             </text>)
             .ClientTemplate("<a href='/Monitoring/Companies/Details/#= Id#'>#=Name#</a>").Title("Наименование").Width(150);
-            columns.Bound(c => c.OwnerName).Title("Ответственный").Width(150);
+            columns.Template(@<text>
+                                    @Html.ActionLink(@item.OwnerName, "Details", "Contacts", new { id = @item.OwnerId })
+                            </text>)
+            .ClientTemplate("<a href='/Monitoring/Contacts/Details/#= OwnerId#'>#=OwnerName#</a>").Title("Ответственный").Width(150);
             columns.Bound(c => c.Type).Title("Тип компании").Width(150);
             columns.Bound(c => c.Size).Title("<div class='text-center'>Размер <br/>компании</div>").Width(120);
             columns.Bound(c => c.Sector).Title("Отрасль").Width(120);

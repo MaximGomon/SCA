@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
+using SCA.Areas.Monitoring.Converters;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
@@ -31,28 +32,31 @@ namespace SCA.Areas.Monitoring.Controllers
             return View();
         }
 
+        public ActionResult Details(Guid id)
+        {
+            var contact = _contactBusinessLogic.GetById(id);
+
+            return View(contact.ConvertToContactModel());
+        }
+
+        public JsonResult GetContactsContains(string contains)
+        {
+            var items = _contactBusinessLogic.GetAllEntities().Where(x => x.Name.Contains(contains)).ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
+
         public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
         {
-            //var items = _contactBusinessLogic.GetAllEntities().Select(x => new ContactModel
-            //{
-            //    ReadyToBuyScore = x.ReadyToBuyScore,
-            //    ReadyToSell = x.ReadyToSell.Name,
-            //    Name = x.Name,
-            //    CreateDate = x.CreateDate,
-            //    Email = x.Email,
-            //    Id = x.Id
-            //});
-            //return items.ToList();
-            var items = _contactBusinessLogic.GetAllEntities().Select(x => new ContactModel
+            var items = _contactBusinessLogic.GetAllEntities().ToList();//.Select(x => x.ConvertToContactModel());
+
+            var models = new List<ContactModel>();
+
+            foreach (var contact in items)
             {
-                ReadyToBuyScore = x.Score,
-                ReadyToSell = x.ReadyToSell.Name,
-                Name = x.Name,
-                CreateDate = x.CreateDate,
-                Email = x.Email,
-                Id = x.Id
-            });
-            DataSourceResult result = items.ToDataSourceResult(request);
+                models.Add(contact.ConvertToContactModel());
+            }
+
+            DataSourceResult result = models.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
@@ -105,21 +109,7 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpPost]
         public ActionResult Add(ContactModel contact)
         {
-            var dbContact = new Contact();
-            dbContact.Age = _ageBusinessLogic.GetById(contact.AgeDirectionId);
-            dbContact.BirthDate = contact.BirthDate;
-            dbContact.Comment = contact.Comment;
-            dbContact.CreateDate = DateTime.Now;
-            dbContact.Email = contact.Email;
-            dbContact.Gender = (GenderEnum)Enum.Parse(typeof (GenderEnum), contact.Gender);
-            dbContact.IsNameChecked = true;
-            dbContact.ReadyToBuyScore = contact.ReadyToBuyScore;
-            dbContact.ReadyToSell = _sellBusinessLogic.GetById(contact.ReadyToSellId);
-            //dbContact.Telephones = contact.Telephones.Split(';').ToList();
-            dbContact.Status = _contactStatusBusinessLogic.GetById(contact.StatusId);
-            dbContact.Type = _contactTypeBusinessLogic.GetById(contact.ContactTypeId);
-            dbContact.Name = contact.Name;
-            _contactBusinessLogic.Add(dbContact);
+            _contactBusinessLogic.Add(contact.ConvertToDbContact());
             return RedirectToAction("List");
         }
     }

@@ -7,16 +7,17 @@
     <script>
     function onOwnerData() {
         return {
-            contains: $("#OwnerAutoComplete").val()
+            contains: $("#OwnerComplit").val()
         };
     };
-    function addNewSite() {
-       
-            
-    };
+    function onSelect_Loc(e) {
+        var item = this.dataItem(e.item.index());
+        $('#OwnerId').val(item.Id);
+    }
     </script>
     @Html.AntiForgeryToken()
-
+    @Html.Kendo().TextBoxFor(model => model.Id).HtmlAttributes(new {@style = "display: none"})
+    @Html.Kendo().TextBoxFor(model => model.OwnerId).HtmlAttributes(new { @style = "display: none" })
     <div class="form-horizontal">
         @Html.ValidationSummary(true, "", new {@class = "text-danger"})
         <div class="row">
@@ -114,14 +115,16 @@
                 <div class="row">
                     @Html.LabelFor(model => model.OwnerName, htmlAttributes: new {@class = "control-label col-md-2"})
                     <div class="col-md-3">
-                        @(Html.Kendo().AutoComplete()
-                              .Name("OwnerAutoComplete")
+                        @(Html.Kendo().AutoCompleteFor(x => x.OwnerName)
+                              .Name("OwnerComplit")
                               .DataTextField("Name")
+                              .MinLength(2)
+                              .Events(e => e.Select("onSelect_Loc"))
                               .DataSource(source =>
                               {
                                   source.Read(read =>
                                   {
-                                      read.Action("GetOwnersContains", "Companies")
+                                      read.Action("GetContsctsContains", "Contacts")
                                           .Data("onOwnerData");
                                   })
                                       .ServerFiltering(true);

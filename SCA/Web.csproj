@@ -729,6 +729,7 @@
     <None Include="Areas\Monitoring\Views\Companies\Add.cshtml" />
     <Content Include="Areas\Monitoring\Views\SitePages\Add.cshtml" />
     <None Include="Areas\Monitoring\Views\Companies\Details.cshtml" />
+    <Content Include="Areas\Monitoring\Views\Contacts\Details.cshtml" />
     <None Include="Areas\Monitoring\Views\Lead\Add.cshtml" />
     <None Include="Areas\Monitoring\Views\Lead\List.cshtml" />
     <None Include="Areas\Monitoring\Views\SitePages\AddFull.cshtml" />
@@ -1362,7 +1363,8 @@
     <Compile Include="Areas\Monitoring\Controllers\SiteActionController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\SiteController.cs" />
     <Compile Include="Areas\Monitoring\Controllers\SitePagesController.cs" />
-    <Compile Include="Areas\Monitoring\Converters\ContactModelToDb.cs" />
+    <Compile Include="Areas\Monitoring\Converters\CompanyConverter.cs" />
+    <Compile Include="Areas\Monitoring\Converters\ContactConverter.cs" />
     <Compile Include="Areas\Monitoring\Models\ActivityModel.cs" />
     <Compile Include="Areas\Monitoring\Models\CompanyModel.cs" />
     <Compile Include="Areas\Monitoring\Models\ContactModel.cs" />
