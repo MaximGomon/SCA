@@ -14,13 +14,17 @@
         .Columns(columns =>
         {
             //columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
-            columns.Bound(c => c.Name).Title("Наименование").Width(150);
+            //columns.Template(c => @Html.ActionLink(c.Name, "Details")).Title("Наименование").Width(150);
+            columns.Template(@<text>
+                                    @Html.ActionLink(@item.Name, "Details", "Companies", new { id = @item.Id })
+                            </text>)
+            .ClientTemplate("<a href='/Monitoring/Companies/Details/#= Id#'>#=Name#</a>").Title("Наименование").Width(150);
             columns.Bound(c => c.OwnerName).Title("Ответственный").Width(150);
             columns.Bound(c => c.Type).Title("Тип компании").Width(150);
             columns.Bound(c => c.Size).Title("<div class='text-center'>Размер <br/>компании</div>").Width(120);
             columns.Bound(c => c.Sector).Title("Отрасль").Width(120);
             columns.Bound(c => c.Status).Title("Статус").Width(120);
-            //columns.Bound(c => c.Name).Title("Общий балл").Width(150); 
+            //columns.Bound(c => c.Name).Title("Общий балл").Width(150);
             //columns.Bound(c => c.Name).Title("Действия").Width(120);
 
         })

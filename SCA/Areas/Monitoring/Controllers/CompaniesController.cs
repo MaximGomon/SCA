@@ -75,9 +75,11 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         [HttpGet]
-        public ActionResult Details()
+        public ActionResult Details(Guid id)
         {
-            return View();
+            var company = _companyBusinessLogic.GetById(id);
+
+            return View(ConvertToCompanyModel(company));
         }
 
         public ActionResult Create(CompanyModel model)
