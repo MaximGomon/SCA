@@ -1,38 +1,68 @@
-﻿del SCA.Areas.Monitoring.Models.SiteModel
+﻿@using SCA.Areas.Monitoring.Models
+@model SCA.Areas.Monitoring.Models.SiteModel
 
-@using (Html.BeginForm("Details", "Site"))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
+    @Html.Kendo().TextBoxFor(model => model.Id).HtmlAttributes(new { @style = "display: none" })
     <div class="form-horizontal">
-        <h4>SiteModel</h4>
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @*@Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.Kendo().TextBoxFor(model => model.Name)
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Comment, new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @*@Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.Kendo().TextBoxFor(model => model.Comment)
-                @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Domains, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.Kendo().TextBoxFor(model => model.Domains)
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button type="submit" id="btnSave" name="Command" value="Save" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
-                    <span class="ui-button-text">Save</span>
-                </button>
-                <input type="submit" value="Create" class="btn btn-default" />
+                @(Html.Kendo().Grid<SitePageModel>()
+                .Name("grid")
+                .Columns(columns =>
+                {
+                    columns.Bound(c => c.Id).Hidden(true);
+                    columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+                    columns.Bound(c => c.Name).Title("Название").Width(150);
+                    columns.Bound(c => c.RelatedUrl).Title("Относительный Url").Width(120);
+                    columns.Bound(c => c.Tag).Title("Теги").Width(150); ;
+                    //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
+
+                })
+                .Filterable()
+                .ColumnMenu(c => c.Columns(false))
+                .Resizable(resizable => resizable.Columns(true))
+                .Reorderable(reorderable => reorderable.Columns(true))
+                .Scrollable()
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .PageSizes(true)
+                    .ButtonCount(5))
+
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+
+                    .Read(read => read.Action("PageList", "Site", new { id = Model.Id }))
+                )
+                )
             </div>
         </div>
     </div>
 }
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

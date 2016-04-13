@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
+using SCA.Areas.Monitoring.Converters;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
@@ -26,18 +27,12 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpPost]
         public void Add(SiteModel model)
         {
-            var dbSite = new ClientSite
-            {
-                Name = model.Name,
-                IsDeleted = false,
-                //Pages = model.
-            };
-            foreach (var sitePageModel in model.Pages)
-            {
-                dbSite.Pages.Add(_sitePagesBusinessLogic.GetById(sitePageModel.Id));
-            }
+            var dbSite = model.ConvertToDbSite();
+            
             _siteBusinessLogic.Add(dbSite);
         }
+
+        
 
         public JsonResult PagesList([DataSourceRequest]DataSourceRequest request, Guid id)
         {

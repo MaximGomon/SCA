@@ -1365,6 +1365,7 @@
     <Compile Include="Areas\Monitoring\Controllers\SitePagesController.cs" />
     <Compile Include="Areas\Monitoring\Converters\CompanyConverter.cs" />
     <Compile Include="Areas\Monitoring\Converters\ContactConverter.cs" />
+    <Compile Include="Areas\Monitoring\Converters\SiteConverter.cs" />
     <Compile Include="Areas\Monitoring\Models\ActivityModel.cs" />
     <Compile Include="Areas\Monitoring\Models\CompanyModel.cs" />
     <Compile Include="Areas\Monitoring\Models\ContactModel.cs" />

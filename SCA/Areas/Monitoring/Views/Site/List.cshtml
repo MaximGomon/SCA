@@ -30,7 +30,10 @@
             columns.Bound(c => c.Id).Hidden(true);
             columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
             //columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
-            columns.Bound(c => c.Name).Title("Название").Width(150);
+             columns.Template(@<text>
+                                    @Html.ActionLink(@item.Name, "Details", "Site", new { id = @item.Id })
+                            </text>)
+            .ClientTemplate("<a href='/Monitoring/Site/Details/#= Id#'>#=Name#</a>").Title("Наименование").Width(150);
             columns.Bound(c => c.Company).Title("Компания").Width(120);
             columns.Bound(c => c.PagesCount).Title("К-во страниц").Width(120);
             //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
