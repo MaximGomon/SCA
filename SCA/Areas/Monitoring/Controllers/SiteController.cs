@@ -96,5 +96,16 @@ namespace SCA.Areas.Monitoring.Controllers
                 Domains = x.Domains.Aggregate((a, b) => a + ";" + b)
             };
         }
+
+        public JsonResult GetSitesContains(string contains)
+        {
+            var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Name.Contains(contains)).ToList();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Search()
+        {
+            return PartialView();
+        }
     }
 }

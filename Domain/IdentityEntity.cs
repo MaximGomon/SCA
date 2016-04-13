@@ -11,6 +11,6 @@ namespace SCA.Domain
         }
 
         [Required]
-        public virtual Guid Id { get; private set; }
+        public virtual Guid Id { get; set; }
     }
 }

@@ -734,6 +734,7 @@
     <None Include="Areas\Monitoring\Views\SitePages\AddFull.cshtml" />
     <Content Include="Areas\Monitoring\Views\Site\Details.cshtml" />
     <Content Include="Areas\Monitoring\Views\Site\List.cshtml" />
+    <Content Include="Areas\Monitoring\Views\Site\Search.cshtml" />
     <None Include="Properties\PublishProfiles\malpinsoft - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\malpinsoft - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\webcore-ms - FTP.pubxml" />

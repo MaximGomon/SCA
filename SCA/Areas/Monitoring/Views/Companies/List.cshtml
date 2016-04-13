@@ -13,7 +13,7 @@
         .Name("grid")
         .Columns(columns =>
         {
-            columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+            //columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
             columns.Bound(c => c.Name).Title("Наименование").Width(150);
             columns.Bound(c => c.OwnerName).Title("Ответственный").Width(150);
             columns.Bound(c => c.Type).Title("Тип компании").Width(150);

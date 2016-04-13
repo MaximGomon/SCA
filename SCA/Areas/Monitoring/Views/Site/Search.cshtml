@@ -1,0 +1,33 @@
+﻿@model SCA.Areas.Monitoring.Models.SiteModel
+<script>
+    function onSiteData() {
+        return {
+            contains: $("#SiteAutoComplete").val()
+        };
+    }
+</script>
+@using (Html.BeginForm())
+{
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                @Html.Label("Название сайта", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-3">
+                    @(Html.Kendo().AutoComplete()
+                              .Name("SiteAutoComplete")
+                              .DataTextField("Name")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("GetSitesContains", "Site")
+                                          .Data("onSiteData");
+                                  })
+                                      .ServerFiltering(true);
+                              })
+                    )
+                </div>
+            </div>
+        </div>
+    </div>
+}
