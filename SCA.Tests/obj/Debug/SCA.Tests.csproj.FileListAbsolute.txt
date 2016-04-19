@@ -75,3 +75,304 @@ D:\Work\Sources\SCA\SCA.Tests\obj\Debug\SCA.Tests.csprojResolveAssemblyReference
 D:\Work\Sources\SCA\SCA.Tests\obj\Debug\SCA.Tests.dll
 D:\Work\Sources\SCA\SCA.Tests\obj\Debug\SCA.Tests.pdb
 D:\Work\Sources\SCA\SCA.Tests\bin\Debug\FillDictionary.sql
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\ApplicationInsights.config
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\csc.exe
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\csc.exe.config
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\csc.rsp
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\csi.exe
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\csi.rsp
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\System.AppContext.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\System.Console.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\System.Diagnostics.StackTrace.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\System.IO.FileSystem.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\System.IO.FileSystem.Primitives.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\vbc.exe
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\vbc.exe.config
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\vbc.rsp
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\FillDictionary.sql
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\SCA.Tests.dll.config
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\SCA.Tests.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\SCA.Tests.pdb
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\SCA.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Owin.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\DataAccess.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Domain.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\BussinesLogic.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.Razor.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\EntityFramework.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\SCA.pdb
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\DataAccess.pdb
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Domain.pdb
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\BussinesLogic.pdb
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.Razor.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\EntityFramework.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\bg-BG\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\cs-CZ\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\da-DK\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\de-DE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\es-ES\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\fr-CA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\fr-FR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\it-IT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\nl-NL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\pl-PL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\pt-BR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\pt-PT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\ro-RO\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\ru-RU\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\sv-SE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\tr-TR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\uk-UA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA.Tests\obj\Debug\SCA.Tests.csprojResolveAssemblyReference.cache
+E:\VadimB\new\SCA\SCA.Tests\obj\Debug\SCA.Tests.dll
+E:\VadimB\new\SCA\SCA.Tests\obj\Debug\SCA.Tests.pdb
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\ApplicationInsights.config
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csc.exe
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csc.exe.config
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csc.rsp
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csi.exe
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csi.rsp
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.AppContext.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Console.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Diagnostics.StackTrace.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.IO.FileSystem.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.IO.FileSystem.Primitives.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\vbc.exe
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\vbc.exe.config
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\vbc.rsp
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\FillDictionary.sql
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.Tests.dll.config
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.Tests.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.Tests.pdb
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Owin.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\DataAccess.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Domain.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\BussinesLogic.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Facebook.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Newtonsoft.Json.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Razor.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\EntityFramework.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.pdb
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\DataAccess.pdb
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Domain.pdb
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\BussinesLogic.pdb
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Facebook.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Newtonsoft.Json.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Razor.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\EntityFramework.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\bg-BG\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\cs-CZ\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\da-DK\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\de-DE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\es-ES\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\fr-CA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\fr-FR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\it-IT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\nl-NL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\pl-PL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\pt-BR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\pt-PT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\ro-RO\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\ru-RU\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\sv-SE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\tr-TR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\uk-UA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.csprojResolveAssemblyReference.cache
+E:\VadimB\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.dll
+E:\VadimB\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.pdb
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\ApplicationInsights.config
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csc.exe
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csc.exe.config
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csc.rsp
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csi.exe
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\csi.rsp
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.AppContext.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Console.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Diagnostics.StackTrace.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.IO.FileSystem.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.IO.FileSystem.Primitives.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\vbc.exe
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\vbc.exe.config
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\vbc.rsp
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\FillDictionary.sql
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.Tests.dll.config
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.Tests.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.Tests.pdb
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Owin.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\DataAccess.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Domain.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\BussinesLogic.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Facebook.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Google.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Razor.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\EntityFramework.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\SCA.pdb
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Mvc.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\DataAccess.pdb
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Kendo.Mvc.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Domain.pdb
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\BussinesLogic.pdb
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Facebook.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Google.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.Razor.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\EntityFramework.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\bg-BG\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\cs-CZ\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\da-DK\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\de-DE\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\es-ES\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\fr-CA\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\fr-FR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\it-IT\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\nl-NL\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\pl-PL\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\pt-BR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\pt-PT\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\ro-RO\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\ru-RU\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\sv-SE\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\tr-TR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\uk-UA\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.csprojResolveAssemblyReference.cache
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.dll
+D:\job\New TASK\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.pdb

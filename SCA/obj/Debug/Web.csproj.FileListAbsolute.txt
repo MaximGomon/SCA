@@ -90,3 +90,497 @@ D:\Work\Sources\SCA\SCA\obj\Debug\Web.csprojResolveAssemblyReference.cache
 D:\Work\Sources\SCA\SCA\obj\Debug\SCA.dll
 D:\Work\Sources\SCA\SCA\obj\Debug\SCA.pdb
 D:\Work\Sources\SCA\SCA\bin\FillDictionary.sql
+E:\VadimB\new\SCA\SCA\bin\ApplicationInsights.config
+E:\VadimB\new\SCA\SCA\bin\roslyn\csc.exe
+E:\VadimB\new\SCA\SCA\bin\roslyn\csc.exe.config
+E:\VadimB\new\SCA\SCA\bin\roslyn\csc.rsp
+E:\VadimB\new\SCA\SCA\bin\roslyn\csi.exe
+E:\VadimB\new\SCA\SCA\bin\roslyn\csi.rsp
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\VadimB\new\SCA\SCA\bin\roslyn\System.AppContext.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\System.Collections.Immutable.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\System.Console.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\System.IO.FileSystem.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\System.Reflection.Metadata.dll
+E:\VadimB\new\SCA\SCA\bin\roslyn\vbc.exe
+E:\VadimB\new\SCA\SCA\bin\roslyn\vbc.exe.config
+E:\VadimB\new\SCA\SCA\bin\roslyn\vbc.rsp
+E:\VadimB\new\SCA\SCA\bin\roslyn\VBCSCompiler.exe
+E:\VadimB\new\SCA\SCA\bin\roslyn\VBCSCompiler.exe.config
+E:\VadimB\new\SCA\SCA\bin\FillDictionary.sql
+E:\VadimB\new\SCA\SCA\bin\SCA.dll.config
+E:\VadimB\new\SCA\SCA\bin\SCA.dll
+E:\VadimB\new\SCA\SCA\bin\SCA.pdb
+E:\VadimB\new\SCA\SCA\bin\BussinesLogic.dll
+E:\VadimB\new\SCA\SCA\bin\DataAccess.dll
+E:\VadimB\new\SCA\SCA\bin\Domain.dll
+E:\VadimB\new\SCA\SCA\bin\EntityFramework.dll
+E:\VadimB\new\SCA\SCA\bin\EntityFramework.SqlServer.dll
+E:\VadimB\new\SCA\SCA\bin\Facebook.dll
+E:\VadimB\new\SCA\SCA\bin\Kendo.Mvc.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.Agent.Intercept.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.DependencyCollector.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.Web.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.WindowsServer.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.ApplicationInsights.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Facebook.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.dll
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Web.Infrastructure.dll
+E:\VadimB\new\SCA\SCA\bin\Newtonsoft.Json.dll
+E:\VadimB\new\SCA\SCA\bin\Owin.dll
+E:\VadimB\new\SCA\SCA\bin\System.Net.Http.Formatting.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.Helpers.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.Http.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.Http.WebHost.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.Mvc.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.Razor.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.WebPages.Deployment.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.WebPages.dll
+E:\VadimB\new\SCA\SCA\bin\System.Web.WebPages.Razor.dll
+E:\VadimB\new\SCA\SCA\bin\BussinesLogic.pdb
+E:\VadimB\new\SCA\SCA\bin\DataAccess.pdb
+E:\VadimB\new\SCA\SCA\bin\Domain.pdb
+E:\VadimB\new\SCA\SCA\bin\EntityFramework.xml
+E:\VadimB\new\SCA\SCA\bin\EntityFramework.SqlServer.xml
+E:\VadimB\new\SCA\SCA\bin\Facebook.xml
+E:\VadimB\new\SCA\SCA\bin\Kendo.Mvc.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.DependencyCollector.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.Web.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AI.WindowsServer.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.ApplicationInsights.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Facebook.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.xml
+E:\VadimB\new\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.xml
+E:\VadimB\new\SCA\SCA\bin\Newtonsoft.Json.xml
+E:\VadimB\new\SCA\SCA\bin\System.Net.Http.Formatting.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.Helpers.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.Http.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.Http.WebHost.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.Mvc.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.Razor.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.WebPages.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.WebPages.Deployment.xml
+E:\VadimB\new\SCA\SCA\bin\System.Web.WebPages.Razor.xml
+E:\VadimB\new\SCA\SCA\bin\bg-BG\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\cs-CZ\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\da-DK\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\de-DE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\es-ES\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\fr-CA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\fr-FR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\it-IT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\nl-NL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\pl-PL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\pt-BR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\pt-PT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\ro-RO\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\ru-RU\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\sv-SE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\tr-TR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\uk-UA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\bin\zh-CN\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\obj\Debug\Web.csprojResolveAssemblyReference.cache
+E:\VadimB\new\SCA\SCA\obj\Debug\SCA.dll
+E:\VadimB\new\SCA\SCA\obj\Debug\SCA.pdb
+D:\job\New TASK\new\SCA\SCA\bin\ApplicationInsights.config
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\csc.exe
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\csc.exe.config
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\csc.rsp
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\csi.exe
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\csi.rsp
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\System.AppContext.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\System.Collections.Immutable.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\System.Console.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\System.IO.FileSystem.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\System.Reflection.Metadata.dll
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\vbc.exe
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\vbc.exe.config
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\vbc.rsp
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\VBCSCompiler.exe
+D:\job\New TASK\new\SCA\SCA\bin\roslyn\VBCSCompiler.exe.config
+D:\job\New TASK\new\SCA\SCA\bin\FillDictionary.sql
+D:\job\New TASK\new\SCA\SCA\bin\SCA.dll.config
+D:\job\New TASK\new\SCA\SCA\bin\SCA.dll
+D:\job\New TASK\new\SCA\SCA\bin\SCA.pdb
+D:\job\New TASK\new\SCA\SCA\bin\BussinesLogic.dll
+D:\job\New TASK\new\SCA\SCA\bin\DataAccess.dll
+D:\job\New TASK\new\SCA\SCA\bin\Domain.dll
+D:\job\New TASK\new\SCA\SCA\bin\EntityFramework.dll
+D:\job\New TASK\new\SCA\SCA\bin\EntityFramework.SqlServer.dll
+D:\job\New TASK\new\SCA\SCA\bin\Facebook.dll
+D:\job\New TASK\new\SCA\SCA\bin\Kendo.Mvc.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.DependencyCollector.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.Web.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.WindowsServer.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.ApplicationInsights.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Facebook.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.dll
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Web.Infrastructure.dll
+D:\job\New TASK\new\SCA\SCA\bin\Newtonsoft.Json.dll
+D:\job\New TASK\new\SCA\SCA\bin\Owin.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Net.Http.Formatting.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Helpers.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Http.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Http.WebHost.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Mvc.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Razor.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.WebPages.Deployment.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.WebPages.dll
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.WebPages.Razor.dll
+D:\job\New TASK\new\SCA\SCA\bin\BussinesLogic.pdb
+D:\job\New TASK\new\SCA\SCA\bin\DataAccess.pdb
+D:\job\New TASK\new\SCA\SCA\bin\Domain.pdb
+D:\job\New TASK\new\SCA\SCA\bin\EntityFramework.xml
+D:\job\New TASK\new\SCA\SCA\bin\EntityFramework.SqlServer.xml
+D:\job\New TASK\new\SCA\SCA\bin\Facebook.xml
+D:\job\New TASK\new\SCA\SCA\bin\Kendo.Mvc.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.DependencyCollector.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.Web.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AI.WindowsServer.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.ApplicationInsights.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Facebook.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.xml
+D:\job\New TASK\new\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.xml
+D:\job\New TASK\new\SCA\SCA\bin\Newtonsoft.Json.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Net.Http.Formatting.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Helpers.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Http.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Http.WebHost.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Mvc.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.Razor.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.WebPages.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.WebPages.Deployment.xml
+D:\job\New TASK\new\SCA\SCA\bin\System.Web.WebPages.Razor.xml
+D:\job\New TASK\new\SCA\SCA\bin\bg-BG\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\cs-CZ\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\da-DK\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\de-DE\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\es-ES\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\fr-CA\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\fr-FR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\it-IT\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\nl-NL\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\pl-PL\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\pt-BR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\pt-PT\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\ro-RO\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\ru-RU\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\sv-SE\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\tr-TR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\uk-UA\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\bin\zh-CN\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\obj\Debug\Web.csprojResolveAssemblyReference.cache
+D:\job\New TASK\new\SCA\SCA\obj\Debug\SCA.dll
+D:\job\New TASK\new\SCA\SCA\obj\Debug\SCA.pdb
+E:\VadimB\new\SCA\SCA\SCA\bin\ApplicationInsights.config
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\csc.exe
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\csc.exe.config
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\csc.rsp
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\csi.exe
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\csi.rsp
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\System.AppContext.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\System.Collections.Immutable.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\System.Console.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\System.IO.FileSystem.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\System.Reflection.Metadata.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\vbc.exe
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\vbc.exe.config
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\vbc.rsp
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\VBCSCompiler.exe
+E:\VadimB\new\SCA\SCA\SCA\bin\roslyn\VBCSCompiler.exe.config
+E:\VadimB\new\SCA\SCA\SCA\bin\FillDictionary.sql
+E:\VadimB\new\SCA\SCA\SCA\bin\SCA.dll.config
+E:\VadimB\new\SCA\SCA\SCA\bin\SCA.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\SCA.pdb
+E:\VadimB\new\SCA\SCA\SCA\bin\BussinesLogic.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\DataAccess.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Domain.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\EntityFramework.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\EntityFramework.SqlServer.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Facebook.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Kendo.Mvc.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.Agent.Intercept.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.DependencyCollector.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.Web.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.WindowsServer.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.ApplicationInsights.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Facebook.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Web.Infrastructure.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Newtonsoft.Json.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\Owin.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Net.Http.Formatting.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Helpers.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Http.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Http.WebHost.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Mvc.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Razor.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.WebPages.Deployment.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.WebPages.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.WebPages.Razor.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\BussinesLogic.pdb
+E:\VadimB\new\SCA\SCA\SCA\bin\DataAccess.pdb
+E:\VadimB\new\SCA\SCA\SCA\bin\Domain.pdb
+E:\VadimB\new\SCA\SCA\SCA\bin\EntityFramework.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\EntityFramework.SqlServer.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Facebook.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Kendo.Mvc.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.DependencyCollector.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.Web.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AI.WindowsServer.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.ApplicationInsights.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Facebook.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\Newtonsoft.Json.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Net.Http.Formatting.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Helpers.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Http.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Http.WebHost.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Mvc.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.Razor.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.WebPages.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.WebPages.Deployment.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\System.Web.WebPages.Razor.xml
+E:\VadimB\new\SCA\SCA\SCA\bin\bg-BG\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\cs-CZ\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\da-DK\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\de-DE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\es-ES\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\fr-CA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\fr-FR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\it-IT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\nl-NL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\pl-PL\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\pt-BR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\pt-PT\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\ro-RO\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\ru-RU\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\sv-SE\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\tr-TR\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\uk-UA\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\bin\zh-CN\Kendo.Mvc.resources.dll
+E:\VadimB\new\SCA\SCA\SCA\obj\Debug\Web.csprojResolveAssemblyReference.cache
+E:\VadimB\new\SCA\SCA\SCA\obj\Debug\SCA.dll
+E:\VadimB\new\SCA\SCA\SCA\obj\Debug\SCA.pdb
+D:\job\New TASK\new\SCA\SCA\SCA\bin\ApplicationInsights.config
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\csc.exe
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\csc.exe.config
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\csc.rsp
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\csi.exe
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\csi.rsp
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\System.AppContext.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\System.Collections.Immutable.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\System.Console.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\System.IO.FileSystem.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\System.Reflection.Metadata.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\vbc.exe
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\vbc.exe.config
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\vbc.rsp
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\VBCSCompiler.exe
+D:\job\New TASK\new\SCA\SCA\SCA\bin\roslyn\VBCSCompiler.exe.config
+D:\job\New TASK\new\SCA\SCA\SCA\bin\FillDictionary.sql
+D:\job\New TASK\new\SCA\SCA\SCA\bin\SCA.dll.config
+D:\job\New TASK\new\SCA\SCA\SCA\bin\SCA.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\SCA.pdb
+D:\job\New TASK\new\SCA\SCA\SCA\bin\BussinesLogic.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\DataAccess.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Domain.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\EntityFramework.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\EntityFramework.SqlServer.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Facebook.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Kendo.Mvc.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.Agent.Intercept.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.DependencyCollector.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.Web.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.WindowsServer.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.ApplicationInsights.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Facebook.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Google.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Web.Infrastructure.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Newtonsoft.Json.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Owin.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Net.Http.Formatting.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Helpers.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Http.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Http.WebHost.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Mvc.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Razor.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.WebPages.Deployment.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.WebPages.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.WebPages.Razor.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\BussinesLogic.pdb
+D:\job\New TASK\new\SCA\SCA\SCA\bin\DataAccess.pdb
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Domain.pdb
+D:\job\New TASK\new\SCA\SCA\SCA\bin\EntityFramework.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\EntityFramework.SqlServer.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Facebook.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Kendo.Mvc.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.DependencyCollector.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.Web.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AI.WindowsServer.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.ApplicationInsights.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Facebook.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.Google.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\Newtonsoft.Json.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Net.Http.Formatting.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Helpers.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Http.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Http.WebHost.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Mvc.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.Razor.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.WebPages.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.WebPages.Deployment.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\System.Web.WebPages.Razor.xml
+D:\job\New TASK\new\SCA\SCA\SCA\bin\bg-BG\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\cs-CZ\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\da-DK\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\de-DE\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\es-ES\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\fr-CA\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\fr-FR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\it-IT\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\nl-NL\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\pl-PL\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\pt-BR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\pt-PT\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\ro-RO\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\ru-RU\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\sv-SE\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\tr-TR\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\uk-UA\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\bin\zh-CN\Kendo.Mvc.resources.dll
+D:\job\New TASK\new\SCA\SCA\SCA\obj\Debug\Web.csprojResolveAssemblyReference.cache
+D:\job\New TASK\new\SCA\SCA\SCA\obj\Debug\SCA.dll
+D:\job\New TASK\new\SCA\SCA\SCA\obj\Debug\SCA.pdb
