@@ -36,8 +36,8 @@
                 .Columns(columns =>
                 {
                     columns.Bound(c => c.Id).Hidden(true);
-                    columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
-                    columns.Bound(c => c.Name).Title("Название").Width(150);
+                    //columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+                    columns.Bound(c => c.PageName).Title("Название").Width(150);
                     columns.Bound(c => c.RelatedUrl).Title("Относительный Url").Width(120);
                     columns.Bound(c => c.Tag).Title("Теги").Width(150); ;
                     //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
@@ -57,7 +57,7 @@
                 .DataSource(dataSource => dataSource
                     .Ajax()
                     
-                    .Read(read => read.Action("PageList", "Site", new {id = Model.Id}))
+                    .Read(read => read.Action("PagesList", "Site", new {id = Model.Id}))
                 )
                )
             </div>

@@ -18,22 +18,23 @@ namespace SCA.Areas.Monitoring.Controllers
         private readonly ClientSitePagesBusinessLogic _sitePagesBusinessLogic = new ClientSitePagesBusinessLogic(new ClientSitePageRepository());
         private readonly ClientSiteBusinessLogic _siteBusinessLogic = new ClientSiteBusinessLogic(new ClientSiteRepository());
         // GET: Monitoring/Site
-        [HttpGet]
+        [System.Web.Mvc.HttpGet]
         public ActionResult Add()
         {
-            return View(new SiteModel {Id = Guid.NewGuid()});
+            var site = new ClientSite {Name = "Draft"};
+            _siteBusinessLogic.Add(site);
+            return View(new SiteModel {Id = site.Id});
         }
 
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         public void Add(SiteModel model)
         {
             var dbSite = model.ConvertToDbSite();
-            
             _siteBusinessLogic.Add(dbSite);
         }
 
         
-
+        [HttpPost]
         public JsonResult PagesList([DataSourceRequest]DataSourceRequest request, Guid id)
         {
             var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Id == id).SelectMany(x => x.Pages).ToList();
@@ -42,7 +43,7 @@ namespace SCA.Areas.Monitoring.Controllers
             {
                 pages.Add(new SitePageModel
                 {
-                    Name = item.Name,
+                    PageName = item.Name,
                     RelatedUrl = item.RelatedUrl,
                     Id = item.Id,
                     Tag = string.Join(", ", item.Tags.Select(x => x.Name)),
@@ -54,12 +55,11 @@ namespace SCA.Areas.Monitoring.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        [HttpGet]
+        [System.Web.Mvc.HttpGet]
         public ActionResult Details(Guid id)
         {
             var site = _siteBusinessLogic.GetById(id);
-            var model = ConvertToSiteModel(site);
-            return View(model);
+            return View(site.ConvertToSiteModel());
         }
 
         public ActionResult List()
@@ -67,30 +67,20 @@ namespace SCA.Areas.Monitoring.Controllers
             return View();
         }
 
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
         {
             var items = _siteBusinessLogic.GetAllEntities();//.Select(x => ConvertToSiteModel(x));
             var models = new List<SiteModel>();
             foreach (var clientSite in items)
             {
-                models.Add(ConvertToSiteModel(clientSite));
+                models.Add(clientSite.ConvertToSiteModel());
             }
             DataSourceResult result = models.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        private static SiteModel ConvertToSiteModel(ClientSite x)
-        {
-            return new SiteModel
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Company = x.Owner.Name,
-                PagesCount = x.Pages.Count,
-                Domains = x.Domains.Aggregate((a, b) => a + ";" + b)
-            };
-        }
+        
 
         public JsonResult GetSitesContains(string contains)
         {

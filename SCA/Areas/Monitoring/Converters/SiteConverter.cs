@@ -33,6 +33,18 @@ namespace SCA.Areas.Monitoring.Converters
             return dbSite; ;
         }
 
+        public static SiteModel ConvertToSiteModel(this ClientSite x)
+        {
+            return new SiteModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Company = x.Owner == null ? String.Empty : x.Owner.Name,
+                PagesCount = x.Pages == null ? 0 : x.Pages.Count,
+                Domains = x.Domains == null ? String.Empty : x.Domains.Aggregate((a, b) => a + ";" + b)
+            };
+        }
+
         public static void AddRangeIfNoExist(this ICollection<string> source, IEnumerable<string> newItems)
         {
             if (source == null)
