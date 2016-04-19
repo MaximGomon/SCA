@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SCA.DataAccess;
 
 namespace SCA.Controllers
 {
@@ -26,7 +27,7 @@ namespace SCA.Controllers
         {
             return RedirectToAction("List", "Companies", new { area = "Monitoring"});
         }
-        
+
         public JsonResult Test([DataSourceRequest]DataSourceRequest request)
         {
             var response = _list.ToDataSourceResult(request);

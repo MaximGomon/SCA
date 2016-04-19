@@ -23,7 +23,9 @@ namespace SCA.Areas.Monitoring.Converters
             dbContact.Comment = model.Comment;
             dbContact.CreateDate = DateTime.Now;
             dbContact.Email = model.Email;
+            dbContact.Ip = model.ContactIp;
             dbContact.Gender = (GenderEnum)Enum.Parse(typeof(GenderEnum), model.Gender);
+            dbContact.Link = model.ContactLink;
             dbContact.IsNameChecked = true;
             dbContact.ReadyToBuyScore = model.ReadyToBuyScore;
             dbContact.ReadyToSell = sellBusinessLogic.GetById(model.ReadyToSellId);
@@ -39,18 +41,21 @@ namespace SCA.Areas.Monitoring.Converters
         {
             var model =  new ContactModel
             {
-                ReadyToBuyScore = contact.Score,
-                ReadyToSell = contact.ReadyToSell.Name,
+
+             //  ReadyToBuyScore = contact.Score,
+             //   ReadyToSell = contact.ReadyToSell.Name,
                 Name = contact.Name,
                 CreateDate = contact.CreateDate,
                 Email = contact.Email,
-                Id = contact.Id,
-                Status = contact.Status.Name,
-                AgeDirection = contact.Age.Name,
-                Comment = contact.Comment,
-                ContactType = contact.Type.Name,
+                Id = contact.Id, 
+                ContactIp = contact.Ip,
+                ContactLink = contact.Link,
+            //    Status = contact.Status.Name,
+            //    AgeDirection = contact.Age.Name,
+            //    Comment = contact.Comment,
+            //    ContactType = contact.Type.Name,
                 Gender = contact.Gender.ToString(),
-                //Telephones = contact.Telephones.
+            //    //Telephones = contact.Telephones.
             };
             if (contact.BirthDate.HasValue)
             {

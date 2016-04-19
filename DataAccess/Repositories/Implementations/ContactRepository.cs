@@ -10,6 +10,10 @@ namespace SCA.DataAccess.Repositories.Implementations
         {
             return DbContext.Contacts.FirstOrDefault(x => x.Name == name);
         }
+        public Contact GetByIp(string ip)
+        {
+            return DbContext.Contacts.FirstOrDefault(x => x.Ip == ip);
+        }
 
         public Contact GetByLogin(string login)
         {

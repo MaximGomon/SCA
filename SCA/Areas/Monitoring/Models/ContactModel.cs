@@ -21,7 +21,8 @@ namespace SCA.Areas.Monitoring.Models
         }
 
         public string Name { get; set; }
-
+        public string ContactIp { get; set; }
+        public string ContactLink { get; set; }
         [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string Email { get; set; }
         public string ReadyToSell { get; set; }

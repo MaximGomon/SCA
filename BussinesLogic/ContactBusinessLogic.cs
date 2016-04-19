@@ -22,5 +22,10 @@ namespace SCA.BussinesLogic
         {
             return _contactRepository.GetByLogin(login);
         }
+
+        public Contact GetByIp(string ip)
+        {
+            return _contactRepository.GetByIp(ip);
+        }
     }
 }

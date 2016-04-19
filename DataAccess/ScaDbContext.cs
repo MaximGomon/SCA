@@ -1,15 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using System.Web;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
+using Microsoft.Owin.Security;
 using SCA.Domain;
 
 namespace SCA.DataAccess
 {
-    public class ScaDbContext : DbContext
+    public class ScaDbContext : IdentityDbContext<ScaIdentityUser>
     {
         public ScaDbContext() : base("DbConnection")
         {
             //var connectionString = this.Database.Connection.ConnectionString;
+        }
+
+        public static ScaDbContext Create()
+        {
+            return new ScaDbContext();
         }
 
         public DbSet<Activity> Activities { get; set; }
@@ -42,11 +57,34 @@ namespace SCA.DataAccess
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
+            //modelBuilder.Conventions.Remove<DecimalPropertyConvention>();
+
+            modelBuilder.Conventions.Add<ColumnAttributeConvention>();
+            modelBuilder.Conventions.Add<DatabaseGeneratedAttributeConvention>();
+            modelBuilder.Conventions.Add<KeyAttributeConvention>();
+            modelBuilder.Conventions.Add<IndexAttributeConvention>();
+            modelBuilder.Conventions.Add<MaxLengthAttributeConvention>();
+            modelBuilder.Conventions.Add<NotMappedPropertyAttributeConvention>();
+            modelBuilder.Conventions.Add<PropertyMaxLengthConvention>();
+            modelBuilder.Conventions.Add<RequiredNavigationPropertyAttributeConvention>();
+            modelBuilder.Conventions.Add<RequiredPrimitivePropertyAttributeConvention>();
+            modelBuilder.Conventions.Add<StoreGeneratedIdentityKeyConvention>();
+            modelBuilder.Conventions.Add<StringLengthAttributeConvention>();
+            modelBuilder.Conventions.Add<TableAttributeConvention>();
+            modelBuilder.Conventions.Add<TimestampAttributeConvention>();
+
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Activity>()
                 .HasMany(s => s.Tag);
             modelBuilder.Entity<Company>()
                 .HasMany(x => x.Sites);
+
+            base.OnModelCreating(modelBuilder);
+
+
         }
     }
 
@@ -73,4 +111,55 @@ namespace SCA.DataAccess
             }
         }
     }
+
+    public class ScaUserManager : UserManager<ScaIdentityUser>
+    {
+
+        public ScaUserManager(IUserStore<ScaIdentityUser> store) : base(store)
+        {
+        }
+
+        public static ScaUserManager Create(IdentityFactoryOptions<ScaUserManager> options, IOwinContext context)
+        {
+            var manager = new ScaUserManager(new UserStore<ScaIdentityUser>(context.Get<ScaDbContext>()));
+            return manager;
+        }
+
+    }
+
+    public class ScaIdentityUser : IdentityUser
+    {
+        public ScaIdentityUser()
+        {
+        }
+
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ScaIdentityUser> manager)
+        {
+            // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
+            var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
+            // Add custom user claims here
+            return userIdentity;
+        }
+
+    }
+
+
+    public class ScaSignInManager : SignInManager<ScaIdentityUser, string>
+    {
+        public ScaSignInManager(ScaUserManager userManager, IAuthenticationManager authenticationManager)
+            : base(userManager, authenticationManager)
+        {
+        }
+
+        public override Task<ClaimsIdentity> CreateUserIdentityAsync(ScaIdentityUser user)
+        {
+            return user.GenerateUserIdentityAsync((ScaUserManager)UserManager);
+        }
+
+        public static ScaSignInManager Create(IdentityFactoryOptions<ScaSignInManager> options, IOwinContext context)
+        {
+            return new ScaSignInManager(context.GetUserManager<ScaUserManager>(), context.Authentication);
+        }
+    }
+
 }

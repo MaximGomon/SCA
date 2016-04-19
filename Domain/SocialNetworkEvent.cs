@@ -16,7 +16,8 @@ namespace SCA.Domain
         public virtual string Message { get; set; }
         public virtual ICollection<Tag> Tags { get; set; }
         public virtual Contact Avtor { get; set; }
-        public virtual DateTime DateCreated { get; set; } 
-        public virtual ICollection<Activity> Activity { get; set; }
+        public virtual DateTime DateCreated { get; set; }
+        public virtual string Type { get; set; }
+        public virtual ICollection<Activity> Activities { get; set; }
     }
 }
