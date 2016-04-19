@@ -1,10 +1,27 @@
 ﻿@model SCA.Areas.Monitoring.Models.SitePageModel
-
+<script>
+    function SavePage() {
+        var id = $("#Id").val();
+        $.ajax({
+            url: "/Monitoring/SitePages/Save",
+            method: "post",
+            data: JSON.stringify({
+                Id: $("#Id").val(),
+                SiteId: $("#SiteId").val(),
+                PageName: $("#PageName").val(),
+                Tag: $("#Tag").val(),
+                RelatedUrl: $("#RelatedUrl").val(),
+    }),
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+        });
+    }
+</script>
+@using (Html.BeginForm("Save", "SitePages", FormMethod.Post))
+{
+    @Html.Kendo().TextBoxFor(model => model.Id).HtmlAttributes(new { @style = "display: none" })
+    @Html.Kendo().TextBoxFor(model => model.SiteId).HtmlAttributes(new { @style = "display: none" })
 <div class="modal-content">
-    @*<div class="modal-header">
-        <button class="close" data-dismiss="modal" area-hidden="true">X</button>
-        <h4>Новая страница</h4>
-    </div>*@
     <div class="modal-body">
         <table style="width: 100%">
             <tr>
@@ -12,8 +29,8 @@
                     @Html.Label("Название")
                 </td>
                 <td>
-                    @Html.Kendo().TextBoxFor(model => model.Name)
-                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    @Html.Kendo().TextBoxFor(model => model.PageName)
+                    @Html.ValidationMessageFor(model => model.PageName, "", new {@class = "text-danger"})
                 </td>
             </tr>
             <tr>
@@ -22,7 +39,7 @@
                 </td>
                 <td>
                     @Html.Kendo().TextBoxFor(model => model.Tag)
-                    @Html.ValidationMessageFor(model => model.Tag, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.Tag, "", new {@class = "text-danger"})
                 </td>
             </tr>
             <tr>
@@ -36,10 +53,16 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" onclick="SavePage();" value="Save" name="Save" class="btn btn-default close" data-dismiss="modal"/>
+                    @*<input type="submit" value="Create" class="btn btn-default"/>*@
+                    @* onclick="location.href = '@Url.Action("Add", "SitePages"); return false;'"/>*@
+                    @*<a href="location.href='@Url.Action("Add", "SitePages"); return false;'"><i>Create</i></a>*@
+                    @*@Html.ActionLink("Create", "Save", "SitePages", new { @class = "btn btn-sm btn-success" })*@
+                    @*<a href="@Url.Action("Add","SitePages")" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i> Добавить</a>*@
                 </td>
             </tr>
         </table>
     </div>
-    
+
 </div>
+}

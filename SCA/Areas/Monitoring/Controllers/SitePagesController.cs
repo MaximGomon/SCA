@@ -34,11 +34,11 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         [HttpPost]
-        public void Add(SitePageModel model)
+        public void Save(SitePageModel model)
         {
             var dbSitePage = new ClientSitePage
             {
-                Name = model.Name,
+                Name = model.PageName,
                 IsDeleted = false,
                 RelatedUrl = model.RelatedUrl,
                 Tags = model.Tag.Split(',').Select(x => new Tag
