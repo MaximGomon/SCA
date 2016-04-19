@@ -12,8 +12,9 @@ namespace SCA.Areas.Monitoring.Controllers
 {
     public class SitePagesController : Controller
     {
-        private readonly TagBusinessLogic _tagBusinessLogic = new TagBusinessLogic(new TagRepository());
+        //private readonly TagBusinessLogic _tagBusinessLogic = new TagBusinessLogic(new TagRepository());
         private readonly ClientSitePagesBusinessLogic _sitePagesBusinessLogic = new ClientSitePagesBusinessLogic(new ClientSitePageRepository());
+        private readonly ClientSiteBusinessLogic _siteBusinessLogic = new ClientSiteBusinessLogic(new ClientSiteRepository());
         // GET: Monitoring/SitePages
         [HttpGet]
         public ActionResult Add(Guid id)
@@ -46,9 +47,28 @@ namespace SCA.Areas.Monitoring.Controllers
                     Name = x,
                     IsDeleted = false
                 }).ToList(),
-                
+                //ToDo Сделать серверную валидацию на существования тега
             };
+
             _sitePagesBusinessLogic.Add(dbSitePage);
+
+            var site = _siteBusinessLogic.GetById(model.SiteId);
+            site.Pages.Add(dbSitePage);
+            _siteBusinessLogic.Update(site);
+            //var tags = model.Tag.Split(',').ToList();
+            //foreach (var tag in tags)
+            //{
+            //    var t1 = _tagBusinessLogic.GetAllEntities().FirstOrDefault(x => x.Name == tag);
+            //    if (t1 == null) //Сделать серверную валидацию на существования тега
+            //    {
+            //        dbSitePage.Tags.Add(new Tag
+            //        {
+            //            Name = tag,
+            //            IsDeleted = false
+            //        });
+            //    }
+            //}
+            
         }
     }
 }

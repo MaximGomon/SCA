@@ -11,6 +11,10 @@ namespace SCA.Domain
     /// </summary>
     public class ClientSite : NamedEntity
     {
+        public ClientSite()
+        {
+            Pages = new List<ClientSitePage>();
+        }
         /// <summary>
         /// Перечень страниц сайта
         /// </summary>
@@ -20,5 +24,6 @@ namespace SCA.Domain
         /// </summary>
         public virtual ICollection<string> Domains { get; set; }
         public virtual Company Owner { get; set; }
+        public virtual string Url { get; set; }
     }
 }

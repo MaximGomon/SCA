@@ -1,7 +1,6 @@
 ﻿@model SCA.Areas.Monitoring.Models.SitePageModel
 <script>
     function SavePage() {
-        var id = $("#Id").val();
         $.ajax({
             url: "/Monitoring/SitePages/Save",
             method: "post",
@@ -11,10 +10,17 @@
                 PageName: $("#PageName").val(),
                 Tag: $("#Tag").val(),
                 RelatedUrl: $("#RelatedUrl").val(),
-    }),
+            }),
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
+            succsess: function(data) {
+                
+            },
+            error: function(data) {
+                
+            }
         });
+        $('#sitePageGrid').data('kendoGrid').dataSource.read();
     }
 </script>
 @using (Html.BeginForm("Save", "SitePages", FormMethod.Post))
@@ -54,11 +60,6 @@
             <tr>
                 <td colspan="2">
                     <input type="submit" onclick="SavePage();" value="Save" name="Save" class="btn btn-default close" data-dismiss="modal"/>
-                    @*<input type="submit" value="Create" class="btn btn-default"/>*@
-                    @* onclick="location.href = '@Url.Action("Add", "SitePages"); return false;'"/>*@
-                    @*<a href="location.href='@Url.Action("Add", "SitePages"); return false;'"><i>Create</i></a>*@
-                    @*@Html.ActionLink("Create", "Save", "SitePages", new { @class = "btn btn-sm btn-success" })*@
-                    @*<a href="@Url.Action("Add","SitePages")" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i> Добавить</a>*@
                 </td>
             </tr>
         </table>

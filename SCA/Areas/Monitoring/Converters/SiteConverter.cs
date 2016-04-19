@@ -22,6 +22,7 @@ namespace SCA.Areas.Monitoring.Converters
                 Name = model.Name,
                 Owner = companyBusinessLogic.GetById(model.CompanyId),
                 IsDeleted = false,
+                Url = model.Url
             };
 
             dbSite.Domains.AddRangeIfNoExist(model.Domains.Split(','));
@@ -41,7 +42,9 @@ namespace SCA.Areas.Monitoring.Converters
                 Name = x.Name,
                 Company = x.Owner == null ? String.Empty : x.Owner.Name,
                 PagesCount = x.Pages == null ? 0 : x.Pages.Count,
-                Domains = x.Domains == null ? String.Empty : x.Domains.Aggregate((a, b) => a + ";" + b)
+                Domains = x.Domains == null ? String.Empty : x.Domains.Aggregate((a, b) => a + ";" + b),
+                Url = x.Url,
+                CompanyId = x.Owner == null ? Guid.Empty : x.Owner.Id,
             };
         }
 

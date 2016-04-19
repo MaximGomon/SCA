@@ -5,6 +5,7 @@
 {
     @Html.AntiForgeryToken()
     @Html.Kendo().TextBoxFor(model => model.Id).HtmlAttributes(new { @style = "display: none" })
+    @Html.Kendo().TextBoxFor(model => model.CompanyId).HtmlAttributes(new { @style = "display: none" })
     <div class="form-horizontal">
         @Html.ValidationSummary(true, "", new {@class = "text-danger"})
 
@@ -30,9 +31,15 @@
             </div>
         </div>
         <div class="form-group">
+            @Html.LabelFor(model => model.Url, new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.Kendo().TextBoxFor(model => model.Url)
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 @(Html.Kendo().Grid<SitePageModel>()
-                .Name("grid")
+                .Name("sitePageGrid")
                 .Columns(columns =>
                 {
                     columns.Bound(c => c.Id).Hidden(true);

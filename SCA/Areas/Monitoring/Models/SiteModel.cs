@@ -11,6 +11,7 @@ namespace SCA.Areas.Monitoring.Models
         public string Comment { get; set; }
         //public DateTime CreateDate { get; set; }
         public string Company { get; set; }
+        public string Url { get; set; }
         public Guid CompanyId { get; set; }
         public int PagesCount { get; set; }
     }

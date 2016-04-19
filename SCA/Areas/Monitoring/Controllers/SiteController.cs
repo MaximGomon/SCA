@@ -15,7 +15,6 @@ namespace SCA.Areas.Monitoring.Controllers
 {
     public class SiteController : Controller
     {
-        private readonly ClientSitePagesBusinessLogic _sitePagesBusinessLogic = new ClientSitePagesBusinessLogic(new ClientSitePageRepository());
         private readonly ClientSiteBusinessLogic _siteBusinessLogic = new ClientSiteBusinessLogic(new ClientSiteRepository());
         // GET: Monitoring/Site
         [System.Web.Mvc.HttpGet]
@@ -51,7 +50,7 @@ namespace SCA.Areas.Monitoring.Controllers
 
                 });
             }
-            DataSourceResult result = items.ToDataSourceResult(request);
+            DataSourceResult result = pages.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
