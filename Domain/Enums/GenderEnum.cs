@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SCA.Domain.Enums
+﻿namespace SCA.Domain.Enums
 {
     public enum GenderEnum
     {

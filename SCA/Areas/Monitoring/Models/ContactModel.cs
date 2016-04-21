@@ -1,5 +1,4 @@
 ﻿using System;
-using SCA.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace SCA.Areas.Monitoring.Models

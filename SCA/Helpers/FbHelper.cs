@@ -1,9 +1,4 @@
-﻿using System;
-using System.Configuration;
-using System.IO;
-using System.Net;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Configuration;
 using Facebook;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;

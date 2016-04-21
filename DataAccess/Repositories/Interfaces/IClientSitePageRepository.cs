@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using SCA.Domain;
+﻿using SCA.Domain;
 
 namespace SCA.DataAccess.Repositories.Interfaces
 {

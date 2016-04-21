@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace SCA.Models
+﻿namespace SCA.Models
 {
     /// <summary>
     /// Для превю гріда

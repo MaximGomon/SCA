@@ -1,5 +1,4 @@
-﻿using System;
-using SCA.DataAccess.Repositories.Implementations;
+﻿using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 
 namespace SCA.BussinesLogic
