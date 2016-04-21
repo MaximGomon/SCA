@@ -17,7 +17,11 @@ namespace SCA.Domain
         public virtual ICollection<Tag> Tags { get; set; }
         public virtual Contact Avtor { get; set; }
         public virtual DateTime DateCreated { get; set; }
+        /// <summary>
+        /// Что именно было запощено (видео, фото, текст)
+        /// </summary>
         public virtual string Type { get; set; }
+        public virtual string EventId { get; set; }
         public virtual ICollection<Activity> Activities { get; set; }
     }
 }

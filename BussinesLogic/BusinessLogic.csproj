@@ -51,6 +51,7 @@
     <Compile Include="LeadTypeBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemUserBusinessLogic.cs" />
+    <Compile Include="SettingBusinessLogic.cs" />
     <Compile Include="TagBusinessLogic.cs" />
   </ItemGroup>
   <ItemGroup>

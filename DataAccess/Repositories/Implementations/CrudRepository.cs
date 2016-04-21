@@ -15,7 +15,7 @@ namespace SCA.DataAccess.Repositories.Implementations
         public ScaDbContext DbContext = DbContextSingle.Instance;
 
 
-        public void Add(TEntity entity)
+        public virtual void Add(TEntity entity)
         {
             DbContext.Set<TEntity>().Add(entity);
             SaveChanges();

@@ -150,3 +150,24 @@ D:\job\New TASK\new\SCA\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.DD.re
 D:\job\New TASK\new\SCA\SCA\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
 D:\job\New TASK\new\SCA\SCA\DataAccess\obj\Debug\DataAccess.dll
 D:\job\New TASK\new\SCA\SCA\DataAccess\obj\Debug\DataAccess.pdb
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddUrlToClientSite.resources
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.DD.resources
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.Security.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Newtonsoft.Json.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Owin.dll
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.Security.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\Work\Sources\SCA\DataAccess\bin\Debug\Newtonsoft.Json.xml
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddSystemTable.resources
+D:\Work\Sources\SCA\DataAccess\obj\Debug\SCA.DataAccess.Migrations.AddEventIdInSocialEvent.resources

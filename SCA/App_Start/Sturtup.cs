@@ -10,7 +10,11 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Facebook;
 using Microsoft.Owin.Security.Google;
 using Owin;
+using SCA.BussinesLogic;
 using SCA.DataAccess;
+using SCA.DataAccess.Repositories.Implementations;
+using SCA.Domain;
+using SCA.Domain.Enums;
 
 [assembly: OwinStartup(typeof(SCA.Sturtup))]
 
@@ -59,10 +63,12 @@ namespace SCA
         }
         private Task OnAuthenticated(FacebookAuthenticatedContext facebookAuthenticatedContext)
         {
-            var httpSessionStateBase = ((HttpContextBase)facebookAuthenticatedContext.OwinContext.Environment["System.Web.HttpContextBase"]).Session;
-            if (
-                httpSessionStateBase != null)
-                httpSessionStateBase["accessT"] = facebookAuthenticatedContext.AccessToken;
+            var settingBusinessLogic = new SettingBusinessLogic(new SystemSettingRepository());
+            settingBusinessLogic.Add(new SystemSetting
+            {
+                Key = SettingKeyEnum.AccessToken.ToString(),
+                Value = facebookAuthenticatedContext.AccessToken
+            });
             return Task.FromResult(0);
         }
     }

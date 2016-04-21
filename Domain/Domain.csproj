@@ -59,6 +59,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeePosition.cs" />
     <Compile Include="Enums\GenderEnum.cs" />
+    <Compile Include="Enums\SettingKeyEnum.cs" />
     <Compile Include="IdentityEntity.cs" />
     <Compile Include="Interfaces\IChanged.cs" />
     <Compile Include="Interfaces\IChangedBy.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="ReadyToSellState.cs" />
     <Compile Include="SocialNetworkEvent.cs" />
     <Compile Include="SocialNetworkType.cs" />
+    <Compile Include="SystemSetting.cs" />
     <Compile Include="SystemUser.cs" />
     <Compile Include="SystemUserType.cs" />
     <Compile Include="Tag.cs" />

@@ -49,7 +49,6 @@ D:\Work\Sources\SCA\SCA\bin\System.Web.Razor.dll
 D:\Work\Sources\SCA\SCA\bin\System.Web.WebPages.Deployment.dll
 D:\Work\Sources\SCA\SCA\bin\System.Web.WebPages.dll
 D:\Work\Sources\SCA\SCA\bin\System.Web.WebPages.Razor.dll
-D:\Work\Sources\SCA\SCA\bin\EntityFramework.dll
 D:\Work\Sources\SCA\SCA\bin\BussinesLogic.pdb
 D:\Work\Sources\SCA\SCA\bin\DataAccess.pdb
 D:\Work\Sources\SCA\SCA\bin\Domain.pdb
@@ -584,3 +583,35 @@ D:\job\New TASK\new\SCA\SCA\SCA\bin\zh-CN\Kendo.Mvc.resources.dll
 D:\job\New TASK\new\SCA\SCA\SCA\obj\Debug\Web.csprojResolveAssemblyReference.cache
 D:\job\New TASK\new\SCA\SCA\SCA\obj\Debug\SCA.dll
 D:\job\New TASK\new\SCA\SCA\SCA\obj\Debug\SCA.pdb
+D:\Work\Sources\SCA\SCA\bin\Facebook.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Facebook.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.Google.dll
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Work\Sources\SCA\SCA\bin\Owin.dll
+D:\Work\Sources\SCA\SCA\bin\System.Net.Http.Formatting.dll
+D:\Work\Sources\SCA\SCA\bin\System.Web.Http.dll
+D:\Work\Sources\SCA\SCA\bin\System.Web.Http.WebHost.dll
+D:\Work\Sources\SCA\SCA\bin\EntityFramework.SqlServer.xml
+D:\Work\Sources\SCA\SCA\bin\Facebook.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Facebook.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.Google.xml
+D:\Work\Sources\SCA\SCA\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Work\Sources\SCA\SCA\bin\System.Net.Http.Formatting.xml
+D:\Work\Sources\SCA\SCA\bin\System.Web.Http.xml
+D:\Work\Sources\SCA\SCA\bin\System.Web.Http.WebHost.xml

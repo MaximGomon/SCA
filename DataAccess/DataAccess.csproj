@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201604191857360_DD.Designer.cs">
       <DependentUpon>201604191857360_DD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603201912434_Init.cs" />
+    <Compile Include="Migrations\201603201912434_Init.Designer.cs">
+      <DependentUpon>201603201912434_Init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201603211817179_UpdateActivity.cs" />
     <Compile Include="Migrations\201603211817179_UpdateActivity.Designer.cs">
       <DependentUpon>201603211817179_UpdateActivity.cs</DependentUpon>
@@ -137,6 +141,14 @@
     <Compile Include="Migrations\201604191529093_AddUrlToClientSite.Designer.cs">
       <DependentUpon>201604191529093_AddUrlToClientSite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604201344226_AddSystemTable.cs" />
+    <Compile Include="Migrations\201604201344226_AddSystemTable.Designer.cs">
+      <DependentUpon>201604201344226_AddSystemTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604211114082_AddEventIdInSocialEvent.cs" />
+    <Compile Include="Migrations\201604211114082_AddEventIdInSocialEvent.Designer.cs">
+      <DependentUpon>201604211114082_AddEventIdInSocialEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -149,6 +161,7 @@
     <Compile Include="Repositories\Implementations\LeadTypeRepository.cs" />
     <Compile Include="Repositories\Implementations\SocialNetworkRepository.cs" />
     <Compile Include="Repositories\Implementations\SystemUserRepository.cs" />
+    <Compile Include="Repositories\Implementations\SystemSettingRepository.cs" />
     <Compile Include="Repositories\Implementations\TagRepository.cs" />
     <Compile Include="Repositories\Interfaces\IActivityRepository.cs" />
     <Compile Include="Repositories\Interfaces\IClientSitePageRepository.cs" />
@@ -165,6 +178,7 @@
     <Compile Include="Repositories\Interfaces\IPaymentRepository.cs" />
     <Compile Include="Repositories\Interfaces\ISocialNetworkRepository.cs" />
     <Compile Include="Repositories\Interfaces\ISystemUserRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ISystemSettingRepository.cs" />
     <Compile Include="Repositories\Interfaces\ITagRepository.cs" />
     <Compile Include="ScaDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -218,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604191529093_AddUrlToClientSite.resx">
       <DependentUpon>201604191529093_AddUrlToClientSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604201344226_AddSystemTable.resx">
+      <DependentUpon>201604201344226_AddSystemTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604211114082_AddEventIdInSocialEvent.resx">
+      <DependentUpon>201604211114082_AddEventIdInSocialEvent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

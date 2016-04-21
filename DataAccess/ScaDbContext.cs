@@ -54,12 +54,13 @@ namespace SCA.DataAccess
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Lead> Leads { get; set; }
         public DbSet<LeadType> LeadTypes { get; set; }
+        public DbSet<SystemSetting> SystemSettings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //modelBuilder.Conventions.Remove<PluralizingEntitySetNameConvention>();
             //modelBuilder.Conventions.Remove<DecimalPropertyConvention>();
 
             modelBuilder.Conventions.Add<ColumnAttributeConvention>();

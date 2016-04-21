@@ -376,3 +376,29 @@ D:\job\New TASK\new\SCA\SCA\SCA.Tests\bin\Debug\zh-CN\Kendo.Mvc.resources.dll
 D:\job\New TASK\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.csprojResolveAssemblyReference.cache
 D:\job\New TASK\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.dll
 D:\job\New TASK\new\SCA\SCA\SCA.Tests\obj\Debug\SCA.Tests.pdb
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\SCA.Tests.dll.config
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Owin.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Facebook.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Google.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Facebook.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Facebook.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.Google.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Work\Sources\SCA\SCA.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml

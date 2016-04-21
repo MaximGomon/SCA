@@ -52,7 +52,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
-      <HintPath>..\packages\Facebook.6.1.4\lib\net45\Facebook.dll</HintPath>
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Kendo.Mvc, Version=2015.3.930.545, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
@@ -150,6 +150,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -191,6 +192,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -1457,8 +1459,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FbHelper.cs" />
     <Compile Include="Helpers\HelpersUi.cs" />
     <Compile Include="Models\AccountVewModel.cs" />
+    <Compile Include="Models\Facebook\FbComment.cs" />
+    <Compile Include="Models\Facebook\FbComments.cs" />
+    <Compile Include="Models\Facebook\FbData.cs" />
+    <Compile Include="Models\Facebook\FbFeed.cs" />
+    <Compile Include="Models\Facebook\FbFeeds.cs" />
+    <Compile Include="Models\Facebook\FbFrom.cs" />
+    <Compile Include="Models\Facebook\FbLike.cs" />
+    <Compile Include="Models\Facebook\FbLikes.cs" />
     <Compile Include="Models\GridData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

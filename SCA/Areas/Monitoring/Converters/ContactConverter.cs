@@ -42,18 +42,18 @@ namespace SCA.Areas.Monitoring.Converters
             var model =  new ContactModel
             {
 
-             //  ReadyToBuyScore = contact.Score,
-             //   ReadyToSell = contact.ReadyToSell.Name,
+                ReadyToBuyScore = contact.Score,
+                ReadyToSell = contact.ReadyToSell != null ? contact.ReadyToSell.Name : String.Empty,
                 Name = contact.Name,
                 CreateDate = contact.CreateDate,
                 Email = contact.Email,
                 Id = contact.Id, 
                 ContactIp = contact.Ip,
                 ContactLink = contact.Link,
-            //    Status = contact.Status.Name,
-            //    AgeDirection = contact.Age.Name,
-            //    Comment = contact.Comment,
-            //    ContactType = contact.Type.Name,
+                Status = contact.Status != null ? contact.Status.Name : String.Empty,
+                AgeDirection = contact.Age != null ? contact.Age.Name : String.Empty,
+                Comment = contact.Comment,
+                ContactType = contact.Type != null ? contact.Type.Name : String.Empty,
                 Gender = contact.Gender.ToString(),
             //    //Telephones = contact.Telephones.
             };
