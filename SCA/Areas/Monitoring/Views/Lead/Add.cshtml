@@ -3,10 +3,41 @@
 @{
     ViewBag.Title = "Lead";
 }
-
+<script>
+    function onContactData() {
+        return {
+            contains: $("#ContactComplit").val()
+        };
+    };
+    function onSelect_Loc(e) {
+        var item = this.dataItem(e.item.index());
+        $('#ContactId').val(item.Id);
+    }
+</script>
 @using (Html.BeginForm())
 {
     @Html.Kendo().TextBoxFor(model => model.Id).HtmlAttributes(new { @style = "display: none" })
+    @Html.Kendo().TextBoxFor(model => model.ContactId).HtmlAttributes(new { @style = "display: none" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-4">
+            @(Html.Kendo().AutoCompleteFor(x => x.ContactName)
+                              .Name("ContactComplit")
+                              .DataTextField("Name")
+                              .MinLength(2)
+                              .Events(e => e.Select("onSelect_Loc"))
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("GetContactsContains", "Contacts")
+                                          .Data("onContactData");
+                                  })
+                                      .ServerFiltering(true);
+                              })
+            )
+        </div>
+    </div>
     <div class="form-group">
         @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-4">
@@ -20,7 +51,7 @@
                   {
                       source.Read(read =>
                       {
-                          read.Action("GetTags", "Lead");
+                          read.Action("GetTags", "Tag");
                       }).ServerFiltering(true);
                   })
                 )

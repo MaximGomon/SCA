@@ -15,7 +15,6 @@ namespace SCA.Areas.Monitoring.Controllers
     {
         private readonly LeadBusinessLogic _leadBusinessLogic = new LeadBusinessLogic(new LeadRepository());
         private readonly LeadTypeBusinessLogic _leadTypeBusinessLogic  = new LeadTypeBusinessLogic(new LeadTypeRepository());
-        private readonly TagBusinessLogic _tagBusinessLogic = new TagBusinessLogic(new TagRepository());
         // GET: Monitoring/Lead
         public ActionResult List()
         {
@@ -54,21 +53,16 @@ namespace SCA.Areas.Monitoring.Controllers
             });
         }
 
-        [HttpGet]
-        public JsonResult GetTags()
-        {
-            var items = _tagBusinessLogic.GetAllEntities().ToList();
-            return Json(items, JsonRequestBehavior.AllowGet);
-        }
+        
 
         [HttpPost]
         public void Add(LeadModel model)
         {
-            var leadType = new LeadType();
-            leadType.Name = model.Name;
-            leadType.IsDeleted = false;
-            leadType.LeadTags.AddRange(model.Tags);
-            _leadTypeBusinessLogic.Add(leadType);
+            //var leadType = new Lead();
+            //leadType.Name = model.Name;
+            //leadType.IsDeleted = false;
+            //leadType.LeadTags.AddRange(model.Tags);
+            //_leadTypeBusinessLogic.Add(leadType);
         }
     }
 }

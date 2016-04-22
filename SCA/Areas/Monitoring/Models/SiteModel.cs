@@ -8,7 +8,7 @@ namespace SCA.Areas.Monitoring.Models
         public string Domains { get; set; }
         public string Name { get; set; } 
         public SitePageModel[] Pages { get; set; }
-        public string Comment { get; set; }
+        //public string Comment { get; set; }
         //public DateTime CreateDate { get; set; }
         public string Company { get; set; }
         public string Url { get; set; }

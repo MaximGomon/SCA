@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using SCA.Areas.Monitoring.Models;
@@ -51,6 +52,10 @@ namespace SCA.Areas.Monitoring.Controllers
             _sitePagesBusinessLogic.Add(dbSitePage);
 
             var site = _siteBusinessLogic.GetById(model.SiteId);
+            if (site.Pages == null)
+            {
+                site.Pages = new List<ClientSitePage>();
+            }
             site.Pages.Add(dbSitePage);
             _siteBusinessLogic.Update(site);
             //var tags = model.Tag.Split(',').ToList();

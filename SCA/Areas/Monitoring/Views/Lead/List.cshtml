@@ -35,7 +35,7 @@
             //columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
             columns.Bound(c => c.Name).Title("Название").Width(150);
             columns.Bound(c => c.ContactName).Title("Контакт").Width(120);
-            //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
+            columns.Bound(c => c.Tags).Title("Теги").Width(120); ;
 
         })
         .Filterable()
