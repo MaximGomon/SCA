@@ -25,14 +25,14 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         [System.Web.Mvc.HttpPost]
-        public void Add(SiteModel model)
+        public ActionResult Add(SiteModel model)
         {
             var dbSite = model.ConvertToDbSite();
-            _siteBusinessLogic.Add(dbSite);
+            _siteBusinessLogic.Update(dbSite);
+            return RedirectToAction("List");
         }
 
         
-        [HttpPost]
         public JsonResult PagesList([DataSourceRequest]DataSourceRequest request, Guid id)
         {
             var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Id == id).SelectMany(x => x.Pages).ToList();
