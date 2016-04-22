@@ -1,0 +1,60 @@
+﻿@using Kendo.Mvc.UI
+@using SCA.Areas.Monitoring.Models
+
+@section content_header{
+    <h1>
+        @*<img src="~/Content/themes/admin/img/.png"/>*@
+        Лиды
+    </h1>
+    @Html.GetBreadcrumb("fa fa-dashboard", null, "Мониторинг", "Лиды")
+}
+@section content_box_header{
+    <div class="btn-group" role="group" aria-label="...">
+        <a href="@Url.Action("Add","Lead")" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i> Добавить</a>
+        <button class="btn btn-default btn-sm"><i class="fa fa-tags"></i> Теги</button>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Экспорт
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-file-excel-o"></i> Excel</a></li>
+                <li><a href="#"><i class="fa fa-file-pdf-o"></i> Pdf</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="hr-top" />
+}
+
+@(Html.Kendo().Grid<LeadTypeModel>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(c => c.Id).Hidden(true);
+            //columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
+            //columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
+            columns.Bound(c => c.Name).Title("Название").Width(150);
+            //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
+
+        })
+        .Filterable()
+        .ColumnMenu(c => c.Columns(false))
+        .Resizable(resizable => resizable.Columns(true))
+        .Reorderable(reorderable => reorderable.Columns(true))
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            .PageSizes(true)
+            .ButtonCount(5))
+
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("List_Read", "Lead"))
+        )
+)
+
+
+
+
+
