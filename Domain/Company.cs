@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using SCA.Domain.Interfaces;
 
 namespace SCA.Domain
@@ -27,9 +28,10 @@ namespace SCA.Domain
         /// Перечень всех сайтов клиента, на которых установленны счетчики
         /// </summary>
         public virtual ICollection<ClientSite> Sites { get; set; }
-
+        [Column(TypeName = "datetime2")]
         public virtual DateTime? ModifyDate { get; set; }
         public virtual SystemUser ChangedBy { get; set; }
+        [Column(TypeName = "datetime2")]
         public virtual DateTime CreateDate { get; set; }
         public virtual SystemUser CreatedBy { get; set; }
         public virtual string Comment { get; set; }

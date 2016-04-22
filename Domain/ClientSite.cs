@@ -9,7 +9,8 @@ namespace SCA.Domain
     {
         public ClientSite()
         {
-            Pages = new List<ClientSitePage>();
+            //if(Pages == null)
+            //Pages = new List<ClientSitePage>();
         }
         /// <summary>
         /// Перечень страниц сайта

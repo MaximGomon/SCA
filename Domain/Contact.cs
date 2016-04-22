@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using SCA.Domain.Enums;
 using SCA.Domain.Interfaces;
 
@@ -38,6 +39,7 @@ namespace SCA.Domain
         /// <summary>
         /// Дата рождения
         /// </summary>
+        [Column(TypeName = "datetime2")]
         public virtual DateTime? BirthDate { get; set; }
         /// <summary>
         /// Коментарии
@@ -62,6 +64,7 @@ namespace SCA.Domain
         /// <summary>
         /// Дата последней активности контакта
         /// </summary>
+        [Column(TypeName = "datetime2")]
         public virtual DateTime? LastActivityDate { get; set; }
         /// <summary>
         /// Состояние готовности к покупке
@@ -78,8 +81,10 @@ namespace SCA.Domain
         public virtual string Link { get; set; }
         public virtual ICollection<SocialNetworkEvent> SocialProfiles {get; set; }
         public virtual ICollection<ClientSitePage> ViewedPages { get; set; }
+        [Column(TypeName = "datetime2")]
         public virtual DateTime CreateDate { get; set; }
         public virtual SystemUser CreatedBy { get; set; }
+        [Column(TypeName = "datetime2")]
         public virtual DateTime? ModifyDate { get; set; }
         public virtual SystemUser ChangedBy { get; set; }
     }

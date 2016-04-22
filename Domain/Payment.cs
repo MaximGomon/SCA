@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SCA.Domain
 {
@@ -8,6 +9,7 @@ namespace SCA.Domain
     public class Payment : IdentityEntity
     {
         public virtual PaymentType Type { get; set; }
+        [Column(TypeName = "datetime2")]
         public virtual DateTime PayDate { get; set; }
         public virtual PaymentStatus Status { get; set; }
         /// <summary>
