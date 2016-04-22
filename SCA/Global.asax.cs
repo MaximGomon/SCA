@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Web;
 using System.Web.Caching;
 using System.Web.Mvc;
@@ -18,11 +19,12 @@ namespace SCA
 
         static void ScheduleTaskTrigger()
         {
+            int timeout = int.Parse(ConfigurationManager.AppSettings["FbPingTimeout"] ?? "5");
             HttpRuntime.Cache.Add("ScheduledTaskTrigger",
                                   string.Empty,
                                   null,
                                   Cache.NoAbsoluteExpiration,
-                                  TimeSpan.FromMinutes(1),
+                                  TimeSpan.FromMinutes(timeout),
                                   CacheItemPriority.NotRemovable,
                                   new CacheItemRemovedCallback(PerformScheduledTasks));
         }
