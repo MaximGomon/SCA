@@ -39,12 +39,31 @@ namespace SCA.Areas.Monitoring.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
+        public void AddSite(Guid id, Guid siteId)
+        {
+            _companyBusinessLogic.AddSiteToCompany(id, siteId);
+        }
+
+        public JsonResult GetCompanySites([DataSourceRequest] DataSourceRequest request, Guid id)
+        {
+            var items = _companyBusinessLogic.GetAllEntities().Where(x => x.Id == id).SelectMany(x => x.Sites).ToList();
+            var models = new List<SiteModel>();
+            foreach (var site in items)
+            {
+                models.Add(site.ConvertToSiteModel());
+            }
+            var result = models.ToDataSourceResult(request);
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
         
 
         [HttpGet]
         public ActionResult Add()
         {
             var company = new Company();
+            company.Id = Guid.NewGuid();
+            company.Name = "Draft";
+            _companyBusinessLogic.Add(company);
             return View(company.ConvertToCompanyModel());
         }
 

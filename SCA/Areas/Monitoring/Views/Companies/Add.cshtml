@@ -124,7 +124,7 @@
                               {
                                   source.Read(read =>
                                   {
-                                      read.Action("GetContsctsContains", "Contacts")
+                                      read.Action("GetContactsContains", "Contacts")
                                           .Data("onOwnerData");
                                   })
                                       .ServerFiltering(true);
@@ -135,7 +135,7 @@
             </div>
             <div class="col-md-7">
                 @(Html.Kendo().Grid<SiteModel>()
-                      .Name("grid")
+                      .Name("sitesGrid")
                       .Columns(columns =>
                       {
                           columns.Bound(c => c.Id).Hidden(true);
@@ -152,7 +152,7 @@
                         @<text>
                             @Html.ActionLink("Добавить", "Search", "Site",
                                 new {id = Model.Id},
-                                new {@class = "addNewItem btn btn-sm btn-success fa fa-plus-circle k-grid-add"}) 
+                                new {@class = "addNewItem btn btn-sm btn-success fa fa-plus-circle"}) 
                         </text> ))
 
                       .ColumnMenu(c => c.Columns(false))
@@ -167,7 +167,7 @@
 
                       .DataSource(dataSource => dataSource
                           .Ajax()
-                          .Read(read => read.Action("List_Read", "Site"))
+                          .Read(read => read.Action("GetCompanySites", "Companies",new {Id = @Model.Id}))
                       )
 )
             </div>
@@ -195,6 +195,15 @@
                         $('#dialogContent').html(data);
                         $('#modDialog').modal('show');
                     });
+                    return false;
+                });
+            });
+
+            $(function () {
+                $.ajaxSetup({ cache: false });
+                $("#modDialog").hide(function (e) {
+                    alert('Hello');
+                    $('#sitesGrid').data('kendoGrid').dataSource.read();
                     return false;
                 });
             });

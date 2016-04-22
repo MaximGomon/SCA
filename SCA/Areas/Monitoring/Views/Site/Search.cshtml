@@ -1,33 +1,63 @@
-﻿@model SCA.Areas.Monitoring.Models.SiteModel
-<script>
+﻿<script>
     function onSiteData() {
         return {
             contains: $("#SiteAutoComplete").val()
         };
     }
+
+    function AddSite() {
+        $.ajax({
+            url: "/Monitoring/Companies/AddSite/" + $("#Id").val(),
+            method: "post",
+            data: JSON.stringify({
+                SiteId: $("#SiteId").val(),
+            }),
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            succsess: function (data) {
+
+            },
+            error: function (data) {
+
+            }
+        });
+        //$('#sitePageGrid').data('kendoGrid').dataSource.read();
+    }
+
+    function onSelect(e) {
+        var item = this.dataItem(e.item.index());
+        $('#SiteId').val(item.Id);
+    }
 </script>
-@using (Html.BeginForm())
-{
+
+    @Html.TextBox("SiteId", null, new { @style = "display: none", @id = "SiteId"})
     <div class="modal-content">
         <div class="modal-body">
             <div class="row">
-                @Html.Label("Название сайта", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-3">
+                @Html.Label("Название сайта", htmlAttributes: new {@class = "control-label col-md-2"})
+                <div class="col-md-12">
                     @(Html.Kendo().AutoComplete()
-                              .Name("SiteAutoComplete")
-                              .DataTextField("Name")
-                              .DataSource(source =>
+                          .Name("SiteAutoComplete")
+                          .DataTextField("Name")
+                          .Events(e => e.Select("onSelect"))
+                          .DataSource(source =>
+                          {
+                              source.Read(read =>
                               {
-                                  source.Read(read =>
-                                  {
-                                      read.Action("GetSitesContains", "Site")
-                                          .Data("onSiteData");
-                                  })
-                                      .ServerFiltering(true);
+                                  read.Action("GetSitesContains", "Site")
+                                      .Data("onSiteData");
                               })
-                    )
+                                  .ServerFiltering(true);
+                          })
+                          )
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="submit" onclick="AddSite();" value="Save" name="Save" class="btn btn-default close" data-dismiss="modal" />
+                </div>
+            </div>
+            @*<input type="submit" value="Добавить" name="AddSite" class="close btn btn-default" data-dismiss="modal"/>*@
+            
         </div>
     </div>
-}
