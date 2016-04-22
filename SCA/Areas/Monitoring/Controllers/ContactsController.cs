@@ -35,7 +35,6 @@ namespace SCA.Areas.Monitoring.Controllers
         // GET: Monitoring/Contacts
         public ActionResult List()
         {
-           GetInfo();
            return View();
         }
 
