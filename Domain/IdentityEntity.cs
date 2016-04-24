@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Security.AccessControl;
 
 namespace SCA.Domain
 {
@@ -10,8 +11,7 @@ namespace SCA.Domain
             Id = Guid.NewGuid();
         }
 
-        [Required]
         [Key]
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
     }
 }

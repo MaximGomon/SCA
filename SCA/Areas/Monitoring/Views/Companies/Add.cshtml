@@ -198,16 +198,6 @@
                     return false;
                 });
             });
-
-            $(function () {
-                $.ajaxSetup({ cache: false });
-                $("#modDialog").hide(function (e) {
-                    alert('Hello');
-                    $('#sitesGrid').data('kendoGrid').dataSource.read();
-                    return false;
-                });
-            });
-        
         </script>
     }
 }

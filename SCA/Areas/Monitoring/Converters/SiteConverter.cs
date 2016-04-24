@@ -19,6 +19,10 @@ namespace SCA.Areas.Monitoring.Converters
             var dbSite = siteBusinessLogic.GetById(model.Id);
             dbSite.Url = model.Url;
             dbSite.Name = model.Name;
+            if (dbSite.Domains == null)
+            {
+                dbSite.Domains = new List<string>();
+            }
             dbSite.Domains.AddRangeIfNoExist(model.Domains.Split(',').AsEnumerable());
 
             //foreach (var sitePageModel in model.Pages)
@@ -53,10 +57,6 @@ namespace SCA.Areas.Monitoring.Converters
 
         public static void AddRangeIfNoExist(this ICollection<string> source, IEnumerable<string> newItems)
         {
-            if (source == null)
-            {
-                source = new List<string>();
-            }
             foreach (var newItem in newItems)
             {
                 if (!source.Contains(newItem.Trim()))

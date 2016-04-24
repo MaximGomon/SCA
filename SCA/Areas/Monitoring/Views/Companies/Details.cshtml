@@ -86,7 +86,7 @@
 
                       .DataSource(dataSource => dataSource
                           .Ajax()
-                          .Read(read => read.Action("List_Read", "Site"))
+                          .Read(read => read.Action("List_Read", "Site", new { id = Model.Id })))
                       )
                 )
             </div>

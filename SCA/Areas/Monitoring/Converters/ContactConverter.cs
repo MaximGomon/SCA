@@ -15,8 +15,10 @@ namespace SCA.Areas.Monitoring.Converters
             var contactTypeBusinessLogic = new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>());
             var contactStatusBusinessLogic = new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>());
             var sellBusinessLogic = new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>());
+            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
 
-            var dbContact = new Contact();
+            var dbContact = contactBusinessLogic.GetById(model.Id);
+
             dbContact.Age = ageDirectionLogic.GetById(model.AgeDirectionId);
             dbContact.BirthDate = model.BirthDate;
             dbContact.Comment = model.Comment;
@@ -32,7 +34,7 @@ namespace SCA.Areas.Monitoring.Converters
             dbContact.Status = contactStatusBusinessLogic.GetById(model.StatusId);
             dbContact.Type = contactTypeBusinessLogic.GetById(model.ContactTypeId);
             dbContact.Name = model.Name;
-            dbContact.Id = model.Id;
+            //dbContact.Id = model.Id;
             return dbContact;
         }
 

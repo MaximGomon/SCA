@@ -15,7 +15,7 @@ namespace SCA.Areas.Monitoring.Controllers
     public class CompaniesController : Controller
     {
         private readonly CompanyBusinessLogic _companyBusinessLogic = new CompanyBusinessLogic(new CompanyRepository());
-        private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+        //private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
         private readonly DictionaryBusinessLogic<CompanyType> _typeBusinessLogic = new DictionaryBusinessLogic<CompanyType>(new DictionaryRepository<CompanyType>());
         private readonly DictionaryBusinessLogic<CompanyStatus> _statusBusinessLogic = new DictionaryBusinessLogic<CompanyStatus>(new DictionaryRepository<CompanyStatus>());
         private readonly DictionaryBusinessLogic<CompanySize> _sizeBusinessLogic = new DictionaryBusinessLogic<CompanySize>(new DictionaryRepository<CompanySize>());
@@ -61,7 +61,7 @@ namespace SCA.Areas.Monitoring.Controllers
         public ActionResult Add()
         {
             var company = new Company();
-            company.Id = Guid.NewGuid();
+            //company.Id = Guid.NewGuid();
             company.Name = "Draft";
             _companyBusinessLogic.Add(company);
             return View(company.ConvertToCompanyModel());
@@ -92,7 +92,7 @@ namespace SCA.Areas.Monitoring.Controllers
             //    company.Sites.Add(_siteBusinessLogic.GetById(clientSite.Id));
             //}
 
-            _companyBusinessLogic.Add(company);
+            _companyBusinessLogic.Update(company);
             return RedirectToAction("List");
         }
 

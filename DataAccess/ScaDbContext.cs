@@ -79,6 +79,10 @@ namespace SCA.DataAccess
                 .HasMany(s => s.Tag);
             modelBuilder.Entity<Company>()
                 .HasMany(x => x.Sites);
+            modelBuilder.Entity<ClientSite>()
+                .HasMany(x => x.Pages);
+            modelBuilder.Entity<ClientSite>()
+                .HasOptional(x => x.Owner);
 
             base.OnModelCreating(modelBuilder);
 

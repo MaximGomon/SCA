@@ -15,20 +15,19 @@ namespace SCA.Areas.Monitoring.Converters
             var sizeBusinessLogic = new DictionaryBusinessLogic<CompanySize>(new DictionaryRepository<CompanySize>());
             var sectorBusinessLogic = new DictionaryBusinessLogic<CompanySector>(new DictionaryRepository<CompanySector>());
             var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+            var companyBusinessLogic = new CompanyBusinessLogic(new CompanyRepository());
 
-            var company = new Company
-            {
-                Comment = model.Comment,
-                CreateDate = DateTime.Now,
-                Name = model.Name,
-                IsDeleted = false,
-                Type = typeBusinessLogic.GetById(model.TypeId),
-                Size = sizeBusinessLogic.GetById(model.SizeId),
-                Sector = sectorBusinessLogic.GetById(model.SectorId),
-                Status = statusBusinessLogic.GetById(model.StatusId),
-                Owner = contactBusinessLogic.GetById(model.OwnerId),
-                Id = model.Id,
-            };
+            var company = companyBusinessLogic.GetById(model.Id);
+
+            company.Comment = model.Comment;
+            //company.CreateDate = DateTime.Now;
+            company.Name = model.Name;
+            //company.IsDeleted = false;
+            company.Type = typeBusinessLogic.GetById(model.TypeId);
+            company.Size = sizeBusinessLogic.GetById(model.SizeId);
+            company.Sector = sectorBusinessLogic.GetById(model.SectorId);
+            company.Status = statusBusinessLogic.GetById(model.StatusId);
+            company.Owner = contactBusinessLogic.GetById(model.OwnerId);
             return company;
         }
 

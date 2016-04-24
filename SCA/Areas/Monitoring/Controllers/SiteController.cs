@@ -66,9 +66,9 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         [System.Web.Mvc.HttpPost]
-        public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
+        public JsonResult List_Read([DataSourceRequest]DataSourceRequest request, Guid id)
         {
-            var items = _siteBusinessLogic.GetAllEntities();//.Select(x => ConvertToSiteModel(x));
+            var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Owner.Id == id);//.Select(x => ConvertToSiteModel(x));
             var models = new List<SiteModel>();
             foreach (var clientSite in items)
             {
@@ -82,7 +82,7 @@ namespace SCA.Areas.Monitoring.Controllers
 
         public JsonResult GetSitesContains(string contains)
         {
-            var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Name.Contains(contains)).ToList();
+            var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Name.Contains(contains) && x.Owner == null).ToList();
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 

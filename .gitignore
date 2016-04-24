@@ -1,4 +1,5 @@
 *.txt
 SCA.Tests/bin/
-/bin/*
-/obj/*
+bin/
+obj/
+packages/
