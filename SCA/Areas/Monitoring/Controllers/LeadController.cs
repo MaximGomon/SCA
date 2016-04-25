@@ -15,6 +15,7 @@ namespace SCA.Areas.Monitoring.Controllers
     {
         private readonly LeadBusinessLogic _leadBusinessLogic = new LeadBusinessLogic(new LeadRepository());
         private readonly LeadTypeBusinessLogic _leadTypeBusinessLogic  = new LeadTypeBusinessLogic(new LeadTypeRepository());
+        private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
         // GET: Monitoring/Lead
         public ActionResult List()
         {
@@ -26,22 +27,18 @@ namespace SCA.Areas.Monitoring.Controllers
         {
             var items = _leadBusinessLogic.GetAllEntities();//.Select(x => ConvertToSiteModel(x));
             var models = new List<LeadModel>();
-            foreach (var clientSite in items)
+            foreach (var lead in items)
             {
-                models.Add(ConvertToLeadModel(clientSite));
+                models.Add(new LeadModel
+                {
+                    Id = lead.Id,
+                    LeadType = lead.Type.Name,
+                    ContactName = lead.Buyer.Name,
+                    Name = lead.Name,
+                });
             }
             DataSourceResult result = models.ToDataSourceResult(request);
             return Json(result, JsonRequestBehavior.AllowGet);
-        }
-
-        private LeadModel ConvertToLeadModel(Lead lead)
-        {
-            return new LeadModel
-            {
-                Id = lead.Id,
-                Name = lead.Type.Name,
-                ContactName = lead.Buyer.Name
-            };
         }
 
         [HttpGet]
@@ -58,11 +55,11 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpPost]
         public void Add(LeadModel model)
         {
-            //var leadType = new Lead();
-            //leadType.Name = model.Name;
-            //leadType.IsDeleted = false;
-            //leadType.LeadTags.AddRange(model.Tags);
-            //_leadTypeBusinessLogic.Add(leadType);
+            var lead = new Lead();
+            lead.Name = model.Name;
+            lead.Buyer = _contactBusinessLogic.GetById(model.ContactId);
+            lead.Type = _leadTypeBusinessLogic.GetById(model.LeadTypeId);
+            _leadBusinessLogic.Add(lead);
         }
     }
 }

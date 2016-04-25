@@ -10,6 +10,8 @@ namespace SCA.Areas.Monitoring.Models
         [Display(Name = "Название")]
         public string Name { get; set; }
         [Display(Name = "Теги")]
-        public string[] Tags { get; set; } 
+        public Guid[] TagsId { get; set; }
+        [Display(Name = "Теги")]
+        public string Tags { get; set; }
     }
 }

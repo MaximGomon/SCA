@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
+using SCA.Areas.Monitoring.Converters;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
@@ -14,6 +15,7 @@ namespace SCA.Areas.Monitoring.Controllers
     public class LeadTypeController : Controller
     {
         private readonly LeadTypeBusinessLogic _leadTypeBusinessLogic  = new LeadTypeBusinessLogic(new LeadTypeRepository());
+        private readonly TagBusinessLogic _tagBusinessLogic = new TagBusinessLogic(new TagRepository());
         // GET: Monitoring/Lead
         public ActionResult List()
         {
@@ -48,8 +50,24 @@ namespace SCA.Areas.Monitoring.Controllers
             var leadType = new LeadType();
             leadType.Name = model.Name;
             leadType.IsDeleted = false;
+            foreach (var tag in model.TagsId)
+            {
+                leadType.LeadTags.Add(_tagBusinessLogic.GetById(tag));
+            }
             //leadType.LeadTags.AddRange(model.Tags);
             _leadTypeBusinessLogic.Add(leadType);
+        }
+
+        [HttpPost]
+        public JsonResult GetLeadTypes(string contains)
+        {
+            var items =_leadTypeBusinessLogic.GetAllEntities().Where(x => x.Name == contains);
+            var models = new List<LeadTypeModel>();
+            foreach (var leadType in items)
+            {
+                models.Add(leadType.ConvertToModel());
+            }
+            return Json(items, JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -153,6 +153,10 @@
     <Compile Include="Migrations\201604221838334_FixDataTimeConvertToDbDatatime2.Designer.cs">
       <DependentUpon>201604221838334_FixDataTimeConvertToDbDatatime2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604251708073_AddNameForLead.cs" />
+    <Compile Include="Migrations\201604251708073_AddNameForLead.Designer.cs">
+      <DependentUpon>201604251708073_AddNameForLead.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -245,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604221838334_FixDataTimeConvertToDbDatatime2.resx">
       <DependentUpon>201604221838334_FixDataTimeConvertToDbDatatime2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604251708073_AddNameForLead.resx">
+      <DependentUpon>201604251708073_AddNameForLead.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

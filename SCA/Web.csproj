@@ -1450,6 +1450,7 @@
     <Compile Include="Areas\Monitoring\Controllers\TagController.cs" />
     <Compile Include="Areas\Monitoring\Converters\CompanyConverter.cs" />
     <Compile Include="Areas\Monitoring\Converters\ContactConverter.cs" />
+    <Compile Include="Areas\Monitoring\Converters\LeadTypeConverter.cs" />
     <Compile Include="Areas\Monitoring\Converters\SiteConverter.cs" />
     <Compile Include="Areas\Monitoring\Models\ActivityModel.cs" />
     <Compile Include="Areas\Monitoring\Models\CompanyModel.cs" />

@@ -9,17 +9,27 @@
             contains: $("#ContactComplit").val()
         };
     };
+    function onLeadTypeData() {
+        return {
+            contains: $("#LeadTypeComplit").val()
+        };
+    };
     function onSelect_Loc(e) {
         var item = this.dataItem(e.item.index());
         $('#ContactId').val(item.Id);
+    };
+    function onSelectType(e) {
+        var item = this.dataItem(e.item.index());
+        $('#LeadTypeId').val(item.Id);
     }
 </script>
 @using (Html.BeginForm())
 {
     @Html.Kendo().TextBoxFor(model => model.Id).HtmlAttributes(new { @style = "display: none" })
     @Html.Kendo().TextBoxFor(model => model.ContactId).HtmlAttributes(new { @style = "display: none" })
+    @Html.Kendo().TextBoxFor(model => model.LeadTypeId).HtmlAttributes(new { @style = "display: none" })
     <div class="form-group">
-        @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.ContactName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-4">
             @(Html.Kendo().AutoCompleteFor(x => x.ContactName)
                               .Name("ContactComplit")
@@ -39,21 +49,21 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.LeadType, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-4">
-                @(Html.Kendo().MultiSelectFor(x => x.Tags)
-                  .Name("Tags")
-                  .DataTextField("Name")
-                  .DataValueField("Id")
-                  .Placeholder("Select tags...")
-                  .AutoBind(true)
-                  .DataSource(source =>
-                  {
-                      source.Read(read =>
-                      {
-                          read.Action("GetTags", "Tag");
-                      }).ServerFiltering(true);
-                  })
+                @(Html.Kendo().AutoCompleteFor(x => x.LeadType)
+                    .Name("LeadTypeComplit")
+                    .DataTextField("Name")
+                    .MinLength(2)
+                    .Events(e => e.Select("onSelectType"))
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("GetLeadTypes", "LeadType")
+                            .Data("onLeadTypeData"); ;
+                        }).ServerFiltering(true);
+                    })
                 )
         </div>
     </div>
