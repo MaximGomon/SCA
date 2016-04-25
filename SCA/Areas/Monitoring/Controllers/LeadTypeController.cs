@@ -36,9 +36,10 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            return PartialView(new LeadTypeModel
+            var leadType = new LeadType();
+            return View(new LeadTypeModel
             {
-                Id = Guid.NewGuid()
+                Id = leadType.Id,
             });
         }
         [HttpPost]

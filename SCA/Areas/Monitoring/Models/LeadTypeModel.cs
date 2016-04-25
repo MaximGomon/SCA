@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using SCA.Domain;
 
 namespace SCA.Areas.Monitoring.Models
@@ -6,7 +7,9 @@ namespace SCA.Areas.Monitoring.Models
     public class LeadTypeModel
     {
         public Guid Id { get; set; }
+        [Display(Name = "Название")]
         public string Name { get; set; }
-        public string Tags { get; set; } 
+        [Display(Name = "Теги")]
+        public string[] Tags { get; set; } 
     }
 }
