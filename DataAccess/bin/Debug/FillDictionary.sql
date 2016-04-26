@@ -41,3 +41,7 @@
 	INSERT INTO CompanyStatus (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 2, N'Подтвержденный', 0)
 	INSERT INTO CompanyStatus (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 3, N'Требует подтверждения', 0)
 	INSERT INTO CompanyStatus (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 4, N'Архив', 0)
+
+	INSERT INTO ActivityType (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 1, N'Посещение', 0)
+	INSERT INTO ActivityType (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 2, N'Лайк', 0)
+	INSERT INTO ActivityType (Id, Code, Name, IsDeleted)  VALUES (NEWID(), 3, N'Комментарий', 0)

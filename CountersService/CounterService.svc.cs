@@ -5,6 +5,7 @@ using System.ServiceModel.Web;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
+using SCA.Domain.Enums;
 
 namespace SCA.CountersService
 {
@@ -21,6 +22,8 @@ namespace SCA.CountersService
             var contactLogic = new ContactBusinessLogic(new ContactRepository());
             var tagLogic = new TagBusinessLogic(new TagRepository());
             var activityLogic = new ActivityBusinessLogic(new ActivityRepository());
+            var activityTypeLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>());
+
             Contact contact = contactLogic.GetAllEntities().Where(x => x.Ip == data.Ip).FirstOrDefault();
             if (contact == null)
             {
@@ -41,6 +44,7 @@ namespace SCA.CountersService
             activity.CreateDate = DateTime.Now;
             activity.Cookie = data.Cookie;
             activity.UserAgent = data.Agent;
+            activity.Type = activityTypeLogic.GetByCode(int.Parse(ActivityEnum.Visit.ToString("D")));
            // activity.Tag = 
             foreach (var item in data.Tags.Split(',').ToList())
             {

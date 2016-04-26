@@ -26,7 +26,7 @@ namespace SCA.Areas.Monitoring.Controllers
         {
             return View();
         }
-        
+
         public JsonResult GetCompanies([DataSourceRequest] DataSourceRequest request)
         {
             var items = _companyBusinessLogic.GetAllEntities().ToList();

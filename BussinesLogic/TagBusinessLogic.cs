@@ -15,5 +15,20 @@ namespace SCA.BussinesLogic
         {
             return Repository.GetByName(name);
         }
+
+        public Tag GetByNameOrCreate(string name)
+        {
+            var result = Repository.GetByName(name);
+            if (result == null)
+            {
+                result = new Tag
+                {
+                    Name = name,
+                    IsDeleted = false
+                };
+                Repository.Add(result);
+            }
+            return result;
+        }
     }
 }

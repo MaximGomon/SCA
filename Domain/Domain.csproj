@@ -58,6 +58,7 @@
     <Compile Include="DictionaryEntity.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeePosition.cs" />
+    <Compile Include="Enums\ActivityEnum.cs" />
     <Compile Include="Enums\GenderEnum.cs" />
     <Compile Include="Enums\SettingKeyEnum.cs" />
     <Compile Include="IdentityEntity.cs" />

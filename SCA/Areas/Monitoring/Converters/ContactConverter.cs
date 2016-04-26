@@ -18,7 +18,10 @@ namespace SCA.Areas.Monitoring.Converters
             var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
 
             var dbContact = contactBusinessLogic.GetById(model.Id);
-
+            if (dbContact == null)
+            {
+                dbContact = new Contact();
+            }
             dbContact.Age = ageDirectionLogic.GetById(model.AgeDirectionId);
             dbContact.BirthDate = model.BirthDate;
             dbContact.Comment = model.Comment;

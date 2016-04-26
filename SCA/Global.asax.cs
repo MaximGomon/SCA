@@ -32,6 +32,7 @@ namespace SCA
         static void PerformScheduledTasks(string key, Object value, CacheItemRemovedReason reason)
         {
             FbHelper.Authorize();
+            FbHelper.GetSocialInfo();
             ScheduleTaskTrigger();
         }
     }
