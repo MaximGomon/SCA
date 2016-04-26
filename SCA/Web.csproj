@@ -816,6 +816,7 @@
     <Content Include="Areas\Monitoring\Views\Site\Search.cshtml" />
     <Content Include="Areas\Monitoring\Views\Tag\List.cshtml" />
     <Content Include="Areas\Monitoring\Views\Tag\Edit.cshtml" />
+    <None Include="Properties\PublishProfiles\FileSysytem.pubxml" />
     <None Include="Properties\PublishProfiles\malpinsoft - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\malpinsoft - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\webcore-ms - FTP.pubxml" />
