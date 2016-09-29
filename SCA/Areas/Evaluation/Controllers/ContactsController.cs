@@ -21,7 +21,7 @@ namespace SCA.Areas.Evaluation.Controllers
             return View();
         }
         
-        public ActionResult List_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult List_Read(DataSourceRequest request)
         {
             var items = _contactBusinessLogic.GetAllEntities().Select(x => new ContactModel
             {

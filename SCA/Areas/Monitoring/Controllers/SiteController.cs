@@ -33,7 +33,7 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         
-        public JsonResult PagesList([DataSourceRequest]DataSourceRequest request, Guid id)
+        public JsonResult PagesList(DataSourceRequest request, Guid id)
         {
             var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Id == id).SelectMany(x => x.Pages).ToList();
             var pages = new List<SitePageModel>();
@@ -66,7 +66,7 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         [System.Web.Mvc.HttpPost]
-        public JsonResult List_Read([DataSourceRequest]DataSourceRequest request, Guid id)
+        public JsonResult List_Read(DataSourceRequest request, Guid id)
         {
             var items = _siteBusinessLogic.GetAllEntities().Where(x => x.Owner.Id == id);//.Select(x => ConvertToSiteModel(x));
             var models = new List<SiteModel>();

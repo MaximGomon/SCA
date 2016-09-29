@@ -18,7 +18,7 @@ namespace SCA.Areas.Monitoring.Controllers
             return View();
         }
 
-        public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
+        public JsonResult List_Read(DataSourceRequest request)
         {
             var items = _activityBusinessLogic.GetAllEntities().ToArray();//.Select(x => new ActivityModel
             //{
