@@ -88,13 +88,12 @@
                           .Ajax()
                           .Read(read => read.Action("List_Read", "Site", new { id = Model.Id })))
                       )
-                )
             </div>
         </div>
         <div class="row">
             <div class="col-md-offset-2 col-md-10">
                 <br/>
-                <a href ="@Url.Action("List")">Back to list</a>
+                <a href ="@Url.Action("List")" class="btn btn-default">Back to list</a>
                 @*<input type="submit" value="Сохранить" class="btn btn-default" />*@
             </div>
         </div>

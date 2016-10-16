@@ -3,3 +3,4 @@ SCA.Tests/bin/
 bin/
 obj/
 packages/
+*.user

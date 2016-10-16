@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using SCA.DataAccess.Repositories.Interfaces;
@@ -12,8 +13,7 @@ namespace SCA.DataAccess.Repositories.Implementations
         where TEntity : IdentityEntity
     {
 
-        public ScaDbContext DbContext = DbContextSingle.Instance;
-
+        protected ScaDbContext DbContext = new ScaDbContext();
 
         public virtual void Add(TEntity entity)
         {
@@ -25,11 +25,6 @@ namespace SCA.DataAccess.Repositories.Implementations
         {
             return DbContext.Set<TEntity>().Find(id);
         }
-
-        //public TEntity GetEntity<TEntity>(Guid id) where TEntity : IdentityEntity
-        //{
-        //    return DbContext.Set<TEntity>().Find(id);
-        //}
 
         public void Add(IEnumerable<TEntity> range)
         {
@@ -56,12 +51,12 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public void Update(TEntity entity)
         {
-            if (DbContext.ChangeTracker.Entries<TEntity>().All(e => e.Entity != entity))
-            {
-                DbContext.Set<TEntity>().Attach(entity);
-            }
-            DbContext.Entry(entity).State = EntityState.Modified;
-
+            //if (DbContext.ChangeTracker.Entries<TEntity>().All(e => e.Entity != entity))
+            //{
+            //    DbContext.Set<TEntity>().Attach(entity);
+            //}
+            //DbContext.Entry(entity).State = EntityState.Modified;
+            DbContext.Set<TEntity>().AddOrUpdate<TEntity>(entity);
             SaveChanges();
         }
 

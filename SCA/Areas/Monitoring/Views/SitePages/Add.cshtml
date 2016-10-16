@@ -29,41 +29,39 @@
     @Html.Kendo().TextBoxFor(model => model.SiteId).HtmlAttributes(new { @style = "display: none" })
 <div class="modal-content">
     <div class="modal-body">
-        <table style="width: 100%">
-            <tr>
-                <td>
+        
+            <div class="row">
+                <div class="col-md-4">
                     @Html.Label("Название")
-                </td>
-                <td>
-                    @Html.Kendo().TextBoxFor(model => model.PageName)
+                </div>
+                <div class="col-md-8">
+                    @Html.Kendo().TextBoxFor(model => model.PageName).HtmlAttributes(new { @class = " form-control", style = "width:100%" })
                     @Html.ValidationMessageFor(model => model.PageName, "", new {@class = "text-danger"})
-                </td>
-            </tr>
-            <tr>
-                <td>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
                     @Html.Label("Теги (через запятую)")
-                </td>
-                <td>
-                    @Html.Kendo().TextBoxFor(model => model.Tag)
-                    @Html.ValidationMessageFor(model => model.Tag, "", new {@class = "text-danger"})
-                </td>
-            </tr>
-            <tr>
-                <td>
+                </div>
+                <div class="col-md-8">
+                    @Html.Kendo().TextBoxFor(model => model.Tag).HtmlAttributes(new { @class = "form-control", style = "width:100%" })
+                    @Html.ValidationMessageFor(model => model.Tag, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
                     @Html.Label("Относительный URL")
-                </td>
-                <td>
-                    @Html.Kendo().TextBoxFor(model => model.RelatedUrl)
+                </div>
+                <div class="col-md-8">
+                    @Html.Kendo().TextBoxFor(model => model.RelatedUrl).HtmlAttributes(new { @class = " form-control", style = "width:100%" })
                     @Html.ValidationMessageFor(model => model.RelatedUrl, "", new {@class = "text-danger"})
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" onclick="SavePage();" value="Save" name="Save" class="btn btn-default close" data-dismiss="modal"/>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-10">
+                    <input type="submit" onclick="SavePage();" value="Save" name="Save" class="btn btn-default" data-dismiss="modal"/>
+                </div>
+            </div>
     </div>
-
 </div>
 }

@@ -18,10 +18,10 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpGet]
         public ActionResult Add(Guid id)
         {
-            ClientSitePage csp = new ClientSitePage();
+            //ClientSitePage csp = new ClientSitePage();
             var model = new SitePageModel
             {
-                Id = csp.Id,
+                //Id = csp.Id,
                 SiteId = id,
             };
             return PartialView(model);
@@ -49,7 +49,7 @@ namespace SCA.Areas.Monitoring.Controllers
                 //ToDo Сделать серверную валидацию на существования тега
             };
 
-            _sitePagesBusinessLogic.Add(dbSitePage);
+            
 
             var site = _siteBusinessLogic.GetById(model.SiteId);
             if (site.Pages == null)
