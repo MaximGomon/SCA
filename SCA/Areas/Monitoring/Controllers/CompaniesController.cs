@@ -27,7 +27,7 @@ namespace SCA.Areas.Monitoring.Controllers
             return View();
         }
 
-        public JsonResult GetCompanies([DataSourceRequest] DataSourceRequest request)
+        public JsonResult GetCompanies(DataSourceRequest request)
         {
             var items = _companyBusinessLogic.GetAllEntities().ToList();
             var models = new List<CompanyModel>();
@@ -44,7 +44,7 @@ namespace SCA.Areas.Monitoring.Controllers
             _companyBusinessLogic.AddSiteToCompany(id, siteId);
         }
 
-        public JsonResult GetCompanySites([DataSourceRequest] DataSourceRequest request, Guid id)
+        public JsonResult GetCompanySites(DataSourceRequest request, Guid id)
         {
             var items = _companyBusinessLogic.GetAllEntities().Where(x => x.Id == id).SelectMany(x => x.Sites).ToList();
             var models = new List<SiteModel>();

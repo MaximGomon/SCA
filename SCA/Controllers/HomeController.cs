@@ -24,7 +24,7 @@ namespace SCA.Controllers
             return RedirectToAction("List", "Companies", new { area = "Monitoring"});
         }
 
-        public JsonResult Test([DataSourceRequest]DataSourceRequest request)
+        public JsonResult Test(DataSourceRequest request)
         {
             var response = _list.ToDataSourceResult(request);
             return Json(response, JsonRequestBehavior.AllowGet);

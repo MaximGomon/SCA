@@ -52,7 +52,7 @@ namespace SCA.Areas.Monitoring.Controllers
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
+        public JsonResult List_Read(DataSourceRequest request)
         {
             var items = _contactBusinessLogic.GetAllEntities().ToList();//.Select(x => x.ConvertToContactModel());
 

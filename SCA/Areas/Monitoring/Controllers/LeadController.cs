@@ -23,7 +23,7 @@ namespace SCA.Areas.Monitoring.Controllers
         }
 
         [HttpPost]
-        public JsonResult List_Read([DataSourceRequest]DataSourceRequest request)
+        public JsonResult List_Read(DataSourceRequest request)
         {
             var items = _leadBusinessLogic.GetAllEntities();//.Select(x => ConvertToSiteModel(x));
             var models = new List<LeadModel>();
