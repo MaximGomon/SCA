@@ -46,7 +46,6 @@ namespace SCA
                 ClientSecret = "QiLwRoLVrTLABK4_oiJ6v61h"
             });
 
-
             app.UseFacebookAuthentication(
                 new FacebookAuthenticationOptions()
                 {

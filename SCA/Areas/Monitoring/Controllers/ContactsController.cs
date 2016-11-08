@@ -1,21 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Json;
-using System.Text;
 using System.Web.Mvc;
-using Facebook;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using SCA.Areas.Monitoring.Converters;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
-using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 using SCA.Domain.Enums;
-using SCA.Models.Facebook;
 
 namespace SCA.Areas.Monitoring.Controllers
 {
@@ -24,13 +17,15 @@ namespace SCA.Areas.Monitoring.Controllers
     /// </summary>
     public class ContactsController : Controller
     {
-        private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
-        private readonly CompanyBusinessLogic _companyBusinessLogic = new CompanyBusinessLogic(new CompanyRepository());
-        private readonly DictionaryBusinessLogic<ContactType> _contactTypeBusinessLogic = new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>());
-        private readonly DictionaryBusinessLogic<ContactStatus> _contactStatusBusinessLogic = new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>());
-        private readonly DictionaryBusinessLogic<AgeDirection> _ageBusinessLogic = new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>());
-        private readonly DictionaryBusinessLogic<ReadyToSellState> _sellBusinessLogic = new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>());
-        
+        private readonly IContactBusinessLogic _contactBusinessLogic;
+        private readonly ICompanyBusinessLogic _companyBusinessLogic;
+
+        public ContactsController(IContactBusinessLogic contactBusinessLogic, ICompanyBusinessLogic companyBusinessLogic)
+        {
+            _contactBusinessLogic = contactBusinessLogic;
+            _companyBusinessLogic = companyBusinessLogic;
+        }
+
 
         // GET: Monitoring/Contacts
         public ActionResult List()
@@ -70,7 +65,7 @@ namespace SCA.Areas.Monitoring.Controllers
 
         public JsonResult GetContactTypes()
         {
-            var items = _contactTypeBusinessLogic.GetAllEntities().ToList();
+            var items = _contactBusinessLogic.GetAllTypes().ToList();
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 
@@ -93,19 +88,19 @@ namespace SCA.Areas.Monitoring.Controllers
 
         public JsonResult GetContactStatuses()
         {
-            var items = _contactStatusBusinessLogic.GetAllEntities().ToList();
+            var items = _contactBusinessLogic.GetAllStatuses().ToList();
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GetAgeDirection()
         {
-            var items = _ageBusinessLogic.GetAllEntities().ToList();
+            var items = _contactBusinessLogic.GetAllAges().ToList();
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GetSellStatus()
         {
-            var items = _sellBusinessLogic.GetAllEntities().ToList();
+            var items = _contactBusinessLogic.GetAllSellStatuses().ToList();
             return Json(items, JsonRequestBehavior.AllowGet);
         }
         [HttpGet]

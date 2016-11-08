@@ -4,16 +4,21 @@ using System.Linq;
 using System.Web.Mvc;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
-using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 
 namespace SCA.Areas.Monitoring.Controllers
 {
     public class SitePagesController : Controller
     {
+        public SitePagesController(IClientSitePagesBusinessLogic pagesBusinessLogic, IClientSiteBusinessLogic siteBusinessLogic)
+        {
+            _pagesBusinessLogic = pagesBusinessLogic;
+            _siteBusinessLogic = siteBusinessLogic;
+        }
+
         //private readonly TagBusinessLogic _tagBusinessLogic = new TagBusinessLogic(new TagRepository());
-        private readonly ClientSitePagesBusinessLogic _sitePagesBusinessLogic = new ClientSitePagesBusinessLogic(new ClientSitePageRepository());
-        private readonly ClientSiteBusinessLogic _siteBusinessLogic = new ClientSiteBusinessLogic(new ClientSiteRepository());
+        private readonly IClientSitePagesBusinessLogic _pagesBusinessLogic;
+        private readonly IClientSiteBusinessLogic _siteBusinessLogic;
         // GET: Monitoring/SitePages
         [HttpGet]
         public ActionResult Add(Guid id)
@@ -29,7 +34,7 @@ namespace SCA.Areas.Monitoring.Controllers
 
         public JsonResult GetTags()
         {
-            var items = _sitePagesBusinessLogic.GetAllEntities().SelectMany(x => x.Tags);
+            var items = _pagesBusinessLogic.GetAllEntities().SelectMany(x => x.Tags);
             return Json(items, JsonRequestBehavior.AllowGet);
         }
 

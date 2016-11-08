@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using SCA.Areas.Monitoring.Models;
+﻿using SCA.Areas.Monitoring.Models;
 using SCA.Domain;
 
 namespace SCA.Areas.Monitoring.Converters

@@ -2,7 +2,7 @@
 
 namespace SCA.DataAccess.Repositories.Interfaces
 {
-    interface IClientSiteRepository : ICRUDRepository<ClientSite>, INamedRepository<ClientSite>
+    public interface IClientSiteRepository : ICRUDRepository<ClientSite>, INamedRepository<ClientSite>
     {
     }
 }

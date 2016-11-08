@@ -4,12 +4,12 @@ using SCA.Domain;
 
 namespace SCA.DataAccess.Repositories.Implementations
 {
-    public class DictionaryRepository<DictionaryTEntity> : CrudRepository<DictionaryTEntity> , IDictionaryRepository<DictionaryTEntity>
-        where DictionaryTEntity : DictionaryEntity
+    public class DictionaryRepository<TDictionaryTEntity> : CrudRepository<TDictionaryTEntity> , IDictionaryRepository<TDictionaryTEntity>
+        where TDictionaryTEntity : DictionaryEntity
     {
-        public DictionaryTEntity GetByCode(int code)
+        public TDictionaryTEntity GetByCode(int code)
         {
-            return DbContext.Set<DictionaryTEntity>().FirstOrDefault(x => x.Code == code);
+            return DbContext.Set<TDictionaryTEntity>().FirstOrDefault(x => x.Code == code);
         }
     }
 }

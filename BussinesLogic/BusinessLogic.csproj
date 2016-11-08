@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.2.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,19 +44,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivityBusinessLogic.cs" />
-    <Compile Include="BaseBusinessLogic.cs" />
-    <Compile Include="ClientSiteBusinessLogic.cs" />
-    <Compile Include="ClientSitePagesBusinessLogic.cs" />
-    <Compile Include="CompanyBusinessLogic.cs" />
-    <Compile Include="ContactBusinessLogic.cs" />
-    <Compile Include="DictionaryBusinessLogic.cs" />
-    <Compile Include="LeadBusinessLogic.cs" />
-    <Compile Include="LeadTypeBusinessLogic.cs" />
+    <Compile Include="BusinessLogicModule.cs" />
+    <Compile Include="Implementation\ActivityBusinessLogic.cs" />
+    <Compile Include="Implementation\BaseBusinessLogic.cs" />
+    <Compile Include="Implementation\ClientSiteBusinessLogic.cs" />
+    <Compile Include="Implementation\ClientSitePagesBusinessLogic.cs" />
+    <Compile Include="Implementation\CompanyBusinessLogic.cs" />
+    <Compile Include="Implementation\ContactBusinessLogic.cs" />
+    <Compile Include="Implementation\DictionaryBusinessLogic.cs" />
+    <Compile Include="Implementation\LeadBusinessLogic.cs" />
+    <Compile Include="Implementation\LeadTypeBusinessLogic.cs" />
+    <Compile Include="Interfaces\IActivityBusinessLogic.cs" />
+    <Compile Include="Interfaces\IBaseBusinessLogic.cs" />
+    <Compile Include="Interfaces\IClientSiteBusinessLogic.cs" />
+    <Compile Include="Interfaces\IClientSitePagesBusinessLogic.cs" />
+    <Compile Include="Interfaces\ICompanyBusinessLogic.cs" />
+    <Compile Include="Interfaces\IContactBusinessLogic.cs" />
+    <Compile Include="Interfaces\IDictionaryBusinessLogic.cs" />
+    <Compile Include="Interfaces\ILeadBusinessLogic.cs" />
+    <Compile Include="Interfaces\ILeadTypeBusinessLogic.cs" />
+    <Compile Include="Interfaces\ISettingBusinessLogic.cs" />
+    <Compile Include="Interfaces\ISystemUserBusinessLogic.cs" />
+    <Compile Include="Interfaces\ITagBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SystemUserBusinessLogic.cs" />
-    <Compile Include="SettingBusinessLogic.cs" />
-    <Compile Include="TagBusinessLogic.cs" />
+    <Compile Include="Implementation\SystemUserBusinessLogic.cs" />
+    <Compile Include="Implementation\SettingBusinessLogic.cs" />
+    <Compile Include="Implementation\TagBusinessLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
@@ -66,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

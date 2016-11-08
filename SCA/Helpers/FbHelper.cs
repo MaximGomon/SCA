@@ -7,8 +7,6 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Text.RegularExpressions;
 using Facebook;
-using SCA.Areas.Monitoring.Converters;
-using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;

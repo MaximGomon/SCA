@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using Kendo.Mvc.Extensions;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
 using SCA.DataAccess.Repositories.Implementations;
@@ -8,25 +10,20 @@ namespace SCA.Areas.Monitoring.Converters
 {
     public static class CompanyConverter
     {
-        public static Company ConvertToDbCompany(this CompanyModel model)
+        public static Company ConvertToDbCompany(this CompanyModel model, ICompanyBusinessLogic companyBusinessLogic
+            , IContactBusinessLogic contactBusinessLogic)
         {
-            var typeBusinessLogic = new DictionaryBusinessLogic<CompanyType>(new DictionaryRepository<CompanyType>());
-            var statusBusinessLogic = new DictionaryBusinessLogic<CompanyStatus>(new DictionaryRepository<CompanyStatus>());
-            var sizeBusinessLogic = new DictionaryBusinessLogic<CompanySize>(new DictionaryRepository<CompanySize>());
-            var sectorBusinessLogic = new DictionaryBusinessLogic<CompanySector>(new DictionaryRepository<CompanySector>());
-            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
-            var companyBusinessLogic = new CompanyBusinessLogic(new CompanyRepository());
-
             var company = companyBusinessLogic.GetById(model.Id);
 
             company.Comment = model.Comment;
             //company.CreateDate = DateTime.Now;
             company.Name = model.Name;
+            company.Sites.AddRange(companyBusinessLogic.GetAllSites(company.Id));
             //company.IsDeleted = false;
-            company.Type = typeBusinessLogic.GetById(model.TypeId);
-            company.Size = sizeBusinessLogic.GetById(model.SizeId);
-            company.Sector = sectorBusinessLogic.GetById(model.SectorId);
-            company.Status = statusBusinessLogic.GetById(model.StatusId);
+            company.Type = companyBusinessLogic.GetAllTypes().First(x => x.Id == model.TypeId);
+            company.Size = companyBusinessLogic.GetAllSizes().First(x => x.Id == model.SizeId);
+            company.Sector = companyBusinessLogic.GetAllSectors().First(x => x.Id == model.SectorId);
+            company.Status = companyBusinessLogic.GetAllStatuses().First(x => x.Id == model.StatusId);
             company.Owner = contactBusinessLogic.GetById(model.OwnerId);
             return company;
         }

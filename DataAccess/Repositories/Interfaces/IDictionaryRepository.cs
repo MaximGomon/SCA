@@ -2,9 +2,9 @@
 
 namespace SCA.DataAccess.Repositories.Interfaces
 {
-    public interface IDictionaryRepository<DictionaryTEntity>
-        where DictionaryTEntity : DictionaryEntity
+    public interface IDictionaryRepository<TDictionaryTEntity> : ICRUDRepository<TDictionaryTEntity>
+        where TDictionaryTEntity : DictionaryEntity
     {
-        DictionaryTEntity GetByCode(int code);
+        TDictionaryTEntity GetByCode(int code);
     }
 }

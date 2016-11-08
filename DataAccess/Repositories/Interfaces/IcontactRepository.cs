@@ -5,5 +5,7 @@ namespace SCA.DataAccess.Repositories.Interfaces
     public interface IContactRepository : ICRUDRepository<Contact>, INamedRepository<Contact>
     {
         Contact GetByLogin(string login);
+
+        Contact GetByIp(string ip);
     }
 }
