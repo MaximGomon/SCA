@@ -18,6 +18,7 @@ namespace SCA.Helpers
 {
     public static class FbHelper
     {
+        static DatabaseFactory _factory = new DatabaseFactory();
         public static void Authorize()
         {
             var fb = new FacebookClient();
@@ -88,7 +89,7 @@ namespace SCA.Helpers
                     return parsQuery.feed;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw; // ignored
             }
@@ -140,36 +141,42 @@ namespace SCA.Helpers
             return result;
         }
 
-        private static Contact TryAddContact(string id, string name)
+        private static Contact TryAddContact(string id, string name )
         {
-            var contact = new Contact()
+            try
             {
-                Ip = id,
-                Name = name,
-                Link = "https://www.facebook.com/app_scoped_user_id/" + id + "/",
-                Gender = GenderEnum.Unknown
-            };
-            var factory = new DatabaseFactory();
-            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(factory), 
-                new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>(factory)),
-                new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>(factory)), 
-                new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>(factory)),
-                new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>(factory)));
-            if (contactBusinessLogic.GetByIp(contact.Ip) == null)
-            {
-                contactBusinessLogic.Add(contact);
+                var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(_factory),
+                    new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>(_factory)),
+                    new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>(_factory)),
+                    new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>(_factory)),
+                    new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>(_factory)));
+
+                var contact = new Contact()
+                {
+                    Ip = id,
+                    Name = name,
+                    Link = "https://www.facebook.com/app_scoped_user_id/" + id + "/",
+                    Gender = GenderEnum.Unknown
+                };
+
+                if (contactBusinessLogic.GetByIp(contact.Ip) == null)
+                {
+                    contactBusinessLogic.Add(contact);
+                }
+                return contact;
             }
-            return contact;
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
         public static void GetContactFromLikes(FbLikes[] data, SocialNetworkEvent socialEvent)
         {
             try
             {
-                var factory = new DatabaseFactory();
-                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(factory));
-                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(factory), new TagBusinessLogic(new TagRepository(factory)),
-                new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(factory)));
+                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(_factory), new TagBusinessLogic(new TagRepository(_factory)),
+                new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(_factory)));
 
                 foreach (var likes in data)
                 {
@@ -180,14 +187,14 @@ namespace SCA.Helpers
                         {
                             Author = contact,
                             CreateDate = DateTime.Now,
-                            Type = activityTypeBusinessLogic.GetByCode(int.Parse(ActivityEnum.Like.ToString("D")))
+                            Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Like.ToString("D")))
                         };
-                        activityBusinessLogic.Add(activity);
+                        //activityBusinessLogic.Add(activity);
                         socialEvent.Activities.Add(activity);
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
@@ -196,9 +203,8 @@ namespace SCA.Helpers
         {
             try
             {
-                var factory = new DatabaseFactory();
                 var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(new DatabaseFactory()));
-                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(factory), new TagBusinessLogic(new TagRepository(factory)),
+                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(_factory), new TagBusinessLogic(new TagRepository(_factory)),
                 new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(new DatabaseFactory())));
 
 
