@@ -203,7 +203,7 @@ namespace SCA.Helpers
         {
             try
             {
-                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(new DatabaseFactory()));
+                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(_factory));
                 var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(_factory), new TagBusinessLogic(new TagRepository(_factory)),
                 new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(new DatabaseFactory())));
 
@@ -224,7 +224,7 @@ namespace SCA.Helpers
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
