@@ -112,7 +112,27 @@ namespace SCA.Areas.Monitoring.Controllers
         [HttpPost]
         public ActionResult Add(ContactModel contact)
         {
-            _contactBusinessLogic.Add(contact.ConvertToDbContact());
+            var dbContact = _contactBusinessLogic.GetById(contact.Id);
+            if (dbContact == null)
+            {
+                dbContact = new Contact();
+            }
+            dbContact.Age = _contactBusinessLogic.GetAllAges().First(x => x.Id == contact.AgeDirectionId);
+            dbContact.BirthDate = contact.BirthDate;
+            dbContact.Comment = contact.Comment;
+            dbContact.CreateDate = DateTime.Now;
+            dbContact.Email = contact.Email;
+            dbContact.Ip = contact.ContactIp;
+            dbContact.Gender = (GenderEnum)Enum.Parse(typeof(GenderEnum), contact.Gender);
+            dbContact.Link = contact.ContactLink;
+            dbContact.IsNameChecked = true;
+            dbContact.ReadyToBuyScore = contact.ReadyToBuyScore;
+            dbContact.ReadyToSell = _contactBusinessLogic.GetAllSellStatuses().First(x => x.Id == contact.ReadyToSellId);
+            //dbContact.Telephones = contact.Telephones.Split(';').ToList();
+            dbContact.Status = _contactBusinessLogic.GetAllStatuses().First(x => x.Id == contact.StatusId);
+            dbContact.Type = _contactBusinessLogic.GetAllTypes().First(x => x.Id == contact.ContactTypeId);
+            dbContact.Name = contact.Name;
+            _contactBusinessLogic.Add(dbContact);
             return RedirectToAction("List");
         }
 

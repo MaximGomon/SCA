@@ -44,10 +44,6 @@
       .Columns(columns =>
       {
           columns.Bound(c => c.Id).Hidden(true);
-          //columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
-          //columns.Bound(c => c.CreateDateAsString).Title("Дата создания").Width(150);
-          //columns.Bound(c => c.).Title("<div class='text-center'>Последняя <br/>активность</div>").Width(150);
-          //columns.Bound(c => c.ContactIp).Title("Номер");
           columns.Template(@<text>
                                @Html.ActionLink(@item.Name, "Details", "Contacts", new { id = @item.Id })
                             </text>)
@@ -59,13 +55,10 @@
               .ClientTemplate("<a href='#=ContactLink#' target='_blank'>#=ContactLink#</a>").Title("Ссылка");
           //columns.Bound(c => c.Comment).Title("Comment");
           columns.Bound(c => c.Gender).Title("Пол");
-          columns.Bound(c => c.CreateDate).Title("Дата рождения");
+          columns.Bound(c => c.CreateDateAsString).Title("Дата рождения");
 
           //columns.Bound(c => c.ReadyToSell).Title("<div class='text-center'>Готовность <br/>к продаже</div>").Width(150);
           columns.Bound(c => c.CompanyName).Title("Компания");
-          //columns.Bound(c => c.Name).Title("Важность").Width(120);
-          //columns.Bound(c => c.ReadyToBuyScore).Title("Общий балл").Width(150); ;
-          //columns.Bound(c => c.Name).Title("Действия").Width(120); ;
 
       })
       .Filterable()

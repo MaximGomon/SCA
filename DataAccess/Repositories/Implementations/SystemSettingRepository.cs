@@ -19,7 +19,7 @@ namespace SCA.DataAccess.Repositories.Implementations
 
         public override void Add(SystemSetting entity)
         {
-            Add(entity);
+            base.Add(entity);
             SaveChanges();
         }
     }

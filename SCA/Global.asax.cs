@@ -32,6 +32,34 @@ namespace SCA
             
         }
 
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            var sessionScope = Container.BeginLifetimeScope("session");
+
+            Session["Autofac_LifetimeScope"] = sessionScope;
+        }
+
+        //protected void Application_BeginRequest(object sender, EventArgs e)
+        //{
+        //    var sessionScope = (ILifetimeScope)Session["Autofac_LifetimeScope"];
+        //    var requestScope = sessionScope.BeginLifetimeScope("httpRequest");
+
+        //    HttpContext.Current.Items["Autofac_LifetimeScope"] = requestScope;
+        //}
+
+        //protected void Application_EndRequest(object sender, EventArgs e)
+        //{
+        //    var requestScope = (ILifetimeScope)HttpContext.Current.Items["Autofac_LifetimeScope"];
+        //    requestScope.Dispose();
+        //}
+
+        protected void Session_End(object sender, EventArgs e)
+        {
+            var sessionScope = (ILifetimeScope)Session["Autofac_LifetimeScope"];
+
+            sessionScope.Dispose();
+        }
+
         protected virtual void Application_End()
         {
             ((IDisposable)MvcApplication.Container).Dispose();

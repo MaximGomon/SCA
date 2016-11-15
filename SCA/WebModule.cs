@@ -11,7 +11,7 @@ namespace SCA
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>();
+            builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>().SingleInstance();
             builder.RegisterGeneric(typeof(CrudRepository<>)).As(typeof(ICRUDRepository<>)).SingleInstance();
             builder.RegisterType<CompanyRepository>().As<ICompanyRepository>().SingleInstance();
             builder.RegisterType<ContactRepository>().As<IContactRepository>().SingleInstance();

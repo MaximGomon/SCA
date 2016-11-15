@@ -149,7 +149,12 @@ namespace SCA.Helpers
                 Link = "https://www.facebook.com/app_scoped_user_id/" + id + "/",
                 Gender = GenderEnum.Unknown
             };
-            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(new DatabaseFactory()));
+            var factory = new DatabaseFactory();
+            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(factory), 
+                new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>(factory)),
+                new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>(factory)), 
+                new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>(factory)),
+                new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>(factory)));
             if (contactBusinessLogic.GetByIp(contact.Ip) == null)
             {
                 contactBusinessLogic.Add(contact);

@@ -21,7 +21,9 @@ namespace SCA.CountersService
             var factory = new DatabaseFactory();
             _activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(factory), new TagBusinessLogic(new TagRepository(factory))
                 , new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(factory)) );
-            _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(factory));
+            _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(factory), new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>(factory)),
+                new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>(factory)), new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>(factory)),
+                new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>(factory)));
         }
 
         public string DoWork(CounterData data)
