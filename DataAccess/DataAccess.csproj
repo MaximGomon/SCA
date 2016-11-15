@@ -94,6 +94,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessModule.cs" />
+    <Compile Include="DatabaseFactory.cs" />
+    <Compile Include="IDatabaseFactory.cs" />
     <Compile Include="Migrations\201604191857360_DD.cs" />
     <Compile Include="Migrations\201604191857360_DD.Designer.cs">
       <DependentUpon>201604191857360_DD.cs</DependentUpon>
@@ -165,6 +167,10 @@
     <Compile Include="Migrations\201604251708073_AddNameForLead.cs" />
     <Compile Include="Migrations\201604251708073_AddNameForLead.Designer.cs">
       <DependentUpon>201604251708073_AddNameForLead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611141011483_SomeChangesInActivity.cs" />
+    <Compile Include="Migrations\201611141011483_SomeChangesInActivity.Designer.cs">
+      <DependentUpon>201611141011483_SomeChangesInActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604251708073_AddNameForLead.resx">
       <DependentUpon>201604251708073_AddNameForLead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611141011483_SomeChangesInActivity.resx">
+      <DependentUpon>201611141011483_SomeChangesInActivity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

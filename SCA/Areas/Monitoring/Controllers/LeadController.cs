@@ -12,9 +12,17 @@ namespace SCA.Areas.Monitoring.Controllers
 {
     public class LeadController : Controller
     {
-        private readonly LeadBusinessLogic _leadBusinessLogic = new LeadBusinessLogic(new LeadRepository());
-        private readonly LeadTypeBusinessLogic _leadTypeBusinessLogic  = new LeadTypeBusinessLogic(new LeadTypeRepository());
-        private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+        private readonly ILeadBusinessLogic _leadBusinessLogic;
+        private readonly ILeadTypeBusinessLogic _leadTypeBusinessLogic;
+        private readonly IContactBusinessLogic _contactBusinessLogic;
+
+        public LeadController(IContactBusinessLogic contactBusinessLogic, ILeadTypeBusinessLogic leadTypeBusinessLogic, ILeadBusinessLogic leadBusinessLogic)
+        {
+            _contactBusinessLogic = contactBusinessLogic;
+            _leadTypeBusinessLogic = leadTypeBusinessLogic;
+            _leadBusinessLogic = leadBusinessLogic;
+        }
+
         // GET: Monitoring/Lead
         public ActionResult List()
         {

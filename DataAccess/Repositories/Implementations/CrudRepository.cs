@@ -12,7 +12,22 @@ namespace SCA.DataAccess.Repositories.Implementations
         where TEntity : IdentityEntity
     {
 
-        protected ScaDbContext DbContext = new ScaDbContext();
+        private ScaDbContext _context;
+
+        public CrudRepository (IDatabaseFactory databaseFactory)
+        {
+            DatabaseFactory = databaseFactory;
+        }
+
+        protected IDatabaseFactory DatabaseFactory
+        {
+            get; private set;
+        }
+
+        protected ScaDbContext DbContext
+        {
+            get { return _context ?? (_context = DatabaseFactory.Get()); }
+        }
 
         public virtual void Add(TEntity entity)
         {

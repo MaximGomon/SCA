@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Facebook;
 using SCA.BussinesLogic;
+using SCA.DataAccess;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 using SCA.Domain.Enums;
@@ -29,7 +30,7 @@ namespace SCA.Helpers
                 grant_type = "client_credentials"
             });
             fb.AccessToken = result.access_token;
-            var settingBusinessLogic = new SettingBusinessLogic(new SystemSettingRepository());
+            var settingBusinessLogic = new SettingBusinessLogic(new SystemSettingRepository(new DatabaseFactory()));
             settingBusinessLogic.Add(new SystemSetting
             {
                 Key = SettingKeyEnum.AccessToken.ToString(),
@@ -74,7 +75,7 @@ namespace SCA.Helpers
         {
             try
             {
-                var settingBusinessLogic = new SettingBusinessLogic(new SystemSettingRepository());
+                var settingBusinessLogic = new SettingBusinessLogic(new SystemSettingRepository(new DatabaseFactory()));
                 var groupId = ConfigurationManager.AppSettings["GroupId"];
                 var filter = ConfigurationManager.AppSettings["FacebookFilter"];
                 var accessToken = settingBusinessLogic.GetByKey(SettingKeyEnum.AccessToken.ToString());
@@ -125,7 +126,7 @@ namespace SCA.Helpers
             {
                 return null;
             }
-            var tagBusinessLogic = new TagBusinessLogic(new TagRepository());
+            var tagBusinessLogic = new TagBusinessLogic(new TagRepository(new DatabaseFactory()));
             Regex r = new Regex(@"#\S+(\s|)");
             var result = new List<Tag>();
             var matc = r.Matches(message);
@@ -148,7 +149,7 @@ namespace SCA.Helpers
                 Link = "https://www.facebook.com/app_scoped_user_id/" + id + "/",
                 Gender = GenderEnum.Unknown
             };
-            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(new DatabaseFactory()));
             if (contactBusinessLogic.GetByIp(contact.Ip) == null)
             {
                 contactBusinessLogic.Add(contact);
@@ -160,8 +161,11 @@ namespace SCA.Helpers
         {
             try
             {
-                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>());
-                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository());
+                var factory = new DatabaseFactory();
+                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(factory));
+                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(factory), new TagBusinessLogic(new TagRepository(factory)),
+                new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(factory)));
+
                 foreach (var likes in data)
                 {
                     foreach (var like in likes.data)
@@ -187,8 +191,12 @@ namespace SCA.Helpers
         {
             try
             {
-                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>());
-                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository());
+                var factory = new DatabaseFactory();
+                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(new DatabaseFactory()));
+                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(factory), new TagBusinessLogic(new TagRepository(factory)),
+                new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(new DatabaseFactory())));
+
+
                 foreach (var comments in data)
                 {
                     foreach (var fbFrom in comments.data.Select(x => x.@from))

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using SCA.Domain.Interfaces;
 
@@ -20,6 +21,9 @@ namespace SCA.Domain
         public virtual ICollection<Tag> Tag { get; set; }
         public virtual string UserAgent { get; set; }
         public virtual string Cookie { get; set; }
+        public virtual string Ip { get; set; }
+        [NotMapped]
+        public virtual int TypeCode { get; set; }
         public DateTime CreateDate { get; set; }
         /// <summary>
         /// Юзер, которого мі определили со счетчика

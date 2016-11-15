@@ -10,7 +10,13 @@ namespace SCA.Areas.Monitoring.Controllers
     public class TagController : Controller
     {
 
-        private readonly TagBusinessLogic _tagBusinessLogic = new TagBusinessLogic(new TagRepository());
+        private readonly ITagBusinessLogic _tagBusinessLogic;
+
+        public TagController(ITagBusinessLogic tagBusinessLogic)
+        {
+            _tagBusinessLogic = tagBusinessLogic;
+        }
+
         // GET: Monitoring/Tag
         [HttpGet]
         public JsonResult GetTags()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
+using SCA.DataAccess;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 
@@ -13,7 +14,7 @@ namespace SCA.Areas.Monitoring.Converters
         public static ClientSite ConvertToDbSite(this SiteModel model)
         {
             //var sitePagesBusinessLogic = new ClientSitePagesBusinessLogic(new ClientSitePageRepository());
-            var siteBusinessLogic = new ClientSiteBusinessLogic(new ClientSiteRepository());
+            var siteBusinessLogic = new ClientSiteBusinessLogic(new ClientSiteRepository(new DatabaseFactory()));
             //var companyBusinessLogic = new CompanyBusinessLogic(new CompanyRepository());
 
             var dbSite = siteBusinessLogic.GetById(model.Id);

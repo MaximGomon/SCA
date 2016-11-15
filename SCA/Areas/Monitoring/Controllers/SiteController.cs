@@ -14,7 +14,13 @@ namespace SCA.Areas.Monitoring.Controllers
 {
     public class SiteController : Controller
     {
-        private readonly ClientSiteBusinessLogic _siteBusinessLogic = new ClientSiteBusinessLogic(new ClientSiteRepository());
+        private readonly IClientSiteBusinessLogic _siteBusinessLogic;
+
+        public SiteController(IClientSiteBusinessLogic siteBusinessLogic)
+        {
+            _siteBusinessLogic = siteBusinessLogic;
+        }
+
         // GET: Monitoring/Site
         [System.Web.Mvc.HttpGet]
         public ActionResult Add()

@@ -26,7 +26,7 @@ namespace SCA
             builder.RegisterControllers(assembly);
             builder.RegisterFilterProvider();
             builder.RegisterModule(new WebModule());
-            builder.RegisterModule(new BusinessLogicModule());
+           // builder.RegisterModule(new BusinessLogicModule());
             MvcApplication.Container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(Container));
             

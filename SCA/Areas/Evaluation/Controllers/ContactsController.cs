@@ -13,7 +13,13 @@ namespace SCA.Areas.Evaluation.Controllers
     /// </summary>
     public class ContactsController : Controller
     {
-        private readonly ContactBusinessLogic _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+        private readonly IContactBusinessLogic _contactBusinessLogic;
+
+        public ContactsController(IContactBusinessLogic contactBusinessLogic)
+        {
+            _contactBusinessLogic = contactBusinessLogic;
+        }
+
         // GET: Monitoring/Contacts
 
         public ActionResult List()

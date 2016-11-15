@@ -7,9 +7,14 @@ namespace SCA.DataAccess.Repositories.Implementations
 {
     public class ActivityRepository : CrudRepository<Activity>, IActivityRepository
     {
+        public ActivityRepository(IDatabaseFactory databaseFactory)
+            : base(databaseFactory)
+        {
+            
+        }
         public IQueryable<Activity> GetActivitiesByContactId(Guid contactId)
         {
-            return DbContext.Activities.Where(x => x.Author.Id == contactId);
+            return GetAllEntities().Where(x => x.Author.Id == contactId);
         }
     }
 }

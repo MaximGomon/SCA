@@ -7,14 +7,19 @@ namespace SCA.DataAccess.Repositories.Implementations
 {
     public class SystemSettingRepository : CrudRepository<SystemSetting>, ISystemSettingRepository
     {
+        public SystemSettingRepository(IDatabaseFactory databaseFactory)
+            : base(databaseFactory)
+        {
+            
+        }
         public SystemSetting GetByKey(string key)
         {
-            return DbContext.SystemSettings.First(x => x.Key == key);
+            return GetAllEntities().First(x => x.Key == key);
         }
 
         public override void Add(SystemSetting entity)
         {
-            DbContext.Set<SystemSetting>().AddOrUpdate(entity);
+            Add(entity);
             SaveChanges();
         }
     }

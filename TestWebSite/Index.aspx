@@ -7,23 +7,51 @@
 <script type="text/javascript" src="Scripts/jquery-2.2.1.js"></script>
 <script type="text/javascript"> 
     $(function () {
+        
         $.ajax({
             type: "POST",
             url: "http://localhost:8002/CounterService.svc/DoWork",
             data:  JSON.stringify({
                 Ip: location.host,
                 Tags: "tag1",
-                HostName: document.cookie
+                Cookie: readCookie("SCA")
             }),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             processdata: true,
             crossDomain: true,
-            success: function () {
-            },
-            error: function (msg) {
+            //success: function (result, status, xhr) {
+            //    alert(result);
+            //    document.cookie = location.host + ";" + result ;
+            //},
+            complete: function (result) {
+                //document.cookie = location.host + ";" + result.responseText;
+                createCookie("SCA", result.responseText, 365);
+                alert(document.cookie);
             }
+            
         });
+
+        function createCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
     });
 </script>
 <head runat="server">

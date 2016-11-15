@@ -7,9 +7,14 @@ namespace SCA.DataAccess.Repositories.Implementations
 {
     public class SystemUserRepository: CrudRepository<SystemUser>, ISystemUserRepository
     {
+        public SystemUserRepository(IDatabaseFactory databaseFactory)
+            : base(databaseFactory)
+        {
+            
+        }
         public SystemUser GetByLogin(string login)
         {
-            return DbContext.SystemUsers.Where(x => x.Login == login).Select(x => x).Include(x => x.Type).FirstOrDefault();
+            return GetAllEntities().Where(x => x.Login == login).Select(x => x).Include(x => x.Type).FirstOrDefault();
         }
     }
 }

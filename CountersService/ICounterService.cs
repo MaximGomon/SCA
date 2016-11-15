@@ -9,9 +9,9 @@ namespace SCA.CountersService
     [ServiceContract]
     public interface ICounterService
     {
-        [WebInvoke]
+        [WebInvoke(Method = "POST", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         [OperationContract]
-        void DoWork(CounterData data);
+        string DoWork(CounterData data);
     }
 
     [DataContract]

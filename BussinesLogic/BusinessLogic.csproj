@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicModule.cs" />
     <Compile Include="Implementation\ActivityBusinessLogic.cs" />
     <Compile Include="Implementation\BaseBusinessLogic.cs" />
     <Compile Include="Implementation\ClientSiteBusinessLogic.cs" />

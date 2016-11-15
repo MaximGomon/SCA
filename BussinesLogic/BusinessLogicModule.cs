@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using SCA.DataAccess;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.DataAccess.Repositories.Interfaces;
 using SCA.Domain;
@@ -10,6 +11,7 @@ namespace SCA.BussinesLogic
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<CompanyRepository>().As<ICompanyRepository>().SingleInstance();
+            
             builder.RegisterType<ContactRepository>().As<IContactRepository>().SingleInstance();
             builder.RegisterType<ClientSitePageRepository>().As<IClientSitePageRepository>().SingleInstance();
             builder.RegisterType<ClientSiteRepository>().As<IClientSiteRepository>().SingleInstance();

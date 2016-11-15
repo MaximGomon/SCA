@@ -5,6 +5,10 @@ namespace SCA.DataAccess.Repositories.Implementations
 {
     public class LeadTypeRepository : CrudRepository<LeadType>, ILeadTypeRepository
     {
-         
+        public LeadTypeRepository(IDatabaseFactory databaseFactory)
+            : base(databaseFactory)
+        {
+            
+        }    
     }
 }

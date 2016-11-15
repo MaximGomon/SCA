@@ -11,7 +11,13 @@ namespace SCA.Areas.Monitoring.Controllers
 {
     public class ContactActivityController : Controller
     {
-        private readonly ActivityBusinessLogic _activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository());
+        private readonly IActivityBusinessLogic _activityBusinessLogic;
+
+        public ContactActivityController(IActivityBusinessLogic activityBusinessLogic)
+        {
+            _activityBusinessLogic = activityBusinessLogic;
+        }
+
         // GET: Monitoring/ContactActivity
         public ActionResult List()
         {

@@ -1,16 +1,16 @@
 ﻿using Autofac;
-using Autofac.Integration.Mvc;
 using SCA.BussinesLogic;
 using SCA.DataAccess;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.DataAccess.Repositories.Interfaces;
 
-namespace SCA
+namespace SCA.CountersService
 {
-    public class WebModule : Module
+    public class ServiceModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<CounterService>().As<ICounterService>();
             builder.RegisterType<DatabaseFactory>().As<IDatabaseFactory>();
             builder.RegisterGeneric(typeof(CrudRepository<>)).As(typeof(ICRUDRepository<>)).SingleInstance();
             builder.RegisterType<CompanyRepository>().As<ICompanyRepository>().SingleInstance();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Web;
 using SCA.BussinesLogic;
+using SCA.DataAccess;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 using SCA.Domain.Enums;
@@ -13,18 +14,25 @@ namespace SCA.CountersService
     // NOTE: In order to launch WCF Test Client for testing this service, please select CounterService.svc or CounterService.svc.cs at the Solution Explorer and start debugging.
     public class CounterService : ICounterService
     {
-        public void DoWork(CounterData data)
+        private readonly IActivityBusinessLogic _activityBusinessLogic;
+        private readonly IContactBusinessLogic _contactBusinessLogic;
+        public CounterService()
         {
-            IncomingWebRequestContext context = WebOperationContext.Current.IncomingRequest;
-            data.Agent = context.UserAgent;
-            Domain.Activity activity = new Domain.Activity();
-            //Contact contact = new Contact();
-            var contactLogic = new ContactBusinessLogic(new ContactRepository());
-            var tagLogic = new TagBusinessLogic(new TagRepository());
-            var activityLogic = new ActivityBusinessLogic(new ActivityRepository());
-            var activityTypeLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>());
+            var factory = new DatabaseFactory();
+            _activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(factory), new TagBusinessLogic(new TagRepository(factory))
+                , new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(factory)) );
+            _contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(factory));
+        }
 
-            Contact contact = contactLogic.GetAllEntities().Where(x => x.Ip == data.Ip).FirstOrDefault();
+        public string DoWork(CounterData data)
+        {
+            IncomingWebRequestContext context = WebOperationContext.Current?.IncomingRequest;
+            data.Agent = context?
+                .UserAgent;
+            var coockie = data.Cookie.Replace('\"', ' ').Trim();
+            Contact contact = _activityBusinessLogic.GetAllEntities()
+                    .FirstOrDefault(x => (x.Cookie == coockie && x.UserAgent == data.Agent) || x.Ip == data.Ip)?
+                    .Author;
             if (contact == null)
             {
                 contact = new Contact
@@ -33,22 +41,28 @@ namespace SCA.CountersService
                     Name = data.Ip
                 };
                 contact.CreateDate = DateTime.Now;
-                contactLogic.Add(contact);
+                _contactBusinessLogic.Add(contact);
+            }
+            string returns = Guid.NewGuid().ToString();
+
+
+            Activity activity = new Activity();
+            activity.Author = contact;
+            activity.CreateDate = DateTime.Now;
+            if (data.Cookie != null)
+            {
+                activity.Cookie = data.Cookie;
             }
             else
             {
-                contact.ModifyDate = DateTime.Now;
-                contactLogic.Update(contact);
+                activity.Cookie = returns;
             }
-            activity.Author = contact;
-            activity.CreateDate = DateTime.Now;
-            activity.Cookie = data.Cookie;
             activity.UserAgent = data.Agent;
-            activity.Type = activityTypeLogic.GetByCode(int.Parse(ActivityEnum.Visit.ToString("D")));
-           // activity.Tag = 
+            activity.Type = _activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Visit.ToString("D")));
+            //activity.TypeCode = int.Parse(ActivityEnum.Visit.ToString("D"));
             foreach (var item in data.Tags.Split(',').ToList())
             {
-                var tag = tagLogic.GetByName(item);
+                var tag = _activityBusinessLogic.GetTagByName(item);
                 if (tag != null)
                 {
                     if (activity.Tag == null)
@@ -60,13 +74,13 @@ namespace SCA.CountersService
                 else
                 {
                     //TODO Выпилить и выдавать ошибку в лог на этом этапе
-                    var tg = new Tag {Name = item};
-                    tagLogic.Add(tg);
+                    var tg = new Tag { Name = item };
+                    //activityLogic.Add(tg);
                     activity.Tag.Add(tg);
                 }
             }
-            activityLogic.Add(activity);
-
+            _activityBusinessLogic.InsertNew(activity);
+            return activity.Cookie;
         }
     }
 }

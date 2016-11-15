@@ -5,10 +5,8 @@ namespace SCA.BussinesLogic
 {
     public class TagBusinessLogic : BaseBusinessLogic<ITagRepository, Tag>, ITagBusinessLogic
     {
-        private readonly ITagRepository _tagRepository;
         public TagBusinessLogic(ITagRepository repository) : base(repository)
         {
-            _tagRepository = repository;
         }
 
         public Tag GetByName(string name)

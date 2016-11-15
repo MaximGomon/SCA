@@ -1,6 +1,7 @@
 ﻿using System;
 using SCA.Areas.Monitoring.Models;
 using SCA.BussinesLogic;
+using SCA.DataAccess;
 using SCA.DataAccess.Repositories.Implementations;
 using SCA.Domain;
 using SCA.Domain.Enums;
@@ -11,11 +12,12 @@ namespace SCA.Areas.Monitoring.Converters
     {
         public static Contact ConvertToDbContact(this ContactModel model)
         {
-            var ageDirectionLogic = new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>());
-            var contactTypeBusinessLogic = new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>());
-            var contactStatusBusinessLogic = new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>());
-            var sellBusinessLogic = new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>());
-            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository());
+            var fatory = new DatabaseFactory();
+            var ageDirectionLogic = new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>(fatory));
+            var contactTypeBusinessLogic = new DictionaryBusinessLogic<ContactType>(new DictionaryRepository<ContactType>(fatory));
+            var contactStatusBusinessLogic = new DictionaryBusinessLogic<ContactStatus>(new DictionaryRepository<ContactStatus>(fatory));
+            var sellBusinessLogic = new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>(fatory));
+            var contactBusinessLogic = new ContactBusinessLogic(new ContactRepository(fatory));
 
             var dbContact = contactBusinessLogic.GetById(model.Id);
             if (dbContact == null)

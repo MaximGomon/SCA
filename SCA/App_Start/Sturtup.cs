@@ -59,7 +59,7 @@ namespace SCA
         }
         private Task OnAuthenticated(FacebookAuthenticatedContext facebookAuthenticatedContext)
         {
-            var settingBusinessLogic = new SettingBusinessLogic(new SystemSettingRepository());
+            var settingBusinessLogic = new SettingBusinessLogic(new SystemSettingRepository(new DatabaseFactory()));
             settingBusinessLogic.Add(new SystemSetting
             {
                 Key = SettingKeyEnum.AccessToken.ToString(),

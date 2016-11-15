@@ -7,9 +7,14 @@ namespace SCA.DataAccess.Repositories.Implementations
     public class DictionaryRepository<TDictionaryTEntity> : CrudRepository<TDictionaryTEntity> , IDictionaryRepository<TDictionaryTEntity>
         where TDictionaryTEntity : DictionaryEntity
     {
+        public DictionaryRepository(IDatabaseFactory databaseFactory)
+            : base(databaseFactory)
+        {
+            
+        }
         public TDictionaryTEntity GetByCode(int code)
         {
-            return DbContext.Set<TDictionaryTEntity>().FirstOrDefault(x => x.Code == code);
+            return GetAllEntities().FirstOrDefault(x => x.Code == code);
         }
     }
 }
