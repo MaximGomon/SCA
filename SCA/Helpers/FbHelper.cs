@@ -151,6 +151,7 @@ namespace SCA.Helpers
                     new DictionaryBusinessLogic<AgeDirection>(new DictionaryRepository<AgeDirection>(_factory)),
                     new DictionaryBusinessLogic<ReadyToSellState>(new DictionaryRepository<ReadyToSellState>(_factory)));
 
+
                 var contact = new Contact()
                 {
                     Ip = id,
@@ -159,11 +160,13 @@ namespace SCA.Helpers
                     Gender = GenderEnum.Unknown
                 };
 
-                if (contactBusinessLogic.GetByIp(contact.Ip) == null)
+                var existContact = contactBusinessLogic.GetByIp(id);
+                if (existContact == null)
                 {
                     contactBusinessLogic.Add(contact);
+                    return contact;
                 }
-                return contact;
+                return existContact;
             }
             catch (Exception ex)
             {
