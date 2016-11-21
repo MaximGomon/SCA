@@ -39,29 +39,29 @@ namespace SCA.Helpers
             });
         }
 
-        //public static List<SocialNetworkEvent> InfoEvents()
-        //{
-        //    var eventData = GetInfoSocialNetwork();
+        public static List<SocialNetworkEvent> InfoEvents()
+        {
+            var eventData = GetInfoSocialNetwork();
 
-        //    List<SocialNetworkEvent> social = new List<SocialNetworkEvent>();
+            List<SocialNetworkEvent> social = new List<SocialNetworkEvent>();
 
-        //    foreach (var socialEvent in eventData.data)
-        //    {
-        //        var soc = new SocialNetworkEvent()
-        //        {
-        //            EventId = socialEvent.id,
-        //            Link = socialEvent.link,
-        //            Type = socialEvent.type,
-        //            Avtor = null,
-        //            Activities = null,
-        //            //DateCreated = socialEvent.created_time,
-        //            Message = socialEvent.message,
-        //            Tags = null
-        //        };
-        //        social.Add(soc);
-        //    }
-        //    return social;
-        //}
+            foreach (var socialEvent in eventData.data)
+            {
+                var soc = new SocialNetworkEvent()
+                {
+                    EventId = socialEvent.id,
+                    Link = socialEvent.link,
+                    Type = socialEvent.type,
+                    Avtor = null,
+                    Activities = null,
+                    //DateCreated = socialEvent.created_time,
+                    Message = socialEvent.message,
+                    Tags = null
+                };
+                social.Add(soc);
+            }
+            return social;
+        }
 
         public static void GetSocialInfo()
         {
@@ -99,6 +99,9 @@ namespace SCA.Helpers
         {
             try
             {
+                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(_factory), new TagBusinessLogic(new TagRepository(_factory)),
+                new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(_factory)));
+                SocialNetworkBusinessLogic socialNetworkLogic = new SocialNetworkBusinessLogic(new SocialNetworkRepository(_factory));
                 foreach (var fbFeed in data)
                 {
                     var socialEvent = new SocialNetworkEvent();
@@ -111,8 +114,11 @@ namespace SCA.Helpers
                     socialEvent.Type = fbFeed.type;
                     socialEvent.Tags = TryGetTags(fbFeed.message);
                     socialEvent.Activities = new List<Activity>();
-                    GetContactFromLikes(data.Select(x => x.likes).Where(x => x != null).ToArray(), socialEvent);
-                    GetContactFromComments(data.Select(x => x.comments).Where(x => x != null).ToArray(), socialEvent);
+
+                    GetContactFromLikes(data.Select(x => x.likes).Where(x => x != null).ToArray(), socialEvent, activityBusinessLogic);
+                    GetContactFromComments(data.Select(x => x.comments).Where(x => x != null).ToArray(), socialEvent, activityBusinessLogic);
+
+                    socialNetworkLogic.Add(socialEvent);
                 }
             }
             catch (Exception ex)
@@ -174,13 +180,10 @@ namespace SCA.Helpers
             }
         }
 
-        public static void GetContactFromLikes(FbLikes[] data, SocialNetworkEvent socialEvent)
+        public static void GetContactFromLikes(FbLikes[] data, SocialNetworkEvent socialEvent, ActivityBusinessLogic activityBusinessLogic)
         {
             try
             {
-                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(_factory), new TagBusinessLogic(new TagRepository(_factory)),
-                new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(_factory)));
-
                 foreach (var likes in data)
                 {
                     foreach (var like in likes.data)
@@ -190,7 +193,7 @@ namespace SCA.Helpers
                         {
                             Author = contact,
                             CreateDate = DateTime.Now,
-                            Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Like.ToString("D")))
+                            Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Like.ToString("D"))),
                         };
                         //activityBusinessLogic.Add(activity);
                         socialEvent.Activities.Add(activity);
@@ -202,15 +205,10 @@ namespace SCA.Helpers
                 throw;
             }
         }
-        public static void GetContactFromComments(FbComments[] data, SocialNetworkEvent socialEvent)
+        public static void GetContactFromComments(FbComments[] data, SocialNetworkEvent socialEvent, ActivityBusinessLogic activityBusinessLogic)
         {
             try
             {
-                var activityTypeBusinessLogic = new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(_factory));
-                var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(_factory), new TagBusinessLogic(new TagRepository(_factory)),
-                new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(new DatabaseFactory())));
-
-
                 foreach (var comments in data)
                 {
                     foreach (var fbFrom in comments.data.Select(x => x.@from))
@@ -220,7 +218,7 @@ namespace SCA.Helpers
                         {
                             Author = contact,
                             CreateDate = DateTime.Now,
-                            Type = activityTypeBusinessLogic.GetByCode(int.Parse(ActivityEnum.Comment.ToString("D")))
+                            Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Comment.ToString("D")))
                         };
                         activityBusinessLogic.Add(activity);
                         socialEvent.Activities.Add(activity);

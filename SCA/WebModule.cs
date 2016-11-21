@@ -29,6 +29,7 @@ namespace SCA
             builder.RegisterType<SettingBusinessLogic>().As<ISettingBusinessLogic>().SingleInstance();
             builder.RegisterType<SystemUserBusinessLogic>().As<ISystemUserBusinessLogic>().SingleInstance();
             builder.RegisterType<TagBusinessLogic>().As<ITagBusinessLogic>().SingleInstance();
+            builder.RegisterType<SocialNetworkBusinessLogic>().As<ISocialNetworkBusinessLogic>().SingleInstance();
             //base.Load(builder);
         }
     }

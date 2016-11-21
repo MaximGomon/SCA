@@ -27,7 +27,7 @@
             complete: function (result) {
                 //document.cookie = location.host + ";" + result.responseText;
                 createCookie("SCA", result.responseText, 365);
-                alert(document.cookie);
+                //alert(document.cookie);
             }
             
         });
