@@ -9,6 +9,8 @@ namespace SCA.Models.Facebook
         public string id;
         [DataMember]
         public string message;
+        [DataMember(Name = "created_time")]
+        public string CreateTime;
         [DataMember]
         public FbFrom from;
     }

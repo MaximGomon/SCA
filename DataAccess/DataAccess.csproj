@@ -172,6 +172,10 @@
     <Compile Include="Migrations\201611141011483_SomeChangesInActivity.Designer.cs">
       <DependentUpon>201611141011483_SomeChangesInActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611281525428_AddNewFieldToActivity.cs" />
+    <Compile Include="Migrations\201611281525428_AddNewFieldToActivity.Designer.cs">
+      <DependentUpon>201611281525428_AddNewFieldToActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repositories\Implementations\ActivityRepository.cs" />
     <Compile Include="Repositories\Implementations\ClientSitePageRepository.cs" />
@@ -270,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611141011483_SomeChangesInActivity.resx">
       <DependentUpon>201611141011483_SomeChangesInActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611281525428_AddNewFieldToActivity.resx">
+      <DependentUpon>201611281525428_AddNewFieldToActivity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

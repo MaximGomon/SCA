@@ -1478,7 +1478,6 @@
     </Compile>
     <Compile Include="Helpers\FbHelper.cs" />
     <Compile Include="Helpers\HelpersUi.cs" />
-    <Compile Include="Helpers\ScheduleModel.cs" />
     <Compile Include="Models\AccountVewModel.cs" />
     <Compile Include="Models\Facebook\FbComment.cs" />
     <Compile Include="Models\Facebook\FbComments.cs" />

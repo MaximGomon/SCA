@@ -10,5 +10,10 @@ namespace SCA.BussinesLogic
         public SocialNetworkBusinessLogic(ISocialNetworkRepository repository) : base(repository)
         {
         }
+
+        public SocialNetworkEvent GetEventByEventId(string eventId)
+        {
+            return Repository.GetAllEntities().FirstOrDefault(x => x.EventId == eventId);
+        }
     }
 }

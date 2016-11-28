@@ -22,6 +22,7 @@ namespace SCA.Domain
         public virtual string UserAgent { get; set; }
         public virtual string Cookie { get; set; }
         public virtual string Ip { get; set; }
+        public virtual string ExternalId { get; set; }
         [NotMapped]
         public virtual int TypeCode { get; set; }
         public DateTime CreateDate { get; set; }

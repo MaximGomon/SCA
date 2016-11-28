@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Json;
@@ -37,30 +38,6 @@ namespace SCA.Helpers
                 Key = SettingKeyEnum.AccessToken.ToString(),
                 Value = fb.AccessToken
             });
-        }
-
-        public static List<SocialNetworkEvent> InfoEvents()
-        {
-            var eventData = GetInfoSocialNetwork();
-
-            List<SocialNetworkEvent> social = new List<SocialNetworkEvent>();
-
-            foreach (var socialEvent in eventData.data)
-            {
-                var soc = new SocialNetworkEvent()
-                {
-                    EventId = socialEvent.id,
-                    Link = socialEvent.link,
-                    Type = socialEvent.type,
-                    Avtor = null,
-                    Activities = null,
-                    //DateCreated = socialEvent.created_time,
-                    Message = socialEvent.message,
-                    Tags = null
-                };
-                social.Add(soc);
-            }
-            return social;
         }
 
         public static void GetSocialInfo()
@@ -101,22 +78,28 @@ namespace SCA.Helpers
             {
                 var activityBusinessLogic = new ActivityBusinessLogic(new ActivityRepository(_factory), new TagBusinessLogic(new TagRepository(_factory)),
                 new DictionaryBusinessLogic<ActivityType>(new DictionaryRepository<ActivityType>(_factory)));
-                SocialNetworkBusinessLogic socialNetworkLogic = new SocialNetworkBusinessLogic(new SocialNetworkRepository(_factory));
+                var socialNetworkLogic = new SocialNetworkBusinessLogic(new SocialNetworkRepository(_factory));
+
                 foreach (var fbFeed in data)
                 {
-                    var socialEvent = new SocialNetworkEvent();
-                    var contact = TryAddContact(fbFeed.@from.id, fbFeed.@from.name);
-                    socialEvent.Avtor = contact;
-                    socialEvent.CreateDate = DateTime.Parse(fbFeed.created_time);
-                    socialEvent.EventId = fbFeed.id;
-                    socialEvent.Message = fbFeed.message ?? String.Empty;
-                    socialEvent.Link = fbFeed.link;
-                    socialEvent.Type = fbFeed.type;
-                    socialEvent.Tags = TryGetTags(fbFeed.message);
-                    socialEvent.Activities = new List<Activity>();
+                    var socialEvent = socialNetworkLogic.GetEventByEventId(fbFeed.id);
 
-                    GetContactFromLikes(data.Select(x => x.likes).Where(x => x != null).ToArray(), socialEvent, activityBusinessLogic);
-                    GetContactFromComments(data.Select(x => x.comments).Where(x => x != null).ToArray(), socialEvent, activityBusinessLogic);
+                    if (socialEvent == null)
+                    {
+                        socialEvent = new SocialNetworkEvent();
+                        var contact = TryAddContact(fbFeed.@from.id, fbFeed.@from.name);
+                        socialEvent.Avtor = contact;
+                        socialEvent.CreateDate = DateTime.Parse(fbFeed.created_time);
+                        socialEvent.EventId = fbFeed.id;
+                        socialEvent.Message = fbFeed.message ?? String.Empty;
+                        socialEvent.Link = fbFeed.link;
+                        socialEvent.Type = fbFeed.type;
+                        socialEvent.Tags = TryGetTags(fbFeed.message);
+                        socialEvent.Activities = new List<Activity>();
+                    }
+
+                    GetContactFromLikes(fbFeed.likes.data, socialEvent, activityBusinessLogic);
+                    GetContactFromComments(fbFeed.comments.data, socialEvent, activityBusinessLogic);
 
                     socialNetworkLogic.Add(socialEvent);
                 }
@@ -180,24 +163,27 @@ namespace SCA.Helpers
             }
         }
 
-        public static void GetContactFromLikes(FbLikes[] data, SocialNetworkEvent socialEvent, ActivityBusinessLogic activityBusinessLogic)
+        public static void GetContactFromLikes(FbLike[] data, SocialNetworkEvent socialEvent, ActivityBusinessLogic activityBusinessLogic)
         {
             try
             {
-                foreach (var likes in data)
+                foreach (var like in data)
                 {
-                    foreach (var like in likes.data)
+                    if (socialEvent.Activities.Any(x => x.ExternalId == like.id))
                     {
-                        var contact = TryAddContact(like.id, like.name);
-                        var activity = new Activity
-                        {
-                            Author = contact,
-                            CreateDate = DateTime.Now,
-                            Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Like.ToString("D"))),
-                        };
-                        //activityBusinessLogic.Add(activity);
-                        socialEvent.Activities.Add(activity);
+                        continue;
                     }
+                    var contact = TryAddContact(like.id, like.name);
+                    var activity = new Activity
+                    {
+                        Author = contact,
+                        ExternalId = like.id,
+                        CreateDate = DateTime.Now,
+                        Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Like.ToString("D"))),
+                    };
+                    //activityBusinessLogic.Add(activity);
+                    //если к этой записи еще нет лайка этого чувака - добавляем
+                    socialEvent.Activities.Add(activity);
                 }
             }
             catch (Exception ex)
@@ -205,24 +191,26 @@ namespace SCA.Helpers
                 throw;
             }
         }
-        public static void GetContactFromComments(FbComments[] data, SocialNetworkEvent socialEvent, ActivityBusinessLogic activityBusinessLogic)
+        public static void GetContactFromComments(FbComment[] data, SocialNetworkEvent socialEvent, ActivityBusinessLogic activityBusinessLogic)
         {
             try
             {
-                foreach (var comments in data)
+                foreach (var comment in data)
                 {
-                    foreach (var fbFrom in comments.data.Select(x => x.@from))
+                    if (socialEvent.Activities.Any(x => x.ExternalId == comment.id))
                     {
-                        var contact = TryAddContact(fbFrom.id, fbFrom.name);
-                        var activity = new Activity
-                        {
-                            Author = contact,
-                            CreateDate = DateTime.Now,
-                            Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Comment.ToString("D")))
-                        };
-                        activityBusinessLogic.Add(activity);
-                        socialEvent.Activities.Add(activity);
+                        continue;
                     }
+                    var contact = TryAddContact(comment.id, comment.@from.name);
+
+                    var activity = new Activity
+                    {
+                        CreateDate = DateTime.Parse(comment.CreateTime, CultureInfo.InvariantCulture),
+                        ExternalId = comment.id,
+                        Author = contact,
+                        Type = activityBusinessLogic.GetActivityType(int.Parse(ActivityEnum.Comment.ToString("D"))),
+                    };
+                    socialEvent.Activities.Add(activity);
                 }
             }
             catch (Exception ex)

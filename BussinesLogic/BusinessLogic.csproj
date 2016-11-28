@@ -53,6 +53,7 @@
     <Compile Include="Implementation\DictionaryBusinessLogic.cs" />
     <Compile Include="Implementation\LeadBusinessLogic.cs" />
     <Compile Include="Implementation\LeadTypeBusinessLogic.cs" />
+    <Compile Include="Implementation\SocialNetworkBusinessLogic.cs" />
     <Compile Include="Interfaces\IActivityBusinessLogic.cs" />
     <Compile Include="Interfaces\IBaseBusinessLogic.cs" />
     <Compile Include="Interfaces\IClientSiteBusinessLogic.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Interfaces\ILeadBusinessLogic.cs" />
     <Compile Include="Interfaces\ILeadTypeBusinessLogic.cs" />
     <Compile Include="Interfaces\ISettingBusinessLogic.cs" />
+    <Compile Include="Interfaces\ISocialNetworkBusinessLogic.cs" />
     <Compile Include="Interfaces\ISystemUserBusinessLogic.cs" />
     <Compile Include="Interfaces\ITagBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
