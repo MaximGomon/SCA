@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
@@ -24,9 +25,9 @@ namespace SCA.Areas.Monitoring.Controllers
             return View();
         }
 
-        public JsonResult List_Read(DataSourceRequest request)
+        public JsonResult List_Read(DataSourceRequest request, Guid id)
         {
-            var items = _activityBusinessLogic.GetAllEntities().ToArray();//.Select(x => new ActivityModel
+            var items = _activityBusinessLogic.GetAllEntities().Where(x => x.Author.Id == id).ToArray();//.Select(x => new ActivityModel
             //{
             //    Id = x.Id,
             //    ActivityDate = x.CreateDate,
@@ -35,7 +36,7 @@ namespace SCA.Areas.Monitoring.Controllers
             //    UserAgent = x.UserAgent,
             //    //Tags = x.GetAllTags(),
             //}).ToList();
-            items.FirstOrDefault();
+            //items.FirstOrDefault();
             var act = new List<ActivityModel>();
             foreach (var activity in items)
             {
@@ -46,7 +47,7 @@ namespace SCA.Areas.Monitoring.Controllers
                     UserAgent = activity.UserAgent,
                     ActivityDate = activity.CreateDate,
                     UserName = activity.Author.Name,
-                    //Type = activity.Type.Name
+                    Type = activity.Type.Name
                 });
             }
             DataSourceResult result = act.ToDataSourceResult(request);

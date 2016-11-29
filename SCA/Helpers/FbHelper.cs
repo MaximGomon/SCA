@@ -98,8 +98,15 @@ namespace SCA.Helpers
                         socialEvent.Activities = new List<Activity>();
                     }
 
-                    GetContactFromLikes(fbFeed.likes.data, socialEvent, activityBusinessLogic);
-                    GetContactFromComments(fbFeed.comments.data, socialEvent, activityBusinessLogic);
+                    if (fbFeed.likes != null)
+                    {
+                        GetContactFromLikes(fbFeed.likes.data, socialEvent, activityBusinessLogic);
+                    }
+
+                    if (fbFeed.comments != null)
+                    {
+                        GetContactFromComments(fbFeed.comments.data, socialEvent, activityBusinessLogic);
+                    }
 
                     socialNetworkLogic.Add(socialEvent);
                 }
@@ -116,7 +123,7 @@ namespace SCA.Helpers
             {
                 return null;
             }
-            var tagBusinessLogic = new TagBusinessLogic(new TagRepository(new DatabaseFactory()));
+            var tagBusinessLogic = new TagBusinessLogic(new TagRepository(_factory));
             Regex r = new Regex(@"#\S+(\s|)");
             var result = new List<Tag>();
             var matc = r.Matches(message);
@@ -169,10 +176,16 @@ namespace SCA.Helpers
             {
                 foreach (var like in data)
                 {
+                    if(socialEvent.Activities == null)
+                    {
+                        socialEvent.Activities = new List<Activity>();
+                    }
+                    
                     if (socialEvent.Activities.Any(x => x.ExternalId == like.id))
                     {
                         continue;
                     }
+
                     var contact = TryAddContact(like.id, like.name);
                     var activity = new Activity
                     {
@@ -197,10 +210,16 @@ namespace SCA.Helpers
             {
                 foreach (var comment in data)
                 {
+                    if (socialEvent.Activities == null)
+                    {
+                        socialEvent.Activities = new List<Activity>();
+                    }
+
                     if (socialEvent.Activities.Any(x => x.ExternalId == comment.id))
                     {
                         continue;
                     }
+
                     var contact = TryAddContact(comment.id, comment.@from.name);
 
                     var activity = new Activity

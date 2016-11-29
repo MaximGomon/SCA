@@ -75,14 +75,13 @@ namespace SCA.DataAccess
             modelBuilder.Conventions.Add<TimestampAttributeConvention>();
 
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Entity<Activity>()
-                .HasMany(s => s.Tag);
-            modelBuilder.Entity<Company>()
-                .HasMany(x => x.Sites);
-            modelBuilder.Entity<ClientSite>()
-                .HasMany(x => x.Pages);
-            modelBuilder.Entity<ClientSite>()
-                .HasOptional(x => x.Owner);
+
+            modelBuilder.Entity<Activity>().HasMany(s => s.Tag);
+            modelBuilder.Entity<SocialNetworkEvent>().HasMany(s => s.Activities);
+            modelBuilder.Entity<SocialNetworkEvent>().HasMany(s => s.Tags);
+            modelBuilder.Entity<Company>().HasMany(x => x.Sites);
+            modelBuilder.Entity<ClientSite>().HasMany(x => x.Pages);
+            modelBuilder.Entity<ClientSite>().HasOptional(x => x.Owner);
 
             base.OnModelCreating(modelBuilder);
 

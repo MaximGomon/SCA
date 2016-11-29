@@ -14,15 +14,12 @@
         .Name("grid")
         .Columns(columns =>
         {
-            columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
-            //columns.Bound(c => c.Name).Title("Сессия").Width(150);
+            //columns.Bound(c => c).Filterable(false).Sortable(false).Title("<div><input type='checkbox'></div>").Width(50);
             columns.Bound(c => c.ActivityDateAsString).Title("Дата действия").Width(150);
             columns.Bound(c => c.Type).Title("Тип").Width(50);
             columns.Bound(c => c.UserName).Title("Посетитель").Width(120); ;
             columns.Bound(c => c.Tags).Title("Теги").Width(120);
             columns.Bound(c => c.UserAgent).Title("Браузер").Width(180);
-            //columns.Bound(c => c.Name).Title("Описание").Width(120); ;
-
         })
         .Filterable()
         .ColumnMenu(c => c.Columns(false))
